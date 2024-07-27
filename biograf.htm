@@ -1,0 +1,1748 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Биографии знаменитых физиков</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Биографии знаменитых физиков">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="biograf.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТРАНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+
+<!--основеной контент-->
+<Div id="novosti">
+
+<div id="doska">
+<br/>
+<span>ДОСКА ПОЧЁТА ТЕРРИТОРИИ ФИЗИКИ</span>
+<div id="foto">
+<a href="biograf.htm#issak" target="_top"><img src="img/newton.jpg" width="80" height="110" title="ИССАК НЬЮТОН" align="center"></a>&nbsp;
+<a href="biograf.htm#galileo" target="_top"><img src="img/galileo.jpg" width="80" height="110" title="ГАЛИЛЕО ГАЛИЛЕЙ" align="center"></a>&nbsp;
+<a href="biograf.htm#aristotel" target="_top"><img src="img/aristotel.jpg" width="80" height="110" title="АРИСТОТЕЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#jeims" target="_top"><img src="img/joul.jpg" width="80" height="110" title="ДЖЕЙМС ДЖОУЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#andre" target="_top"><img src="img/amper.jpg" width="80" height="110" title="АНДРЭ-МАРИ АМПЕР" align="center"></a>&nbsp;
+<a href="biograf.htm#nikolai" target="_top"><img src="img/kopernik.jpg" width="80" height="110" title="НИКОЛАЙ КОПЕРНИК" align="center"></a>&nbsp;
+<a href="biograf.htm#sharl" target="_top"><img src="img/kulon.png" width="80" height="110" title="ШАРЛЬ КУЛОН" align="center"></a>&nbsp;
+
+<br/><br/>
+<a href="biograf.htm#allesandro" target="_top"><img src="img/volt.jpg" width="80" height="110" title="АЛЕССАНДРО ВОЛЬТА" align="center"></a>&nbsp;
+<a href="biograf.htm#maikl" target="_top"><img src="img/faradei.jpg" width="80" height="110" title="МАЙКЛ ФАРАДЕЙ" align="center"></a>&nbsp;
+<a href="biograf.htm#genrih" target="_top"><img src="img/gerc.jpg" width="80" height="110" title="ГЕНРИХ ГЕРЦ" align="center"></a>&nbsp;
+<a href="biograf.htm#georg" target="_top"><img src="img/om.jpg" width="80" height="110" title="ГЕОРГ ОМ" align="center"></a>&nbsp;
+<a href="biograf.htm#amodeo" target="_top"><img src="img/avogadro.jpg" width="80" height="110" title="АМАДЕО АВОГАДРО" align="center"></a>&nbsp;
+<a href="biograf.htm#roberto" target="_top"><img src="img/boil.jpg" width="80" height="110" title="РОБЕРТО БОЙЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#nikola" target="_top"><img src="img/tesla.jpg" width="80" height="110" title="НИКОЛА ТЕСЛА" align="center"></a>&nbsp;
+
+<br/><br/>
+<a href="biograf.htm#edm" target="_top"><img src="img/mariott.jpg" width="80" height="110" title="ЭДМ МАРИОТТ" align="center"></a>&nbsp;
+<a href="biograf.htm#yatt" target="_top"><img src="img/vatt.jpg" width="80" height="110" title="ДЖЕЙМС УАТТ" align="center"></a>&nbsp;
+<a href="biograf.htm#gey" target="_top"><img src="img/lussak.jpg" width="80" height="110" title="ЖОЗЕФ-ЛУЙ ГЕЙ-ЛЮССАК" align="center"></a>&nbsp;
+<a href="biograf.htm#zak" target="_top"><img src="img/sharl.png" width="80" height="110" title="ЖАК АЛЕКСАНДР СЕЗАР ШАРЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#blez" target="_top"><img src="img/paskal.jpg" width="80" height="110" title="БЛЕЗ ПАСКАЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#uilyam" target="_top"><img src="img/kelvin.jpg" width="80" height="110" title="УИЛЬЯМ КЕЛЬВИН" align="center"></a>&nbsp;
+<a href="biograf.htm#robert" target="_top"><img src="img/guk.jpg" width="80" height="110" title="РОБЕРТ ГУК" align="center"></a>&nbsp;
+
+<br/><br/>
+<a href="biograf.htm#evengelista" target="_top"><img src="img/torrichelli.jpg" width="80" height="110" title="ЭВЕНДЖЕЛИСТА ТОРРИЧЕЛЛЛИ" align="center"></a>&nbsp;
+<a href="biograf.htm#nagaoka" target="_top"><img src="img/hantaro.jpg" width="80" height="110" title="НАГАОКА ХАНТАРО" align="center"></a>&nbsp;
+<a href="biograf.htm#ernest" target="_top"><img src="img/reserford.jpg" width="80" height="110" title="ЭРНЕСТ РЕЗЕРФОРД" align="center"></a>&nbsp;
+<a href="biograf.htm#petr" target="_top"><img src="img/kapica.jpg" width="80" height="110" title="ПЕТР КАПИЦА" align="center"></a>&nbsp;
+<a href="biograf.htm#hans" target="_top"><img src="img/ersted.jpg" width="80" height="110" title="ХАНС ЭРСТЕД" align="center"></a>&nbsp;
+<a href="biograf.htm#aleksandr" target="_top"><img src="img/eihenvald.jpg" width="80" height="110" title="АЛЕКСАНДР ЭЙХЕНВАЛЬД" align="center"></a>&nbsp;
+<a href="biograf.htm#no" target="_top"><img src="img/anonim.jpg" width="80" height="110" title="МОЖЕТ БЫТЬ ЭТО ВЫ?" align="center"></a>&nbsp;
+
+<br/><br/>
+<a href="biograf.htm#jeims" target="_top"><img src="img/maksvell.jpg" width="80" height="110" title="ДЖЕЙМС МАКСВЕЛЛ" align="center"></a>&nbsp;
+<a href="biograf.htm#genya" target="_top"><img src="img/klaperon.jpg" width="80" height="110" title="ГЕНУА ПОЛЬ ЭМИЛЬ КЛАПЕЙРОН" align="center"></a>&nbsp;
+<a href="biograf.htm#ludvig" target="_top"><img src="img/boltsman.jpg" width="80" height="110" title="ЛЮДВИГ БОЛЬЦМАН" align="center"></a>&nbsp;
+<a href="biograf.htm#jan" target="_top"><img src="img/kolladon.jpg" width="80" height="110"title="ЖАН ДАНИЭЛЬ КОЛЛАДОН" align="center"></a>&nbsp;
+<a href="biograf.htm#albert" target="_top"><img src="img/einstein.jpg" width="80" height="110" title="АЛЬБЕРТ ЭЙНШТЕЙН" align="center"></a>&nbsp;
+<a href="biograf.htm#jan1" target="_top"><img src="img/perren.jpg" width="80" height="110" title="ЖАН БАТИСТ ПЕРРЕН" align="center"></a>&nbsp;
+<a href="biograf.htm#rudolf" target="_top"><img src="img/clasius.jpg" width="80" height="110" title="РУДОЛЬФ ЮЛИУС ИММАНУИЛ КЛАЗИУС" align="center"></a>&nbsp;
+<br/><br/>
+
+<a href="biograf.htm#nikola" target="_top"><img src="img/karno.jpg" width="80" height="110" title="НИКОЛА ЛЕОНАР САДИ КАРНО" align="center"></a>&nbsp;
+<a href="biograf.htm#albert1" target="_top"><img src="img/maykelson.jpg" width="80" height="110" title="АЛЬБЕРТ АБРАХАМ МАЙКЕЛЬСОН" align="center"></a>&nbsp;
+<a href="biograf.htm#hristian" target="_top"><img src="img/guigens.jpg" width="80" height="110" title="ХРИСТИАН ГЮЙГЕНС" align="center"></a>&nbsp;
+<a href="biograf.htm#ogusten" target="_top"><img src="img/frenel.jpg" width="80" height="110"title="ОГЮСТЕН ЖАН ФРЕНЕЛЬ" align="center"></a>&nbsp;
+<a href="biograf.htm#tomas" target="_top"><img src="img/ung.jpg" width="80" height="110" title="ТОМАС ЮНГ" align="center"></a>&nbsp;
+<a href="biograf.htm#nils" target="_top"><img src="img/bor.jpg" width="80" height="110" title="НИЛЬС БОР" align="center"></a>&nbsp;
+<a href="biograf.htm#kennet" target="_top"><img src="img/vilson.jpg" width="80" height="110" title="КЕННЕТ ГЕДДЕС ВИЛЬСОН" align="center"></a>&nbsp;
+<br/><br/>
+<font>Да здравствуют передовики науки!</font>
+</div>
+</div>
+
+<br/><center><h1>БИОГРАФИИ ЗНАМЕНИТЫХ ФИЗИКОВ</h1></center>
+
+<div id="news">
+<h2 id="issak">ИССАК НЬЮТОН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Гениальный английский физик, математик и астроном Исаак Ньютон (1642 – 1727) 
+сформулировал три основных закона классической механики, открыл закон всемирного тяготения и разработал закономерности движения небесных 
+тел в Солнечной системе, заложив тем самым основы небесной механики.<br/>
+
+<IMG SRC="img/newton.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ньютон значительно усовершенствовал методы математических вычислений, открыл наряду 
+с Лейбницем дифференциальное и интегральное исчисления. Он выполнил ряд интереснейших 
+работ по оптике, положил начало современной спектроскопии, создал первые зеркальные телескопы. И это ещё далеко не все его великие свершения.
+Однако мало кто знает, что Ньютон около тридцати лет своей жизни отдал алхимии и поискам 
+философского камня, 
+способного превратить любой металл в золото. 
+У Ньютона было ещё одно увлечение, отнимавшее у него, как и алхимические опыты, не мало времени. На протяжении многих лет он занимался анализом текстов Библии.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;К концу жизни Ньютон охватил всю физику и механику, внёс свой вклад в учения о теплоте, 
+свете и звуке, высказал ряд блестящих идей в области электрических и магнитных явлений. 
+Система мира, созданная им, оказалась той отправной точкой, от которой, 
+в сущности, и началось поступательное движение современной науки.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Исаак Ньютон вышел далеко за пределы своей эпохи и в то же время оставался сыном 
+своего века. Его алхимические опыты и богословские изыскания свидетельствуют о 
+многогранности его личности, о широте интересов этого удивительного человека.<br/></P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://x-files-msk.ru/issak-nyuton-neizvestnyy-nyuton" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="galileo">ГАЛИЛЕО ГАЛИЛЕЙ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Галилео Галилей (1564-1642) — итальянский ученый, физик,  механик и астроном, 
+один из основоположников естествознания; поэт, филолог и критик. Боролся против 
+схоластики, считал основой познания опыт. Заложил основы современной механики: выдвинул 
+
+<IMG SRC="img/galileo.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+идею об относительности движения, установил законы инерции, свободного падения и 
+движения тел по наклонной плоскости, сложения движений; открыл изохронность
+колебаний маятника; первым исследовал прочность балок и создал множество различных изобретений.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Галилео Галилей построил 
+телескоп с 32-кратным увеличением и открыл горы на Луне, 4 спутника Юпитера, фазы у 
+Венеры, пятна на Солнце. Активно защищал гелиоцентрическую систему мира, за что был 
+подвергнут суду инквизиции (1633), вынудившей его отречься от учения Николая Коперника. 
+До конца жизни Галилей считался «узником инквизиции» и принужден был жить на своей вилле 
+Арчетри близ Флоренции. В 1992 папа Иоанн Павел II объявил решение суда 
+инквизиции ошибочным и реабилитировал Галилея.</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://to-name.ru/biography/galileo-galilej.htm" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+
+<div id="news">
+<h2 id="aristotel">АРИСТОТЕЛЬ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Аристотель (лат. Aristotle), древнегреческий ученый, философ, основатель Ликея, 
+учитель Александра Македонского. Отец Аристотеля — Никомах, был врачом при дворе 
+македонских царей. Он дал сыну хорошее домашнее образование, знание античной медицины. 
+Влияние отца сказалось 
+на интересах Аристотеля, его занятиях анатомией.
+<br/>
+
+<IMG SRC="img/aristotel.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Аристотель основал свою школу в Афинах. Местом школы стал 
+гимнасий неподалеку от храма Апполона Ликейского, поэтому школа Аристотеля получила 
+название Ликей. Читать лекции Аристотель любил, прогуливаясь с учениками по дорожкам 
+сада. Так появилось еще одно название Ликея — перипатетическая школа 
+(от перипато — прогулка). Представители перипатетической школы помимо философии занимались и конкретными науками 
+(историей, физикой, астрономией, географией).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Последние месяцы жизни Аристотель провел на острове Эвбея.
+В трудах Аристотеля отразился весь научный и духовный опыт Древней Греции, 
+он стал эталоном мудрости, оказал неизгладимое влияние на ход развития человеческой 
+мысли.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://aphorism-list.com/biography.php?page=aristotel" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+
+<div id="news">
+<h2 id="jeims">ДЖЕЙМС ДЖОУЛЬ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джеймс Прескотт Джоуль  — английский физик, пивовар.
+Джоуль изучал природу тепла и обнаружил её связь с механической работой. 
+
+<IMG SRC="img/joul.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Это привело к идее сохранения энергии, что, в свою очередь, привело к разработке первого 
+закона термодинамики. В честь Джоуля названа единица измерения энергии — джоуль. 
+Он работал с лордом Кельвином над абсолютной шкалой 
+температуры, делал наблюдения над магнитострикцией, открыл связь между током, текущим через проводник с определённым сопротивлением и 
+выделяющимся при этом количеством теплоты, названный законом Джоуля.
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изучая тепловые действия токов, Дж. Джоуль в 1843 году пришёл к убеждению в существовании 
+предсказанной Юлиусом Майером определённой зависимости между работой и количеством теплоты и нашёл численное соотношение между 
+этими величинами — механический эквивалент тепла.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="andre">АНДРЭ-МАРИ АМПЕР</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Математика, механика и физика
+обязаны Амперу важными исследованиями. Его основные физические работы выполнены в 
+области электродинамики. В 1820 он установил правило для определения направления действия 
+магнитного поля на магнитную стрелку, известное ныне как правило Ампера; провёл множество 
+
+<IMG SRC="img/amper.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+опытов по исследованию взаимодействия между магнитом и электрическим током; для этих целей
+ создал ряд приборов; обнаружил, что магнитное поле Земли влияет на движущиеся проводники 
+с током. В том же году открыл взаимодействие между электрическими токами, сформулировал 
+закон этого явления (закон Ампера), развил теорию магнетизма, предложил использовать 
+электромагнитные процессы для передачи сигналов.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В 1822 Ампером был открыт магнитный эффект соленоида 
+(катушки с током), 
+откуда следовала идея эквивалентности соленоида постоянному магниту. Также им было 
+предложено усиливать магнитное поле с помощью железного сердечника, помещаемого внутрь 
+соленоида. Идеи Ампера были изложены им в работах «Свод электродинамических наблюдений».</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="nikolai">НИКОЛАЙ КОПЕРНИК</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Польский астроном, 
+создатель гелиоцентрической системы мира, реформатор астрономии. Р. в Торуне.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Коперник глубоко изучил древнюю астрономию, в частности "Алмагест" Птолемея, где была изложена геоцентрическая система мира 
+(видимые движения планет представлялись комбинацией нескольких круговых движений, а 
+Земля считалась неподвижным центром).
+Высоко оценивая систему Птолемея как выдающееся достижение античной астрономии, 
+
+<IMG SRC="img/kopernik.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Коперник еще во время пребывания в Лидзбарке убедился в ее несостоятельности. Он разработал 
+гелиоцентрическую систему мира, основные положения которой были высказаны им следующим образом:
+ "Все замечаемые нами у Солнца движения не свойственны ему, но принадлежат Земле и нашей сфере, 
+вместе с которой мы вращаемся вокруг Солнца, как и всякая другая планета; 
+таким образом, Земля имеет несколько движений. Кажущиеся прямые и попятные движения планет принадлежат не им, 
+но Земле. Таким образом, одно это ее движение достаточно для объяснения большого числа видимых в небе неравномерностей". 
+Эти положения приведены Коперником в сочинении "Малый комментарий" (рукописный список ок. 1515). 
+Закономерности движения планет, их прямые и попятные движения, казавшиеся ранее загадочными, случайными, 
+получили в системе Коперника простое объяснение.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="allesandro">АЛЛЕСАНДРО ВОЛЬТА</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Итальянский физик, 
+химик и физиолог, один из основоположников учения об электричестве.<br>
+
+<IMG SRC="img/volt.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Алессандро Вольта (Alessandro Volta) (18 февраля 1745, 
+Комо, Италия - 5 марта 1827, там же), итальянский естествоиспытатель, физик, химик и физиолог. 
+Его важнейшим вкладом в науку явилось изобретение принципиально нового источника постоянного тока, сыгравшее 
+определяющую роль в дальнейших исследованиях электрических и магнитных явлений. 
+В честь него названа единица разности потенциалов электрического поля - вольт. 
+В своей жизни он сделал ряд блестящих открытий и  изобретений.<br/
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.allbiograf.ru/nauka/fiziki/30-volta-alessandro" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="maikl">МАЙКЛ ФАРАДЕЙ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Майкл Фарадей-английский физик, химик и физико-химик, основоположник учения об электромагнитном поле, 
+член Лондонского королевского общества (1824). В период до 1821 Фарадей опубликовал около 40 научных работ, главным образом по химии. В 1824 ему первому удалось получить хлор в жидком состоянии, а в 1825 г он впервые синтезирует гексахлоран — 
+вещество, на основе которого в XX веке изготовлялись различные инсектициды. Постепенно 
+его экспериментальные исследования всё более переключались в область физики. После 
+
+
+<IMG SRC="img/faradei.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+
+открытия в 1820 Х.Эрстедом магнитного действия электрического тока Фарадея увлекла 
+проблема связи между электричеством и магнетизмом В 1822 в его лабораторном дневнике 
+появилась запись: «Превратить магнетизм в электричество». Рассуждения Фарадея были 
+следующими: если в опыте Эрстеда электрический ток обладает магнитной силой, а, по 
+убеждению Фарадея, все силы взаимопревращаемы, то и магниты должны возбуждать 
+электрический ток. В том же году им была предпринята попытка найти поляризующее 
+действие тока на свет. Пропуская поляризованный свет через воду, находящуюся между 
+полюсами магнита, он пытался обнаружить 
+деполяризацию света, однако опыт дал отрицательный результат. В 1832 году Фарадей открывает электрохимические законы, которые ложатся в основу нового раздела науки — электрохимии, имеющего сегодня огромное 
+количество технологических приложений. Также Майкл Фарадей активно изучал религию.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.allbiograf.ru/nauka/fiziki/30-volta-alessandro" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="genrih">ГЕНРИХ ГЕРЦ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Генрих Герц — немецкий физик.
+Окончил Берлинский университет, где его учителями были Герман фон Гельмгольц и 
+Густав Кирхгоф. С 1885 по 1889 гг. был профессором физики Университета в Карлсруэ. С 1889 года — 
+профессор физики университета в Бонне. Основное достижение — экспериментальное подтверждение электромагнитной теории света Джеймса Максвелла. 
+
+<IMG SRC="img/gerc.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Герц доказал существование электромагнитных волн. Он подробно исследовал отражение, интерференцию, дифракцию и поляризацию электромагнитных волн, доказал, 
+что скорость их распространения совпадает со скоростью распространения света, и что свет представляет собой не что иное, как разновидность 
+электромагнитных волн. Он построил электродинамику движущихся тел, исходя из гипотезы о 
+том, что эфир увлекается движущимися телами. Однако его теория электродинамики не 
+подтвердилась опытами и позднее уступила место электронной теории Хендрика Лоренца. 
+Результаты, полученные Герцем, легли в основу развития радио.
+В 1886—87 гг. Герц впервые наблюдал и дал описание внешнего фотоэффекта. Герц разрабатывал теорию резонансного контура, изучал свойства катодных лучей, исследовал влияние 
+ультрафиолетовых лучей на электрический разряд. В ряде работ по механике дал теорию удара упругих шаров, рассчитал время соударения
+и т. д. В книге «Принципы механики» (1894) дал вывод общих теорем механики и её математического аппарата, исходя из единого принципа (принцип Герца).
+Именем Герца с 1933 года называется единица измерения частоты Герц, которая входит в международную метрическую систему единиц СИ.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="georg">ГЕОРГ ОМ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Родился 16 марта 1787 г. в городе Эрлангене. В 1811 г. окончил 
+Эрлангенский университет. Работал преподавателем математики и физики 
+в различных гимназиях. В 1833 г. стал профессором Нюрнбергской высшей 
+политехнической школы и вскоре был назначен её ректором.<br/>
+
+<IMG SRC="img/om.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;С 1849 по 1852 г. — ректор Мюнхенского университета. Изучая связь 
+электричества с магнетизмом, Ом в 1826 г. открыл один из важнейших 
+законов — количественный закон цепи электрического тока. Учёный 
+воспользовался методом французского инженера и физика Ш. О. Кулона,
+ но несколько изменил его. Над проволокой с током он поместил 
+магнитную стрелку, подвешенную на нити. При закручивании она 
+удерживала стрелку в равновесии, а углом кручения измерялась сила 
+тока.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Помимо электричества Ом занимался акустикой, оптикой, 
+кристаллооптикой. Он высказал мысль о сложном составе звука и 
+экспериментально установил, что человеческое ухо воспринимает как 
+простой тон лишь тот звук, который вызван простым синусоидальным 
+колебанием. Остальные звуки воспринимаются как основной тон и
+добавочные обертоны. Открытие получило название акустического 
+закона Ома.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-roberta-bojlya" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="amodeo">АМЕДЕО АВОГАДРО</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<IMG SRC="img/avogadro.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Граф Лоренцо Романо Амедео Карло Авогадро родился 9 августа 1776 года.
+Основные работы Амедео Авогадро посвящены молекулярной физике. В
+1811 году он выдвинул молекулярную гипотезу строения вещества,
+установил один из газовых законов, названный его именем. Согласно 
+этому закону в одинаковых объемах газов при одинаковых значениях температуры и давления содержится одинаковое 
+количество молекул. Исходя из этого, ученый разработал метод определения молекулярного и атомного весов.
+Именем Авогадро названа универсальная постоянная — число молекул в одном моле идеального газа (число Авогадро). 
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.personbio.com/view_post.php?id_info=1244" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="roberto">РОБЕРТО БОЙЛЬ</h2>
+</div>
+<P>
+
+<IMG SRC="img/boil.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Родился 25 января 1627 г. в замке Лисмор (графство Уотерфорд, Ирландия).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1660 г. Бойль усовершенствовал воздушный насос, изобретённый немецким физиком О. фон Герике, и поставил с его помощью ряд экспериментов: продемонстрировал упругость воздуха, определил его удельный вес и т. д. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1662 г. открыл закон изменения объёма воздуха с изменением давления, который независимо от него установил в 1676 г. французский физик Э. Мариотт (закон Бойля — Мариотта).
+Среди других работ Бойля — исследование упругости твёрдых тел, поведения воды при затвердевании, гидростатических эффектов.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-roberta-bojlya" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="edm">ЭДМ МАРИОТТ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Эдм Мариотт – французский физик, один из основателей (1666) и первых
+ членов Парижской академии наук. Родился в Дижоне. Был настоятелем
+ монастыря Святого Мартина близ Дижона.
+
+<IMG SRC="img/mariott.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Научные работы относятся к механике, теплоте, оптике. В 1676 г. 
+установил закон изменения объёма данной массы газа от давления при
+ постоянной температуре (закон Бойля – Мариотта; этот закон был 
+открыт и опубликован в 1662 г.  Р. Бойлем). Предсказал разнообразные 
+применения этого закона, в частности расчёт высоты местности по 
+данным барометра. Описал многочисленные опыты п о изучению течения 
+жидкостей по трубам; экспериментально подтвердил формулу Э. 
+Торричелли относительно скорости истечения жидкости. Исследовал
+высоту подъёма фонтанов и составил таблицы зависимости высоты 
+подъёма от диаметра отверстия. Изучал столкновение упругих тел, 
+колебания маятника. В «Трактате об ударе или соударении тел» (1678) 
+обобщил исследования в этой области. Доказал увеличение объёма воды
+при замерзании. Обнаружил в 1666 г. слепое пятно в глазу, исследовал цвета, в частности цветные кольца вокруг Солнца и Луны, изучал радугу, дифракцию света, лучистую теплоту, показал различие между тепловыми и световыми лучами. Изготовил ряд различных физических приборов.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://physchem.narod.ru/Source/History/Persones/Mariotte.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="yatt">ДЖЕЙМС УАТТ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Родился 19 января 1736 г. в шотландском городке Гринок 
+(30 км от Глазго).<br/>
+
+<IMG SRC="img/vatt.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Между 1764 и 1784 гг. Уатт работал над созданием теплового двигателя.
+ Конструкция его была более совершенной по сравнению с изобретениями 
+других европейских учёных. Машина действовала за счёт того, что пар 
+из котла поступал в цилиндр и, расширяясь, заставлял двигаться 
+поршень. Одновременно Уатт сумел повысить её мощность, предусмотрев 
+для выхода пара специальное охлаждающее устройство — конденсатор.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Разработанный Уаттом шарнирный механизм превратил паровую 
+машину в универсальный двигатель для прядильных и ткацких станков, 
+позволил применять её на фабриках и заводах, в горном деле. 
+Она заменяла труд десятков людей, которым раньше приходилось 
+приводить станки в движение вручную. Это ускорило развитие английской
+ промышленности.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Другие изобретения Уатта (в частности, копировальный пресс, 
+приспособление для прокладки каналов) также принесли большую пользу.
+</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-dzhejmsa-uatta" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="gey">ЖОЗЕФ-ЛУЙ ГЕЙ-ЛЮССАК</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Французский физик и химик Жозеф Луи Гей-Люссак родился  в Сен-Леонар-де-Нобла (департамент Верхняя Вьенна).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Научные работы Гей-Люссака относятся к самым разным областям химии. В 1802 г. независимо от Джона Дальтона 
+Гей-Люссак открыл один из газовых законов – закон теплового расширения газов, позже названный его именем.
+ В 1804 г. он совершил два полёта на воздушном шаре (поднявшись на высоту 4 и 7 км), во время которых выполнил 
+ряд научных исследований, в частности измерил температуру и влажность воздуха. В 1805 г. совместно с немецким 
+естествоиспытателем Александром фон Гумбольдтом установил состав воды, показав, что соотношение водорода и 
+кислорода в её молекуле равно 2:1. В 1808 г. Гей-Люссак открыл закон объёмных отношений, который представил 
+на заседании Философско-математического общества: «При взаимодействии газов их объёмы и объёмы газообразных 
+продуктов соотносятся как простые числа». В 1809 г. он провел серию опытов с хлором, подтвердивших вывод 
+Гэмпфри Дэви, что хлор – это элемент, а не кислородсодержащее соединение, а в 1810 г. установил элементарный 
+характер калия и натрия, затем фосфора и серы. В 1811 г. Гей-Люссак совместно в французским химиком-аналитиком 
+Луи Жаком Тенаром значительно усовершенствовал метод элементного анализа органических веществ.<br/>
+
+<IMG SRC="img/lussak.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1811 г. Гей-Люссак начал обстоятельное исследование синильной кислоты, установил 
+её состав и провёл аналогию между нею, галогеноводородными кислотами и сероводородом. 
+Полученные результаты привели его к концепции водородных кислот, опровергающей чисто 
+кислородную теорию Антуана Лорана Лавуазье. В 1811-1813 гг. Гей-Люссак установил аналогию 
+между хлором и иодом, получил иодистоводородную и иодную кислоты, монохлорид иода. В 1815 г. 
+он получил и изучил «циан» (точнее говоря, дициан), что послужило одной из предпосылок формирования теории
+ сложных радикалов. <br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Гей-Люссак работал во многих государственных комиссиях и 
+составлял по поручению правительства доклады с рекомендациями по
+ внедрению научных достижений в промышленность. Прикладное значение имели и 
+многие его исследования. Так, его метод определения содержания этилового спирта
+ был положен в основу практических способов определения крепости алкогольных напитков.
+ Гей-Люссак разработал в 1828 г. методику титриметрического определения кислот и щелочей, а 1830 г.
+ – объёмный способ определения серебра в сплавах, применяющийся и в настоящее время. Созданная им конструкция
+ башни для улавливания оксидов азота в дальнейшем нашла применение в производстве серной кислоты. В 1825 г. Гей-Люссак 
+совместно с Мишелем Эженом Шёврелем получили патент на производство стеариновых свечей.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.chemistry.narod.ru/persones/Gay-Lussac.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="zak">ЖАК АЛЕКСАНДР СЕЗАР ШАРЛЬ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Жак Александр Сезар Шарль – французский физик, математик и изобретатель. 
+Член Парижской Академии наук (с 1795), её президент (1816). Родился в Божанси. Образование получил самостоятельно.
+В молодости переехал в Париж, где был канцелярским служащим в министерстве финансов. После 1795 г. – профессор
+экспериментальной физики в Консерватории искусств и ремесел в Париже.<br/>
+
+<IMG SRC="img/sharl.png" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+Исследовал расширение газов, установил (1787) закон изменения давления данной массы идеального газа
+с изменением температуры при постоянном объеме (закон Шарля). Сразу же после братьев Жозефа-Мишеля и
+Жака-Этьенна Монгольфье построил (1783) воздушный шар из прорезиненной ткани, наполненный водородом; 
+осуществил полет на этом шаре. Воздушный шар такого типа получил по имени изобретателя название  шарльер, в
+противоположность  монгольфьеру. Изобрел ряд приборов. Первый предпринял попытку получения фотографических изображений. 
+Впервые показал, что функцию, определенную двумя или большим числом законов, например ломаную, составленную из двух отрезков прямых, 
+можно всегда выразить одним общим законом (1785). Распространил на разностные уравнения понятие особого интеграла.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://physchem.narod.ru/Source/History/Persones/Charles.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+
+<div id="news">
+<h2 id="blez">БЛЕЗ ПАСКАЛЬ</h2>
+</div>
+<P>
+<IMG SRC="img/paskal.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Родился в семье одного из лучших юристов города Клермон-Ферран. Отец, глубоко интересуясь математикой, привил любовь к этой науке своему сыну, 
+который впоследствии стал одним из крупнейших математиков и физиков Франции. Невероятные успехи Блеза до сих 
+пор считают ярким проявлением таланта, граничащего с гениальностью.
+</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-bleza-paskalya" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<br/><br/>
+
+
+<div id="news">
+<h2 id="uilyam">УИЛЬЯМ КЕЛЬВИН</h2>
+</div>
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Уильям Кельвин (Уильям Томсон, лорд Кельвин) появился на свет 26 июня 1824 года в Белфасте (Северная Ирландия).
+Его предками были британские фермеры. Отец — известный математик Джемс Томсон, автор ряда учебников.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Уильям Кельвин является автором многих теоретических работ по физике, он изучал явления электрического тока, 
+динамической геологии. Его работы помогли решить многие задачи электростатики и термодинамики (в частности, ему 
+принадлежат две формулировки второго принципа термодинамики).
+
+<IMG SRC="img/kelvin.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Вместе с Джеймсом Джоулем Кельвин проводил опыты над охлаждением газов и сформулировал 
+теорию действительных газов.
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1850-х годах Уильям интересовался вопросами телеграфии и помог организовать
+ телеграфическую связь через Атлантический океан. Он также изобрел или усовершенствовал
+ многие технические инструменты: лот и компас, зеркальный гальванометр, сифон-рекордер, 
+электрометры, «ампер-весы». Его имя получила абсолютная термодинамическая температурная шкала.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="sharl">ШАРЛЬ ОГЮСТЕН КУЛОН </h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Шарль Огюстен Кулон (14.06.1736 - 23.08.1806) - французский физик и военный инженер, член Парижской Академии наук (1803).
+ Родился в Ангулеме. Окончил (1761) школу военных инженеров и все время находился на военной службе. <br/>
+
+<IMG SRC="img/kulon.png" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Работы Кулона относятся к электричеству, магнетизму, прикладной механике. В 1781 году он сформулировал 
+законы трения, качения и скольжения. Исследуя кручение шелковых и металлических нитей, Кулон установил 
+законы упругого кручения, в частности определил, что сила закручивания нити зависит от материала, из 
+которого она сделана, пропорциональна углу закручивания и четвертой степени диаметра нити и обратно 
+пропорциональна ее длине. Это имело важное значение, поскольку давало новый, очень чувствительный метод 
+измерения силы. Исходя из этого, в 1784 году Кулон построил прибор для измерения силы - крутильные весы. 
+С его помощью в 1785 году ученый экспериментально установил основной закон электростатики (закон Кулона), 
+распространив его в 1788 году на взаимодействие точечных магнитных полюсов. Выдвинул гипотезу магнетизма, 
+согласно которой магнитные жидкости не свободны или не могут течь, как их электрические аналоги, и связаны 
+с отдельными молекулами. Кулон предположил, что каждая молекула в процессе намагничивания становится поляризованной.
+Предположил, что каждая молекула в процессе намагничивания становится поляризованной. Сконструировал магнитометр (1785).
+Кулон заложил основы электро- и магнитостатики. Пытался 
+экспериментально измерить (1796) трение в жидкости по затуханию колебаний движущегося в ней маятника и
+определить зависимость трения от скорости.
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.c-cafe.ru/days/bio/000121.php" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="nikola">НИКОЛА ТЕСЛА</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Никола Тесла (серб. Никола Тесла; 10 июля 1856, Смиляны, Австро-Венгрия, ныне в Хорватии 
+— 7 января 1943, Нью-Йорк, США) — физик, инженер, изобретатель в области электротехники и радиотехники. <br/>
+
+<IMG SRC="img/tesla.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Широко известен благодаря своему научно-революционному вкладу в изучение свойств электричества и магнетизма в 
+конце XIX — начале XX веков. Патенты и теоретические работы Теслы сформировали базис для современных устройств,
+ работающих на переменном токе, многофазных систем и электродвигателя, позволивших совершить второй этап промышленной революции. <br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Современники-биографы считали Теслу «человеком, который изобрёл XX век» и «святым заступником» современного электричества». 
+После демонстрации радио и победы в «Войне токов» Тесла получил повсеместное признание как выдаюmщийся инженер-электрик. <br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ранние работы Теслы проложили путь современной электротехнике, его открытия раннего периода имели инновационное значение.
+В США по известности Тесла мог конкурировать с любым изобретателем или учёным в истории или популярной культуре.</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://iqrate.com/biography/biografiya-tesly-nikoly/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="robert">РОБЕРТ ГУК</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Разносторонний учёный и изобретатель, Гук затронул в своих работах многие разделы естествознания. В 1659 построил воздушный насос, 
+совместно с Х. Гюйгенсом установил (около 1660) постоянные точки термометра — таяния льда и кипения воды. Усовершенствовал барометр, зеркальный телескоп, 
+применил зрительную трубу для измерения углов, сконструировал прибор для измерения силы ветра, машину для деления круга и другие приборы.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Большое значение имело открытие Г. в 1660 закона пропорциональности между силой, приложенной к упругому телу, и его деформацией (см. Гука закон). 
+Гук высказал идею, что все небесные тела тяготеют друг к другу и дал общую картину движения планет. Он предвосхитил закон всемирного тяготения И. Ньютона;
+в 1679 высказал мнение, что если сила притяжения обратно пропорциональна квадрату расстояния, то планета должна двигаться по эллипсу. Гук придерживался волновой теории 
+света и оспаривал корпускулярную; теплоту считал результатом механического движения частиц вещества.<br/>
+
+
+<IMG SRC="img/guk.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+С помощью усовершенствованного им микроскопа Гук наблюдал структуру растений и дал чёткий рисунок, впервые показавший клеточное строение пробки (термин «клетка» был введён Г.),
+а также описал строение клеток бузины, укропа, моркови и др.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Гук высказывал мысли об изменении земной поверхности, которое, по его мнению, повлекло изменение фауны. Гук считал, что окаменелости — это остатки прежде живших существ,
+по которым можно воспроизвести историю Земли.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Гук был известен также как архитектор. По его проектам было построено несколько зданий, главным образом в Лондоне.</p>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.peoples.ru/science/physics/robert_guk/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="evengelista">ЭВЕНДЖЕЛИСТА ТОРРИЧЕЛЛЛИ</h2>
+</div><P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Итальянский математик и физик Эванджелиста Торричелли родился в Фаэнце в небогатой семье; воспитывался у дяди, бенедиктинского монаха. Учился в иезуитском колледже, а затем 
+получил математическое образование в Риме у Б. Кастелли, друга и ученика Г. Галилея. В 1641 г. Торричелли переехал в Арчетри, где помогал Галилею в обработке его трудов. С 1642 г.,
+после смерти Галилея, придворный математик великого герцога Тосканского и одновременно профессор математики Флорентийского университета.<br/>
+
+<IMG SRC="img/torrichelli.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Наиболее известны труды Торричелли в области пневматики и механики. В 1643 г. он показал, что воздух имеет вес и что насос не может вытянуть воду на высоту более 10 м. В 1644 г. 
+развил теорию атмосферного давления, доказал возможность получения так называемой «торричеллиевой пустоты» (тем самым нанеся удар по аристотелевскому утверждению «природа боится пустоты») 
+и изобрёл ртутный барометр. Обнаружил изменение высоты ртутного столба в зависимости от погодных условий, объяснил ветер изменениями атмосферного давления. Открытие и исследование атмосферного
+ давления вызвало большой резонанс среди учёных-современников.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В своём основном труде по механике «О движении свободно падающих и брошенных тяжёлых тел» (1641) Торричелли развивал идеи Галилея о движении, сформулировал принцип движения центров тяжести, 
+установил параболичность траектории тел, брошенных под углом к горизонту, доказал другие теоремы баллистики. Торричелли заложил основы гидравлики, вывел формулу для скорости истечения идеальной
+ жидкости из сосуда (формула Торричелли). Ему принадлежат также работы по математике (в частности, развил метод «неделимых») и баллистике, усовершенствованию оптических приборов, шлифовке линз. 
+Усовершенствовал воздушный термоскоп Галилея, переделав его в спиртовой термометр.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://physchem.narod.ru/Source/History/Persones/Torricelli.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="nagaoka">НАГАОКА ХАНТАРО</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Нагаока Хантаро – японский физик. Р. в Нагасаки. Окончил Токийский ун-т (1887), там же работал до 1926 г. (с 1896 – профессор и с 1916 – директор Института физики при университете).
+В 1917-1946 гг. работал также в Институте физических и химических исследований (Токио), в 1920-1939 гг. возглавлял отдел физики Национального исследовательского совета Японии, в 1931-1934 – президент университета в Осаке.<br/>
+
+
+<IMG SRC="img/hantaro.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Член Японской АН, её президент в 1939-1948 гг. Иностранный член АН СССР (1930).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Научные работы Нагаоки в области физики посвящены магнетизму, атомной и ядерной физике, оптике, спектроскопии, математической физике, геофизике.
+ В 1904 г. он предложил  модель атома, согласно которой последний состоит из положительно заряженного шара, занимающего основную часть объёма атома, вокруг которого вращается кольцо, 
+содержащее электроны («атом типа Сатурна»). Однако модель Нагаоки не обратила на себя внимания физиков, хотя ее в определенной мере можно считать предшественницей ядерной модели Э. Резерфорда.</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://physchem.narod.ru/Source/History/Persones/Nagaoka.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="ernest">ЭРНЕСТ РЕЗЕРФОРД</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Эрнест Резерфорд (англ. Ernest Rutherford; 30 августа 1871, Спринг Грув — 19 октября 1937, Кембридж) — британский физик новозеландского происхождения.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Известен как «отец» ядерной физики, создал планетарную модель атома. Лауреат Нобелевской премии по химии 1908 г.<br/>
+
+<IMG SRC="img/reserford.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Открыл альфа- и бета-излучение, радон и множество изотопов. Открыл радиоактивное превращение химических элементов, создал теорию радиоактивного распада, расщепил атом азота, 
+обнаружил протон. Доказал, что альфа-частица — ядро гелия.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Поставив опыт по рассеянию альфа-частиц на металлической фольге, вывел формулу Резерфорда. Исходя из её анализа, сделал вывод о существовании в атоме массивного ядра.
+Создал планетарную теорию строения атомов. По ней, атом состоит из ядра, находящегося в центре, и электронов, вращающихся по орбитам вокруг ядра.</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="petr">ПЕТР КАПИЦА</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Родился 8 июля 1894 г. в Кронштадте в семье военного инженера.  Первая научная работа (посвящённая получению тонких кварцевых нитей) вышла в 1916 г. в «Журнале русского физико-химического общества».
+В 1921 году стал директором лаборатории Монда при Королевском научном обществе. Его работы 20-х гг. XX в. посвящены ядерной физике, физике и технике сверхсильных магнитных полей, физике и технике низких температур,
+электронике больших мощностей, физике высокотемпературной плазмы.<br/>
+
+
+<IMG SRC="img/kapica.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Капица постоянно занимался исследовательской работой. Вместе с Н. Н. Семёновым он предложил метод определения магнитного момента атома. 
+Капица первым в истории науки поместил камеру Вильсона в сильное магнитное поле и наблюдал искривление траектории движения альфа-частиц. Он установил закон линейного 
+возрастания электрического сопротивления ряда металлов в зависимости от напряжённости магнитного поля (закон Капицы). Им созданы новые методы сжижения водорода и гелия;
+разработан способ сжижения воздуха с помощью турбодетандера.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Капица развил общую теорию электронных приборов магнетронного типа, получил генераторы непрерывного действия — планотрон и ниготрон.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1959 г. экспериментально обнаружил образование высокотемпературной плазмы в высокочастотном разряде, предложил схему термоядерного реактора. Заслуги учёного были высоко оценены советским и мировым научным сообществом.
+Капица дважды стал Героем Социалистического Труда (1945,1974 гг.) и дважды — лауреатом Государственной премии СССР (1941,1943 гг.).
+В 1978 г. ему была вручена Нобелевская премия по физике.
+Умер 8 апреля 1984 г. в Москве.</P>
+
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-petra-kapicy" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="hans">ХАНС ЭРСТЕД</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+За блестяще защищенную диссертацию по медицине Эрстед, едва закончив обучение,
+получил степень доктора философии. Он также получает звание фармацевта высшей 
+ступени и после выпуска устраивается временным управляющим одной из столичных аптек.
+Впрочем тяга к преподаванию приводит его в университет, где первые три года ему приходится
+доказывать свою профессиональную состоятельность, читая несколько лекций в неделю без оплаты.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1806 г. он становится профессором физики, в функции которого входила обязанность 
+экзаменовать кандидатов по философии, а также преподавать физику и химию студентам-медикам и фармацевтам. После этого назначения физика 
+была признана полноправной дисциплиной в Копенгагенском университете.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+После открытия в 1820 году действия электрического тока на магнитную стрелку Эрстед стал 
+всемирно признанным ученым. Через четыре года он создал Общество по распространению естествознания, 
+в 1829 стал директором организованной по его инициативе Политехнической школы в Копенгагене.<br/>
+
+<IMG SRC="img/ersted.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+15 февраля 1820 года Эрстед читал лекцию по электричеству. Лекция сопровождалась демонстрациями опытов.
+На столе находились источник тока, провод, замыкающий его, зажимы, а также компас. Когда ученый замыкал цепь,
+стрелка компаса вздрагивала и поворачивалась. При размыкании цепи стрелка возвращалась в исходное положение. 
+Это было первое очень простое экспериментальное подтверждение связи электричества и магнетизма.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В июле 1820 года Эрстед повторил свой эксперимент, применив более мощные батареи источников тока. 
+Ему удалось обнаружить, что «магнитный эффект электрического тока имеет круговое движение вокруг него», 
+ведь сила действующая между магнитом и проволокой, была направлена не по прямой, соединяющей их, а ей перпендикулярно.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Он также протестировал действие проводников из различных металлов на стрелку. Для этого взял проволоки из платины, золота, 
+серебра, латуни, свинца, железа. Металлы, которые никогда не обнаруживали магнитных свойств, приобретали их, когда через них протекал электрический ток.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Эрстед стал экранировать стрелку от провода стеклом, деревом, смолой, гончарной глиной, камнями, диском электрофора. 
+кранирование не состоялось. Стрелка упорно отклонялась. Последовал вывод: «Такая передача действия сквозь различные вещества не наблюдалась
+ у обычного электричества и электричества вольтаического».</P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.myenergy.ru/kids/persons/oersted/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="aleksandr">АЛЕКСАНДР ЭЙХЕНВАЛЬД</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Русский физик. Один из инициаторов воссоздания МВЖК.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Эйхенвальд считался одним из лучших педагогов-методистов и непревзойдённым мастером лекционных демонстраций. 
+Он — автор учебников, написанных на основе курсов, читавшихся им в учебных заведениях Москвы: «Электричество» 
+(М., 1899; 8-е издание — М.;Л.,1933; переведено на немецкий (1928) и украинский (1938) языки), «Теоретическая физика» в 3-х т.(2-е изд. — М.;Л.,1932—1934)),
+
+<IMG SRC="img/eihenvald.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+«Акустика и оптика» (М., 1914; 2-е изд. — М., 1916). Число научных работ Эйхенвальда невелико, но они относятся к принципиально важным проблемам физики.
+Одна из работ касается вопроса о магнитном поле движущихся электрически заряженных тел:в работе «О магнитном действии тел, движущихся в электростатическом поле» 
+он установил, что магнитное поле конвекционного тока и по величине, и по направлению тождественно с полем тока проводимости; им была доказана эквивалентность токов 
+смещения и токов проводимости («опыт Эйхенвальда»); проведя эксперименты, в которых оба диска конденсатора вместе с помещённым между ними диэлектриком вращались как 
+единое целое, Эйхенвальд показал, что верна теория Лоренца, согласно которой эфир не участвует в движении тел. Этот результат согласовался и с созданной вскоре теорией
+относительности. Другой цикл работ Эйхенвальда был связан с анализом световых волн:в теоретическом исследовании «О движении энергии при полном внутреннем отражении» (1908) 
+Эйхенвальдом был решён вопрос о направлении колебаний световых волн при полном внутреннем отражении, уточнена теорию Друде;
+полученные результаты были представлены в виде диаграмм, вошедших в научную и учебную литературу. В работе «О поле световых волн при отражении и преломлении» 
+(1912) он распространил свой метод на различные случаи отражения и преломления света.
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%85%D0%B5%D0%BD%D0%B2%D0%B0%D0%BB%D1%8C%D0%B4,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="jeims">ДЖЕЙМС МАКСВЕЛЛ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Английский физик, создатель классической электродинамики, один из основоположников статистической физики, организатор и первый директор (с 1871) Кавендишской лаборатории. 
+
+<IMG SRC="img/maksvell.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Развивая идеи М. Фарадея, создал теорию электромагнитного поля (уравнения Максвелла); ввел понятие о токе смещения, предсказал существование электромагнитных волн, выдвинул
+идею электромагнитной природы света. Установил статистическое распределение, названное его именем. Исследовал вязкость, диффузию и теплопроводность газов. Показал, что
+кольца Сатурна состоят из отдельных тел. Труды по цветному зрению и колориметрии (диск Максвелла), оптике (эффект Максвелла), теории упругости (теорема Максвелла, диаграмма Максвелла – Кремоны), термодинамике, истории физики и др.<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+О роли Максвелла в развитии науки превосходно сказал американский физик Р. Фейнман: «В истории человечества (если посмотреть на нее, скажем, через десять тысяч лет) самым значительным событием XIX столетия, несомненно, 
+будет открытие Максвеллом законов электродинамики. На фоне этого важного научного открытия гражданская война в Америке в том же десятилетии будет выглядеть провинциальным происшествием».</p>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.physics.ru/courses/op25part2/content/scientist/maxwell.html#.VFvUAsZ4lok" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<br/></P>
+
+<div id="news">
+<h2 id="genya">ГЕНУА ПОЛЬ ЭМИЛЬ КЛАПЕЙРОН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Генуа Поль Эмиль Клапейрон – французский физик и инженер, член Парижской АН (с 1858). Родился в Париже. В 1818 г. окончил Политехническую школу. В 1820-1830 гг. работал в Петербурге в Институте инженеров путей сообщения. 
+После возвращения во Францию был профессором (с 1844) Школы мостов и дорог в Париже. Осуществлял надзор над строительством первой французской железнодорожной линии от Парижа до Версаля и Сен-Жермена.<br/>
+
+
+<IMG SRC="img/klaperon.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Физические исследования Клапейрона посвящены теплоте, пластичности и равновесию твердых тел. Он придал в 1834 г. математическую форму идеям C. Карно, первым оценив большое научное значение его труда «Размышления о движущей силе огня»,
+ содержащего фактически формулировку второго начала термодинамики. Исходя из этих идей, впервые ввёл в термодинамику графический метод – индикаторные диаграммы, в частности предложил систему координат р-V.<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В 1834 г. вывел уравнение состояния идеального газа, объединяющее закон Бойля – Мариотта, закон Гей-Люссака и закон Авогадро, обобщённое в 1874 г.  Д.И. Менделеевым (уравнение Менделеева – Клапейрона). 
+Вывел уравнение, устанавливающее связь между температурой плавления и кипения вещества и давлением, которое было термодинамически обосновано в 1851 г. Р. Клаузиусом (уравнение Клапейрона – Клаузиуса)<br/>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.physchem.chimfak.rsu.ru/Source/History/Persones/Clapeyron.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="ludvig">ЛЮДВИГ БОЛЬЦМАН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Научные интересы Больцман охватывали почти все области физики (и ряд областей математики). Автор работ по математике, механике, гидродинамике, теории упругости, теории электромагнитного поля, оптике, 
+термодинамике и кинетической теории газов. Однако наибольшее значение имеют работы Больцман по кинетической теории газов и статистическому обоснованию термодинамики. В 1886–1872 гг. он провёл важнейшие 
+исследования в области кинетической теории газов, вывел закон распределения молекул газа по скоростям, обобщив распределения Дж. К. Максвелла на случай, когда на газ действуют внешние силы (статистика Больцмана).<br/>
+
+<IMG SRC="img/boltsman.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+ Формула равновесного больцмановского распределения послужила основой классической статистической физики. В 1872 г., применив статистические методы к кинетической теории газов, вывел основное кинетическое уравнение газов.
+ Установил фундаментальное соотношение между энтропией физической системы и вероятностью её состояния, доказал статистический характер второго начала термодинамики, что указало на несостоятельность гипотезы «тепловой смерти»
+ Вселенной. В том же году доказал так называемую Н-теорему, утверждавшую, что Н-функция, характеризующая состояние замкнутой системы, не может возрастать во времени. Эти исследования Больцмана заложили основу термодинамики 
+необратимых процессов.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Больцман впервые применил законы термодинамики к процессам излучения и в 1884 г. теоретически вывел закон теплового излучения, согласно которому энергия, излучаемая абсолютно чёрным телом, пропорциональна четвёртой
+степени абсолютной температуры. В 1879 г. этот закон был экспериментально установлен Й. Стефаном и известен теперь как закон Стефана – Больцмана.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Больцман был не только теоретиком, но и экспериментатором. Он провёл первые опыты по проверке справедливости максвелловской теории электромагнетизма, измерил диэлектрические
+постоянные различных веществ, исследовал поляризацию диэлектриков. Он измерил диэлектрическую проницаемость газов и твёрдых тел и установил её связь с оптическим показателем преломления.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Основные результаты исследований ученого представлены в его фундаментальных лекционных курсах – «Лекции о максвелловской теории электричества и света» (тт. 1–2, 1891–1893); «Лекции по теории газов» 
+(тт. 1–2, 1896–1898); «Лекции о принципах механики» (тт. 1–3, 1897–1920).</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.physchem.chimfak.rsu.ru/Source/History/Persones/Boltzmann.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="jan">ЖАН ДАНИЭЛЬ КОЛЛАДОН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Изучал юриспруденцию, но в дальнейшем работал в лабораториях Ампера и Фурье.
+В 1826 году получил ежегодную награду французской академии наук за опыт по измерению скорости распространения звука в воде.
+В 1829 году - профессор механики в cole Centrale Paris.
+Вернулся в Швейцарию в 1839 году. Занимался организацией уличного газового освещения в Женеве (1843-1844) и Неаполе (1862).
+Опыт Колладона-Штурма.<br/>
+
+<IMG SRC="img/kolladon.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Жан-Даниэль Колладон и его друг, швейцарский физик Шарль-Франсуа Штурм (фр. Charles-Fran?ois Sturm), в 1826 году на Женевском озере провели опыт по измерению скорости распространения звука в воде.
+Зажигая порох и одновременно производя удар в подводный колокол, они измеряли промежуток времени между вспышкой света и приходом звука от колокола в удаленную точку, расстояние до которой было точно известно (10 миль).
+В ходе эксперимента было установлено, что звук при температуре воды 8 °C распространяется со скоростью 1412,1 м/с.
+В настоящее время в расчетах скорость звука в воде принимается равной 1500 м/с при температуре +15 °C и солености 34‰.</p>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.people.su/55129" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="albert">АЛЬБЕРТ ЭЙНШТЕЙН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Альберт Эйнштейн - выдающийся физик-теоретик, один из основоположников современной теоретической физики, которому принадлежит заслуга разработки и введения в науку целого ряда крупных физических теорий, 
+в частности, теории относительности. Ему принадлежат труды, легшие в основу статистической физики и квантовой теории. Идеи Эйнштейна привели к принципиально иному, в сравнении с ньютоновским, пониманию физической
+
+<IMG SRC="img/einstein.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+сути времени и пространства, созданию новой теории гравитации. Эйнштейн является лауреатом Нобелевской премии по физике, членом большого количества академий наук, почетным доктором порядка двух десятков университетов.
+Им написано более трех сотен работ по физике, примерно 150 статей и книг, посвященных философии и истории науки. Выдающийся физик был активным общественным деятелем, гуманистом, выступал против любого насилия.
+Источник: <a target="_top" href="http://www.wisdoms.ru/avt/b286.html">http://www.wisdoms.ru/</a><BR/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Эйнштейн получил мировое признание еще при жизни. Альберт стал обладателем Нобелевской премии в области физики. Почетная награда досталась ученому за теоретическое объяснение фотоэффекта. В своей теории он объяснил 
+существование фотонов, так называемых квантов света. Теория имела большое практическое значение, и оказала большое влияние на развитие квантовой теории. Теории ученого необычайно трудны для понимания и восприятия, но их 
+фундаментальность можно сравнить разве что с открытиями Исаака Ньютона. Уникальность Эйнштейна заключается в том, что авторство его открытий неоспоримо. </P>
+
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://2mir-istorii.ru/lichnosti-novaya-istoriya/67-albert-eynshteyn.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="jan1">ЖАН БАТИСТ ПЕРРЕН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+французский физик, лауреат Нобелевской премии по физике 1926 года «за работу по дискретной природе материи и в особенности за открытие седиментационного равновесия»
+В период с 1894 по 1897 год он был там ассистентом и занялся изучением катодных и рентгеновских лучей, за что получил звание доктора наук. В 1895 году Перрен показал, что катодные лучи 
+
+<IMG SRC="img/perren.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+имеют корпускулярную природу и имеют отрицательный электрический заряд. Также Перрен определил значение числа Авогадро несколькими методами.
+Кроме того он объяснил источник солнечной энергии — термоядерные реакции с участием водорода.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+После публикации Эйнштейном в 1905 г. теоретической работы об атомарной природе броуновского движения, Перрен поставил эксперимент с целью проверки утверждений Эйнштейна и положил таким образом конец 
+столетней дискуссии об атомной теории Джона Дальтона. Было окончательно проверено и установлено, что броуновское движение в жидкостях вызвано движением молекул, и тем самым дано решающее доказательство 
+действительного существования молекул и атомов. Проводя свои опыты с гуммигутом Перрен сумел сделать то, что казалось совершенно невозможным,— взвесить молекулы и атомы.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Перрен был автором многочисленных книг и диссертаций. Самыми известными являются: "Катодные и рентгеновские лучи", "Контактное электричество",  "Молекулярная реальность", "Материя и свет", "Свет и химические ракции".
+Жан Батист Перрен был отцом Франсиса Перрена — также физика.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.people.su/86317" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="rudolf">РУДОЛЬФ ЮЛИУС ИММАНУИЛ КЛАЗИУС</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Немецкий физик Рудольф Юлиус Иммануил Клаузиус родился в Кёслине, Померания.  Клаузиус первым понял и проанализировал глубокие идеи  С. Карно и оценил их значение для теории теплоты и тепловых машин. 
+Развивая эти идеи, Клаузиус в 1850 г. (одновременно с  У. Томсоном) дал первую формулировку  второго начала термодинамики: «Теплота не может сама собою перейти от более холодного тела к более тёплому». 
+Клаузиус доказал, что не существует способа передачи теплоты от более холодного тела к более нагретому без того, чтобы в природе не произошло каких-либо изменений, которые могли бы компенсировать такой переход. 
+В 1865 г. Клаузиус ввёл понятие энтропии. Ошибочно распространив принцип возрастания энтропии замкнутой системы на всю Вселенную, Клаузиус высказал гипотезу о тепловой смерти Вселенной. <br/>
+
+<IMG SRC="img/clasius.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Концепция «тепловой смерти» у Клаузиуса заключена в формулировке второго начало термодинамики в виде следующего постулата: «Энтропия Вселенной стремится к максимуму». Постулат Клаузиуса и концепция тепловой
+смерти вызвали большое количество возражений. Были придуманы многочисленные эксперименты, казалось, противоречащие принципу Карно-Клаузиуса. Очень тонкий мысленный эксперимент, например, выдвинул в 1870 г.  
+Дж. К. Максвелл (т.н. «демон Максвелла»). <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Клаузиусу принадлежат основополагающие работы в области молекулярно-кинетической теории теплоты. Работы Клаузиуса способствовали введению статистических методов в физику. Клаузиусу удалось 
+с единой точки зрения объяснить такие внешне совершенно различные явления в газах, как внутреннее трение, теплопроводность и диффузия. Он ввёл понятие идеального газа, а также понятие длины свободного
+ пробега молекул, впервые вычислив (1860 г.) эту длину. Доказал теорему вириала (1870 г.), связывающую среднюю кинетическую энергию системы частиц с действующими в ней силами. Построил кинетическую теорию 
+перехода вещества из одного агрегатного состояния в другое и в 1850 г. обосновал уравнение, связывающее изменение температуры плавления с изменением давления (уравнение Клапейрона – Клаузиуса).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Клаузиус внёс важный вклад в теорию электролиза (1857). Теоретически обосновал закон Джоуля – Ленца, развил термодинамическую теорию термоэлектричества (1853) и др. Развивая идеи итальянского учёного О. Ф. Моссотти 
+(1847), Клаузиус разработал теорию поляризации диэлектриков, на основе которой установил соотношение между диэлектрической проницаемостью и поляризуемостью (1879; формула Клаузиуса – Моссотти).<br/
+</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.physchem.chimfak.rsu.ru/Source/History/Persones/Clausius.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="nikola"> НИКОЛА ЛЕОНАР САДИ КАРНО</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Французский физик и военный инженер Никола Леонар Сади Карно, один из основателей термодинамики, родился в Париже в семье видного государственного деятеля наполеоновской эпохи Лазара Карно. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Карно интересовался многими новыми промышленно-технологическими разработками того времени. Занявшись теоретическим обоснованием принципов работы паровых машин, Карно стал одним из  пионеров термодинамики, 
+предложив свою знаменитую модель идеального двигателя. Свои идеи Сади Карно опубликовал в 1824 г. в форме фундаментального трактата "Размышления о движущей силе огня и о машинах, способных развивать эту силу"
+(Reflexions sur la puissance motrice du feu et sur les machines propres a developper cette puissance). В нём Карно рассмотрел в общем виде вопрос о "получении движения из тепла". Анализируя идеальный круговой процесс
+(известный сейчас как цикл Карно), он впервые пришёл к выводу о том, что полезная работа производится только при переходе тепла от нагретого тела к более холодному. Карно высказал также положение, что величина работы 
+обусловлена разностью температур нагревателя и холодильника и не зависит от природы вещества, работающего в тепловой машине (теорема Карно).<br/>
+
+<IMG SRC="img/karno.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ В своих рассуждениях Карно придерживался теории теплорода, однако в дальнейшем, как явствует из его записок, изданных посмертно, он от неё отказался. Карно сделал следующее примечание к своей работе: 
+"Основные положения, на которые опирается теория тепла, требуют внимательного исследования. Некоторые данные опыта представляются необъяснимыми при современном состоянии теории". В своем дневнике, выдержки из
+ которого были опубликованы его братом после смерти Карно, он также писал: "Тепло не что иное, как движущая сила или, вернее, движение, изменившее свой вид; это движение частиц тел; повсюду, где происходит уничтожение
+ движущей силы, возникает одновременно теплота в количестве, точно пропорциональном количеству исчезнувшей движущей силы. Обратно: всегда при исчезновении тепла возникает движущая сила. Таким образом, можно высказать 
+общее положение: движущая сила существует в природе в неизменном количестве; она, собственно говоря, никогда не создается, никогда не уничтожается; в действительности она меняет форму, т. е. вызывает то один род движения,
+ то другой, но никогда не исчезает". Если заменить слова "движущая сила" словом "энергия", то мы получим законченную формулировку закона сохранения энергии. Карно также приблизительно определил механический эквивалент теплоты.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Работа Карно была оценена лишь в 1834 году, когда  Б. Клапейрон, повторив рассуждения Карно, ввёл графический метод описания процессов. Теорема Карно вошла в термодинамику в качестве фундаментального принципа, а 
+сама работа Карно, изложенная Клапейроном и напечатанная в 1843 г. на немецком языке в "Анналах" Поггендорфа, послужила исходным пунктом для исследований У. Томсона и Р. Клаузиуса, приведших к открытию второго начала термодинамики.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://himki-vaz.ru/ximiya/velikie-himiki/karno-carnot-nikola-leonar-sadi.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="albert1">АЛЬБЕРТ АБРАХАМ МАЙКЕЛЬСОН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Американский физик Альберт Майкельсон родился 19 декабря 1852 г. С самого начала своего обучения Майкельсон очень интересовался наукой и в особенности проблемой измерения скорости света. После продолжения, в течение двух лет, обучения в Европе, он уходит с военной службы.
+В 1883 году становится профессором физики в школе прикладных наук в Кливленде и сосредотачивается на разработке улучшенного интерферометра.
+1878 г. Майкельсон заинтересовался измерением скорости света. В течение 1880-1882 гг. совершенствовал знание в Германии и Франции, где изобрел интерферометр («интерферометр Майкельсона»), который сыграл
+значительную роль в доказательстве специальной теории вероятности и в изучении спектральных линий. Осуществил серию экспериментов точного определения скорости света и вычисление относительного движения Земли и эфира.
+Эти опыты имели за цель экспериментально установить движение Земли относительно постоянного эфира.<br/>
+
+<IMG SRC="img/maykelson.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1882 г., вернувшись в США, он становится профессором физики в Кейзовском технологическом институте (ныне Университет Кейз-вестерн-резерв) в Кливленде.
+ Именно тогда началось его сотрудничество с Е.У.Морде, их знаменитый эксперимент     1887 г. был повторением берлинского. Результат эксперимента на этот раз был негативным:
+ интерференционная картина не возникала. Движение Земли не влияло на скорость света. Хотя эксперимент косвенно содействовал становлению специальной теории вероятности, ретроспективно он был важным подтверждением ее.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ С 1889 по 1892 г. Майкельсон — профессор физики в Университете Кларка в Бустере. Там он использовал интерферометр для определения длины метра в длинах волн одной из с
+пектральных линий кадмия, выполнил исследование открытой им (1891) тонкой структуры спектральных линий, доказал с помощью оптического метода обращения Земли вокруг оси и определил (1925)
+ скорость обращения, сконструировал (1907) спектральный прибор высокой способности, совершенные дифракционные решетки, дальномер.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1907 г. Майкельсону была присуждена Нобелевская премия «за создания высокоточных приборов и выполненные с их помощью спектроскопические исследования».<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+От 1892 до 1929 г. А.Майкельсон работал в Чикагском университете, где 1925 г. стал первым почетным профессором. Майкельсон предложил ряд образов использования интерферометра в астрономии для измерения диаметров больших звезд.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1920 г. вместе с Ф.Пизом с помощью интерферометра впервые вычислил диаметр звезды-гиганта Бетельгейзе.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Кроме Нобелевской премии, он был удостоен многочисленных наград, в том числе медали Копли Лондонского королевского общества (1907), медали 
+Генри Дрейпа Национальной академии наук США (1916), золотой медали Лондонского королевского астрономического общества (1923) и медали Даддела Лондонского физического общества.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://biographera.net/biography.php?id=143" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="hristian">ХРИСТИАН ГЮЙГЕНС</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Гюйгенс Христиан (1629—1695), нидерландский физик, математик, механик, астроном. Гюйгенс стал известен как блестящий математик. Однако судьба распорядилась так, что он был современником И. Ньютона, а значит, всегда находился в тени чужого таланта. Гюйгенс явился
+одним из разработчиков механики после Галилея и Декарта. Ему принадлежит первенство в создании маятниковых часов со спусковым механизмом. Он сумел решить задачу об определении центра колебания физического маятника, установить законы, определяющие центростремительную силу. Он также исследовал и вывел закономерности столкновения упругих тел.<br/>
+
+
+<IMG SRC="img/guigens.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Раньше Ньютона Гюйгенс разработал волновую теорию света. Принцип Гюйгенса (1678 г.) — открытый им механизм распространения света — применим и в наши дни. Опираясь на свою теорию света, Гюйгенс объяснил ряд 
+оптических явлений, с большой точностью измерил геометрические характеристики исландского шпата и обнаружил в нём двойное лучепреломление, затем это же явление увидел в кристаллах кварца. Гюйгенс ввёл понятие 
+«ось кристалла», обнаружил поляризацию света. С большим успехом работал он в области оптики: значительно усовершенствовал телескоп, сконструировал окуляр, ввёл диафрагмы.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Являясь одним из создателей Парижской обсерватории, внёс значительный вклад в астрономию — открыл 8 кольцо Сатурна и Титан, один из самых больших спутников в Солнечной системе,
+ различил полярные шапки на Марсе и полосы на Юпитере. Учёный с большим интересом конструировал так называемую планетарную машину (планетарий) и создавал теорию фигуры Земли. Первым подошёл к 
+заключению, что Земля сжата возле полюсов, и высказал идею измерять силу тяжести с помощью секундного маятника. Гюйгенс вплотную подошёл к открытию закона всемирного тяготения. Его математическими методами 
+в науке пользуются и сегодня.</p>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-xristiana-gyujgensa" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="ogusten">ОГЮСТЕН ЖАН ФРЕНЕЛЬ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Исследования Френеля относятся к области физической оптики. Первые оптические опыты он поставил еще в 1811. В 1815 заново открыл принцип интерференции, ничего не зная о работах Т.Юнга в этой области; добавил к 
+
+<IMG SRC="img/frenel.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+опытам английского физика несколько новых, среди них – опыт с «бизеркалами Френеля». Дополнил известный принцип Гюйгенса представлением о когерентности элементарных волн и об их интерференции и исходя из этого в 
+1818 разработал теорию дифракции света (принцип Гюйгенса – Френеля). На основе этого принципа объяснил прямолинейный характер распространения света. Предложил способ расчета дифракционной картины, основанный на разбиении
+фронта волны на зоны (зоны Френеля). С его помощью рассмотрел дифракцию от края препятствия и круглого отверстия. В 1821 доказал поперечность световых волн (независимо от Т.Юнга). В 1823 открыл эллиптическую и круговую 
+поляризацию света, установил законы поляризации света при его отражении и преломлении (формулы Френеля). Френелю принадлежат идеи неподвижного эфира и частичного увлечения света движущимися телами, которые легли в основу 
+электродинамики движущихся сред Х.Лоренца. Предложил принципиально новую линзу для маяков (линза Френеля). Работал в Политехнической школе.</P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.peoples.ru/science/physics/jean_augustin_fresnel/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="tomas">ТОМАС ЮНГ</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Юнг занимался проблемами волновой оптики, сформулировав в 1800 г. принцип суперпозиции волн и объяснив интерференцию света. Самый термин «интерференция» был введен в науку Юнгом.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Волновая теория света впервые была сформулирована Юнгом в Бэкеровской лекции «Теория света и цвета», опубликованной в 1801 г. Сущность волновой теории света Юнг кратко выражает следующим предложением: 
+«Излучаемый свет состоит из волнообразных движений светоносного эфира». Таким образом, все богатство красок природы было сведено Юнгом к колебательному движению эфира, а различие цветов – к различным частотам этих колебаний.<br/>
+
+
+<IMG SRC="img/ung.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Юнг впервые сознательно определил длины световых волн и таким образом положил начало спектрометрии. Ему было уже известно о существовании невидимых, инфракрасных лучей («тепловых»), 
+открытых Уильямом Гершелем в 1800 г., и ультрафиолетовых («химических») лучей, открытых Иоганном Риттером и Уильямом Волластоном в 1801 г. Исследуя эти невидимые лучи, Юнг показал, спроектировав 
+кольца Ньютона на бумагу, пропитанную ляписом, что для ультрафиолетовых лучей также справедлив принцип интерференции.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Кроме волновой оптики, имя Юнга в физике связывается с важной константой теории упругости, так называемого «модуля Юнга», и теорией цветного зрения, основанной на допущении в сетчатой оболочке глаза 
+трех сортов чувствительных волокон, соответствующих трем основным цветам. Юнг одним из первых ввел в физику термин «энергия»; занимался также измерением размеров молекул и натяжения на поверхности жидкости. 
+Его основной труд – «Лекции по натуральной философии» – вышел в 1807 г. в двух томах.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Разносторонность дарований Юнга изумительна. В его сочинениях рассматриваются вопросы механики, оптики, акустики, теплоты, физиологической оптики, технологии, кораблестроения, астрономии, навигации, геофизики,
+ медицины, филологии, ботаники, зоологии и пр. Им было написано около 60 статей для «Британской энциклопедии». Юнг состоял консультантом при Адмиралтействе (1814), был секретарем Бюро долгот, редактором «Морского альманаха» 
+(1814–1829), советником по весам и мерам при парламенте. Вывел формулу для составления таблиц смертности, необходимых в страховом деле (1826). Юнг попытался также составить египетский словарь; в 1823 г. он предложил 
+интерпретацию некоторых египетских иероглифов, выяснил значение ряда знаков Розеттского камня. Юнг был великолепным знатоком музыки, играл почти на всех музыкальных инструментах, прекрасно знал животных,
+был цирковым артистом – наездником и канатоходцем. </P>
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.physchem.chimfak.rsu.ru/Source/History/Persones/Young.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="nils">НИЛЬС БОР</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Бор Нильс Хендрик Давид (1885—1962), датский физик-теоретик. Родился 7 октября 1885 г. в Копенгагене, там же в 1908 г. окончил университет.
+ Некоторое время работал в Кембридже (Англия) в лаборатории у светила в области физики Дж. Томсона, затем был приглашён в Манчестер в лабораторию другой знаменитости — Э. Резерфорда.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Спустя несколько лет создал и возглавил Институт теоретической физики в Копенгагене. Этот научный центр дал Бору возможность собрать вместе всех выдающихся физиков того времени. Основной заслугой учёного 
+считается формулирование принципиально нового подхода в представлении физической картины атомных процессов. К этому времени массивный и противоречивый экспериментальный материал, работы М. Планка, А. Эйнштейна,
+ анализ спектров излучения атомов показали необычность закономерностей микромира. <br/>
+
+<IMG SRC="img/bor.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Бор предложил новую модель водородоподобного атома и открыл условия его устойчивости. Он развил идею квантования энергии Планка и на основе модели атома Резерфорда создал первую квантовую модель атома. 
+При этом физик установил, что в атоме есть стационарные орбиты, двигаясь по которым электрон не излучает (вопреки законам электродинамики) энергию, а скачком может перейти на более близкую к атому орбиту.
+ В момент скачка он излучает квант (порцию) энергии, равный разности энергий атома в стационарных состояниях.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Кроме этого Бор разработал и некоторые правила квантования. Он также определил основные законы спектральных линий и электронных оболочек атомов, объяснил особенности 
+периодической системы химических элементов Д. И. Менделеева и разработал свой вариант изображения этих элементов, пришёл к представлению о существующей оболочке вокруг атома. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Теория Бора получила название квантовой теории планетарного атома. За её разработку в 1922 г. учёному была присуждена Нобелевская премия. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Умер 18 ноября 1962 г.
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://citaty.su/kratkaya-biografiya-nilsa-bora" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</div>
+
+
+<div id="news">
+<h2 id="kennet">КЕННЕТ ГЕДДЕС ВИЛЬСОН</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Вильсон Кеннет Геддес (Kenneth Geddes Wilson) (8.VI.1936-15.VI.2013)  — американский физик-теоретик, член Национальной АН. P . в Уолтеме (штат Массачу сетс). 
+кончил Гарвардский ун-т (1956), где работал в 1959 — 62.Степень доктора философии (PhD) получил в 1961 году в Калифорнийском технологическом институте под руководством М/ Гелл-Манна. 
+
+<IMG SRC="img/vilson.jpg" align="right" height="250" width="200" hspace="20" vspace="20"/>
+
+С 1963 — в Корнеллском ун-те (с 1971 — профессор). C 1985 - директор Корнелльского центра теории и моделирования в науке и конструкторском деле (Корнелльский теоретический центр) — однy из пяти суперкомпьютерных центров,
+созданных при помощи национального научного фонда (США). В 198-2008 - профессор физического факультета Университета штата Огайо.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Работы в области квантовой теории поля, теории элементарных частиц, статистической физики. Развил философию и методику перенормировочной группы. В 1971 
+применил к исследованию критических явлений в статистической физике метод ренормализационной группы и построил теорию фазовых переходов II рода (теория Вильсона),
+ в которой точно рассчитал коэффициент в линейной зависимости теплоемкости от температуры при малых T. (Нобелевская премия, 1982).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Внес значительный вклад в создание квантовой хромодинамики.
+С 1976 г. уделяет основное внимание компьютерному моделированию. Обнаружив, что его теоретическая работа ограничена скоростью и памятью современных компьютеров, он стал
+выступать за создание суперкомпьютерных центров, обслуживающих ученых.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ремия Дэнни Хайнемана в области математической физики, 1973. Медаль Больцмана, 1975. Премия Вольфа по физике, 1980. Награда выдающемуся выпускнику Калтеха, 1981.
+ Медаль Франклина, 1982. Медаль им. Эрингена, 1984. Премия им. Анесура Рамана, 1993.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Кен Вилсон был в числе тех физиков, кто изменил наше представление не только об одном явлении, а о целом спектре явлений", - Стивен Вайнберг. 
+ "Вильсон по меньшей мере на десятилетие опережал свое время в том, что относилось к вычислительной технике",- рассказал один из его коллег Пол Гинспарг.
+
+<div id="up1">
+<center>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.eduspb.com/node/355" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="no">БУДУЩИЙ ЗНАМЕНИТЫЙ ФИЗИК</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<P>На всякий случай Вы тоже попали на доску почёта PHYSICSZONE: кто знает, может быть посмотрев этот сайт, 
+
+<IMG SRC="img/anonim.jpg" align="right" height="250" width="200" hspace="20" vspace="20">
+
+Вы всерьёз заинтересуетесь и увлечётесь физикой и станете знаменитым учёным-физиком! Всё в Ваших руках! В 
+Вас никто не сомневается! Удачи Вам, в познании этой нелёгкой науки, а PHYSICSZONE прибережёт для Вас местечко на Доске почёта 
+и несколько килобайт памяти для Вашей краткой биографии!
+</P>
+
+
+<div id="up1">
+<form action="biograf.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="index.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</div>
+
+<br/><br/>
+
+</div>
+
+
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+
+

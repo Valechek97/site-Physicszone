@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Физические постоянные</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Физические постоянные">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="postoyan.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТРАНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ФИЗИЧЕСКИЕ ПОСТОЯННЫЕ</h1>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В физике есть такие величины, которые имеют одинаковые значения всегда, в разных задачах и условиях. И называеются такие величны - физическими постоянными. На этой странице приведены
+осоновные из них. Используйте их при решении задач и получайте хорошие оценки!</P>
+
+<div id="postoy">
+<table> 
+<tr> <td><span>Постоянная:</span></td><td><span>Обозначение:</span></td><td><span>Значение:</span></td> </tr>
+<tr> <td>Гравитационная постоянная</td><td>G</td><td>6,6720*10<sup>-11</sup> H*м<sup>2</sup>*кг<sup>-2</sup></td> </tr> 
+<tr> <td>Скорость света в ваакуме</td><td>с</td><td>2,99792458*10<sup>8</sup> м*с<sup>-1</sup></td> </tr> 
+<tr> <td>Магнитная постоянная</td><td>&#956;<sub>0</sub></td><td>1,25663706144*10<sup>-6</sup> Гн*м<sup>-1</sup></td> </tr> 
+<tr> <td>Электронная постоянная</td><td>&#949;<sub>0</sub></td><td>8,85418782*10<sup>-12</sup>Ф*м<sup>-1</sup></td> </tr> 
+<tr> <td>Постоянная Планка</td><td>h</td><td>6,626176*10<sup>-34 Дж*с</sup></td> </tr> 
+<tr> <td>Масса покоя электрона</td><td>m<sub>e</sub></td><td>9,109534*10<sup>-31</sup>кг</td> </tr> 
+<tr> <td>Масса покоя протона</td><td>m<sub>p</sub></td><td>1,6726485*10<sup>-27</sup>кг</td> </tr> 
+<tr> <td>Масса покоя нейтрона</td><td>m<sub>n</sub></td><td>1,6749543*10<sup>-27</sup>кг</td> </tr> 
+<tr> <td>Заряд электрона</td><td>e</td><td>1,6021892*10<sup>-19</sup>кг</td> </tr> 
+<tr> <td>Атомная единица массы</td><td> </td><td>1,6605655(86)*10<sup>-27</sup>кг</td> </tr> 
+<tr> <td>Постоянная Авогадро</td><td>N<sub>A</sub></td><td>6,022045*10<sup>23</sup>моль<sup>-1</sup> </td> </tr> 
+<tr> <td>Постоянная Фарадея</td><td>F</td><td>96484,56 Кл*моль<sup>-1</sup></td> </tr> 
+<tr> <td>Молярная газовая постоянная</td><td>R</td><td>8,31441 Дж*моль<sup>-1</sup>*K<sup>-1</sup></td> </tr>
+<tr> <td>Постоянная Больцмана</td><td>R</td><td>1,380662*10<sup>-23</sup>*Дж*К<sup>-1</sup></td> </tr> 
+<tr> <td>Нормальный (молярный) объём идеалього газа при нормальных условиях (t=0<sup></sup>C, p=101,325 кПа)</td><td>V<sub>0</sub></td><td>2,241*10<sup>-2</sup>м<sup>3</sup>/моль</td> </tr> 
+<tr> <td>Нормальное атмосферное давление</td><td>P<sub>атм.н</sub></td><td>101325 Па</td> </tr> 
+<tr> <td>Ускорение свободного падения (нормальное)</td><td>g<sub>n</sub></td><td>9,80665 м/c<sup>2</sup></td></tr> 
+<tr> <td>Энергия покоя электрона</td><td>m<sub>e</sub>с<sup>2</sup></td><td>0,5110034 МэВ</td> </tr>
+<tr> <td>Энергия покоя протона</td><td>m<sub>p</sub>с<sup>2</sup></td><td>938,2796 МэВ</td> </tr> 
+<tr> <td>Энергия покоя нейтрона</td><td>m<sub>n</sub>с<sup>2</sup</td><td>939,5731 МэВ</td> </tr> 
+<tr> <td>Масса атома водорода <sup>1</sup>H</td><td> </td><td>1,07825036 a.e.м.</td> </tr> 
+<tr> <td>Масса атома дейтерия <sup>2</sup>H</td><td> </td><td>2,0141011795 а.е.м.</td> </tr>
+<tr> <td>Масса атома гелия -4<sup>4</sup>H</td</td><td> </td><td>4,002603267 а.е.м.</td> </tr> 
+<tr> <td>Радиус боровской орбиты</td><td>a<sub>0</sub></td><td>5?2917706*10<sup>-11</sup>м</td> </tr>           
+</table>
+</div>
+
+
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="postoyan.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+</div>
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+</div>
+<CENTER>
+</body>
+</html>
+
+

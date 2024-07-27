@@ -1,0 +1,773 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Основные законы физики</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Основные законы физики">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="zakons.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТРАНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ОСНОВНЫЕ ЗАКОНЫ ФИЗИКИ</h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Есть такое высказывание-"Моя территория-мои правила". И на территории физики тоже есть свои законы и правила. Для того,
+чтобы понимать, что возможно на Территории физики, а чего не должно быть, что можно на ней делать, а что недопустимо-ознакомьтесь с территориальными
+законами т.е с основными законами физики!</p>
+
+<div id="poisk">
+<li><form action="zakons.htm#7kl" aria-haspopup="true" target="_top" title="Законы физики, изучаемые в 7 классе"><button type="submit"><P>7 КЛАСС</P></button></form></li>
+<li><form action="zakons.htm#8kl" aria-haspopup="true" target="_top" Title="Законы физики, изучаемые в 8 классе"><button type="submit"><P>8 КЛАСС</P></button></form></li>
+<li><form action="zakons.htm#9kl" aria-haspopup="true" target="_top" title="Законы физики, изучаемые в 9 классе"><button type="submit"><P>9 КЛАСС</P></button></form></li>
+<li><form action="zakons.htm#10kl" aria-haspopup="true" target="_top" title="Законы физики, изучаемые в 10 классе"><button type="submit"><P>10 КЛАСС</P></button></form></li>
+<li><form action="zakons.htm#11kl" aria-haspopup="true" target="_top" title="СКОРО ОТКРЫТИЕ!"><button type="submit"><P>11 КЛАСС</P></button></form></li>
+</div>
+
+<div id="news">
+<h2 id="7kl">7 КЛАСС</h2>
+</div>
+
+
+<dl>
+<dt>ЗАКОН ВСЕМИРНОГО ТЯГОТЕНИЯ</dt>
+<dd>Все тела притягиваются друг к другу силами, равными по модулю произведению
+массы этих тел и обратно пропорциональными квадрату расстояния между ними.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ГУКА</dt>
+<dd>Изменение длины тела при сжатий и растяжении прямо пропорционально модулю силы упругости.
+При упругой деформации, растяжении или сжатии, модуль силы упругости прямопропорционален абсолютному удлинению тела.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ПАСКАЛЯ</dt>
+<dd>Давление, производимое на жидкость или газ, передаётся в любую точку без изменений во
+всех направлениях.</dd>
+</dl>
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zakons.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+
+<div id="news">
+<h2 id="8kl">8 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ И ПРЕВРАЩЕНИЯ ЭНЕРГИИ</dt>
+<dd>Энергия ниоткуда не берётся и никуда не девается, а лишь пере
+ходит из одной формы в другую.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ОМА</dt>
+<dd>Сила тока в участке цепи прямопропорциональна напряжению на концах этого участка и обратно
+пропорциональна его сопротивлению. I=U/R, где I-сила тока, U-напряжение, R-сопротивление участка.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ДЖОУЛЯ-ЛЕНЦА</dt>
+<dd>Количество теплоты, выделяемое проводником с током, равно произведению квадрата силы
+тока, сопротивления проводника и времени.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ПРЯМОЛИНЕЙНОГО РАСПРОСТРАНЕНИЯ СВЕТА</dt>
+<dd>В днородной среде свет распространяется прямолинейно.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН НЕЗАВИСИМОСТИ СВЕТОВЫХ ЛУЧЕЙ</dt>
+<dd>При пересечении лучей они не возмущаются.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ОБРАТИМОСТИ ЛУЧЕЙ</dt>
+<dd>Если луч пустить в обратном направлении, то он пройдёт обратный путь.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ЛУЧЕЙ</dt>
+<dd>Луч падающий, луч отражённый или перпендикулярно восстановленный в точке падения лежат в одной
+плоскости.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ПРЕЛОМЛЕНИЯ</dt>
+<dd>Луч падающий, луч преломлённый лежат в одной плоскости. Отношение синуса угла падения и
+преломления есть величина постоянная для двух данных сред, называемая относительным показателем преломления второй и первой сред.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН НЕЗАВИСИМОСТИ ДЕЙСТВИЯ СИЛ</dt>
+<dd>При одновременном действии на материальную точку несколько сил каждая из них сообщает точке такое же ускореие, как она сообщила бы, если бы действовала бы одна.</dd>
+</dl>
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zakons.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+
+<div id="news">
+<h2 id="9kl">9 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ПРИНЦИПЫ ОТНОСИТЕЛЬНОСТИ ДВИЖЕНИЯ ГАЛИЛЕО:</dt>
+<dd>Никакими механическими опытами, проведёнными в инерциальной системе отсчёта, нельзя отличить состояние покоя от
+равномерного прямолинейного движения; все законы механики имеют одну и ту же форму во всех инерциальных системах
+отсчёта.</dd>
+</dl>
+
+<dl>
+<dt>ПЕРВЫЙ ЗАКОН НЬЮТОНА</dt>
+<dd>Существуют такие система отсчёта, относительно которых тела сохраняют свою скорость постоянной, если на них 
+не действуют другие тела или их действие скомпенсировано.</dd>
+</dl>
+
+<dl>
+<dt>ВТОРОЙ ЗАКОН НЬЮТОНА</dt>
+<dd>Ускорение, приобретённое телом, прямопропорционально равнодействующей сил, приложенных к телу и обратнопропорционально его массе.</dd>
+</dl>
+
+<dl>
+<dt>ПЕРВЫЙ ЗАКОН МЕХАНИКИ</dt>
+<dd>Любая система отсчёта , движущаяся по отношению к инерциальной системе отсчёта поступательно, равномерно и прямолинейно, также является инерциальной системой отсчёта т.е в ней выполняется Первый закон Ньютона.
+Система отсчёта, движущаяся с ускорением по отношению к инерциальной системе отсчёта, неинерциальна и закон инерциии в ней не выполняется.</dd>
+</dl>
+
+<dl>
+<dt>ПРИНЦИП СУПЕРПОЗИЦИИ</dt>
+<dd>Если на тело одновременно действуют несколько сил, то равнодействующая сила равна их геометрической (векторной) сумме.</dd>
+</dl>
+
+<dl>
+<dt>ТРЕТИЙ ЗАКОН НЬЮТОНА</dt>
+<dd>Силы с которыми тела действуют друг на друга равны по модулю и противоположны по направлению.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ВСЕМИРНОГО ТЯГОТЕНИЯ</dt>
+<dd>Все тела притягиваются друг к другу с силами пропорциональными произведению масс этих сил и обратнопропорциональными квадрату
+расстояния между ними.</dd>
+</dl>
+
+<dl>
+<dt>ВТОРОЙ ЗАКОН НЬЮТОНА(2)</dt>
+<dd>Изменение импульса тела равно импульсу силы.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ ИМПУЛЬСА</dt>
+<dd>В замкнутой системе сумма импульсов всех тел сохранется. </dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ ЭНЕРГИИ</dt>
+<dd>В замкнутой системе, в которой действуют только консервативные силы, механическая энергия сохраняется. </dd>
+</dl>
+
+<dl>
+<dt>ПРИ РАСПРОСТРАНЕНИИ ВОЛНЫ</dt>
+<dd>Может меняться её длина и скорость, но никогда не меняется частота (период).</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО БУРАВЧИКА</dt>
+<dd>Если поступательные движения буравчика совпадает с направлением тока в проводнике, то вращение ручки буравчика покажет направление магнитных
+линий внутри проводника.</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО ПРАВОЙ РУКИ</dt>
+<dd>Если обхватить соленойд ладонью правой руки, направив четыре пальца по направлению тока в витках, то отставленный большой палец покажет направление
+линии магнитного поля внутри проводника.</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО ЛЕВОЙ РУКИ</dt>
+<dd>Если левую руку расположить так, чтобы линии магнитного поля входили в ладонь перпендикулярно к ней, а четыре пальца были направлены по току, то отставленный на 90 градусов большой
+палец покажет направление действующей на проводнике силы.</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО ЛЕВОЙ РУКИ ПО СИЛЕ АМПЕРА</dt>
+<dd>Если левую руку расположить так, чтобы линии магнитного поля входили в ладонь перпендикулярно к ней, а четыре пальца были направлены по движению положительно заряженной частицы (или против движения отрицательного заряда)
+, то отставленный большой палец покажет направление действующей на частицу силы.</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО ЛЕНЦА</dt>
+<dd>Возникающий в замкнутом контуре индукционный ток, своим магнитным полем препятствует тому изменению магнитного потока, которым он вызван.</dd>
+</dl>
+
+<dl>
+<dt>РАВЕНСТВО ИНЕРТНОЙ И ГРАВИТАЦИОННОЙ МАСС</dt>
+<dd>Ускорение, с которым тело падает на другое - ускорение свободного падения - не зависит от массы падающего тела, а также от других его характеристик (объёма, плотности и т.д). </dd>
+</dl>
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zakons.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+
+<div id="news">
+<h2 id="10kl">10 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ СКОРОСТЕЙ</dt>
+<dd>Если тело движется относительно некоторой системы отсчёта с определённой скоростью и сама система отсчёта движется относительно другой системы остчёта, то скорость тела относительно второй системы остчёта равна геометрической сумме этих скоростей.</dd>
+</dl>
+
+
+<dl>
+<dt>ПРИНЦИП ОТНОСИТЕЛЬНОСТИ ГАЛИЛЕО</dt>
+<dd>Никакими механическими опытами, проводимым внутри инерциальной системы остчёта нельзя отличить состояние покоя от равномерного прямолинейного движения.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН НЬЮТОНА</dt>
+<dd>Существуют такие системы отсчёта,  относительно которых тела сохраняют свою скорость постоянной при отсутствии действия на него других тел или их действие скомпенсировано.</dd>
+</dl>
+
+
+<dl>
+<dt>ПРИНЦИП ПРИЧИННОСТИ МЕХАНИКИ</dt>
+<dd>Изменение скорости тела всегда вызывается воздействием на него других тел.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ ИМПУЛЬСА</dt>
+<dd>Если сумма внешних сил равна нулю, то импульс системы сил сохраняется. Импульс системы тел могут изменить только внешние силы, причём изменение импульса системы совпадает по направлению с суммарной внешних сил.</dd>
+</dl>
+
+
+<dl>
+<dt>ВТОРОЙ ЗАКОН НЬЮТОНА (3)</dt>
+<dd>Изменение импульса тела (материальной точки) пропорционально приложенной к нему силе и меет такое же направление, как и сила.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН РАБОТЫ</dt>
+<dd>Тело может совершать работу, тольку при наличии у него энергии.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН РАБОТЫ СИЛЫ ТЯЖЕСТИ</dt>
+<dd>РАбота силы тяжести не зависит от формы траектории, а определяется лишь начальным и конечным положением тела. Работа силы тяжести по замкнутому контуру равна нулю. Такие силы являются консервативными или потенциальными.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ МЕХАНИЧЕСКОЙ ЭНЕРГИИ</dt>
+<dd>В замкнутой системе полна механическая энергия сохраняется.</dd>
+</dl>
+
+
+<dl>
+<dt>О РАВНОВЕСИИ ТВЁРДЫХ ТЕЛ:</dt>
+<dd>Если твёрдое тело находится в равновесии, то геометрическая сумма внешних сил, приложенных к телу равно нулю. При
+равновесии твёрдого тела сумма моментов всех внешних сил, действующих на тело, относительно любой оси равно нулю.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН ТЕМПЕРАТУРЫ</dt>
+<dd>Температура характеризует состояние теплового равновесия системы тел: все тела системы, находящихся друг с другом в тепловом равновесии имеют одну и ту же температуру.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН СРЕДНЕЙ КИНЕТИЧЕСКОЙ ЭНЕРГИИ</dt>
+<dd>Средняя кинетическая энергия хаотичного поступательного движения молекул газа пропорциональна абсолютной температуре.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН АВОГАДРО</dt>
+<dd>В равных объёмах газов при одинаковых температурах и давлениях содержит одинаковое количество молекул.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН БОЙЛЯ-МАРИОТТА</dt>
+<dd>Для данного газа, при постоянной массе и температуре при произведении давления на объём, есть величина постоянная.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ГЕЯ-ЛЮССАКА</dt>
+<dd>Для газа данной массы при постоянном давлении отношение объёма к его температуре есть величина постоянная.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ШАРЛЯ</dt>
+<dd>Для газа данной массы отношение давления к температуре есть величина постоянная при постоянном объёме.</dd>
+</dl>
+
+<dl>
+<dt>ПЕРВЫЙ ЗАКОН ТЕРМОДИНАМИКИ</dt>
+<dd>Изменение внутренней энергии системы при переходеиз одного состояния в другое равна сумме работы внешних сил и количества теплоты переданного системе.
+Количество теплоты, сообщённое системе, идёт на изменение её внутренней энергии и на работу, которую система совершает над внешними силами.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН КУЛОНА</dt>
+<dd>Сила взаимодействия двухточечных неподвижных зарядов в ваакуме прямопропорционально произведению модулей зарядов и обратнопропорционально квадрату расстояния между ними.
+Этот закон справедлив на расстояниях между зарядами от 10<sup-15</sup>м до нескольких десятков километров. Если заряды находятся в диэлектрике, то закон Кулона имеет форму.</dd>
+</dl>
+
+<dl>
+<dt>ПРИНЦИП СУПЕРПОЗИЦИИ ПОЛЕЙ</dt>
+<dd>Если взаимной точке пронстанства различные заряженные частицы создают электрические поля, напряжённости которых векторные E1 E2 E3 и так далее, то результируюшая напряжённость в этой точке  равна сумме напряжённности этих полей.</dd>
+</dl>
+
+<dl>
+<dt>СВОЙСТВА ЛИНИИ</dt>
+<dd>Линия напряжённости начинается у положительного заряда (или бесконечности) и заканчивается на отрицательном заряде (или бесконечности). Эти линии нигде не пересекаются. По густоте линии судят по напряжённости.</dd>
+</dl>
+
+<dl>
+<dt>СВОЙСТВА ПОТЕНЦИАЛА ЭЛЕКТРИЧЕСКОГО ПОЛЯ</dt>
+<dd>На замкнутой траектории работа электрического поля всегда равна нулю. Поля, обладающие таким свойством, называют потенциальными. Отношение потенциальной энергии к заряду не зависит от помещённого в поле заряда.
+Изменение потенциала н зависит от выбора нулевого потенциала. Разность потенциалов между двумя точками численно равна единице, если при перемещении зарада в 1 Кулон из одной точки в другую
+, электрическое поле совершает работу в 1 Джоуль.</dd>
+</dl>
+
+<dl>
+<dt>СВОЙСТВА НАПРЯЖЕННОСТИ ЭЛЕКТРИЧЕСКОГО ПОЛЯ</dt>
+<dd>Напряжённость электрического поля численно равна единице, если разность потенциалов между двумя точками на расстоянии 1 м в однородном поле равна 1 Вольту.</dd>
+</dl>
+
+<dl>
+<dt>СВОЙСТВА ЭЛЕКТРОЁМКОСТИ</dt>
+<dd>Электроёмкость не зависит ни от заряда, ни от напряжения, а определяется лишь геометрическими размерами проводников, их формой, взаимным расположением и электрическими свойствами среды.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ОМА ДЛЯ ПОЛНОЙ ЦЕПИ</dt>
+<dd>Сила тока в замкнутой в замкнутой цепи равно этоношению электродвижущей силы источника токак полному сопротивлению цепи.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ПОСЛЕДОВАТЕЛЬНОГО СОЕДИНЕНИЯ</dt>
+<dd>При последовательном соединении нескольких источников полной электродвижущей силы батареи равна их алгебраической сумме.</dd>
+</dl>
+
+<dl>
+<dt>ЗАКОН ПАРАЛЛЕЛЬНОГО СОЕДИНЕНИЯ</dt>
+<dd>При параллельном соединении одинаковых источников суммарная электродвижущая сила равна суммарной электродвижущей силе источника.</dd>
+</dl>
+
+
+<dl>
+<dt>СВОЙСТВО СОБСТВЕННОЙ ПРОВОДИМОСТИ</dt>
+<dd>При абсолютном нуле температуры все валентные электроны в полупроводниках будут связаны. При собственной проводимости полупроводниуов количество электронов и дырок одинаково.</dd>
+</dl>
+
+<dl>
+<dt>СВОЙСТВО СВОБОДНОГО ЭЛЕКТРОНА</dt>
+<dd>Если в атомах четырёхвалентного элемента добавить пятивалентную, то один электрон уже изначально становится свободным.</dd>
+</dl>
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zakons.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+
+<div id="news">
+<h2 id="11kl">11 КЛАСС</h2>
+</div>
+<dl>
+<dt>СВОЙСТВА МАГНИТНОГО ПОЛЯ</dt>
+<dd>1) Магнитное поле порождается движущимися зарядами.<br/>
+2) Магнитное поле обнаруживается по действию электричского поля.<br/>
+3) Магнитное поле-это вихревое поле (линии всегда замкнуты). <br/>
+4) Магнитное поле не имеет источников т.е нет магнитных зарядов. <br/>
+5) Материально, так как оно децствует на тело и обладает энергией.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН АМПЕРА</dt>
+<dd>сила Ампера равна произведению магнитной индукции [B] на силу тока I, длину участка проводника &#916;l и на sin угла между вектором B и участко проводника.</dd>
+</dl>
+
+<dl>
+<dt>ПРАВИЛО БУРАВЧИКА</dt>
+<dd>Если поступательное движение буравчика совпадает с направлением тока в проводнике, то в направление вращения ручки буравчика совпадает с направлением вектора B.</dd>
+</dl>
+
+
+<dl>
+<dt>ПРАВИЛО ЛЕВОЙ РУКИ</dt>
+<dd>Если левую руку расположить так, чтобы перпендикулярная составляющая вектора B входила в ладонь, а четыре пальца совпадали с направлением тока в провднике, тогда отставленный
+на 90 градусов большой палец покажет направление силы Ампера.</dd>
+</dl>
+
+
+<dl>
+<dt>ПРАВИЛО ЛЕВОЙ РУКИ ДЛЯ СИЛЫ ЛОРЕНЦА</dt>
+<dd>Левую руку располагают так, чтобы магнитная индукция входила в ладонь, четыре пальца совпадали с направлением движения положительного заряда, тогда отогнутый на 90 
+градусов большой палец покажет силу Лоренца, действующий на заряд.</dd>
+</dl>
+
+
+<dl>
+<dt>ГИПОТЕЗА АМПЕРА</dt>
+<dd>Внутри молекул и атомов циркулируют элементарные токи (вследствие движения электронов по орбитам). Если плоскости, в которых циркулируют эти токи расположены беспорядочно по
+отношению друг к другу, то ихз действия взаимно компенсируются и никаких магнитных своийст не обнаруживается. В намагниченном состоянии в элементарном токе ориентировано так, что их действия складываются.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОН РАВЕНСТВА ПУТИ К  ПЕРЕМЕЩЕНИЮ</dt>
+<dd>В общем виде пусть S не равен премещению &#916;r. Равенство соблюдается только при движении в одном направлении.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОНЫ ТЕЛА, БРОШЕННОГО ВЕРТИКАЛЬНО ВВЕРХ</dt>
+<dd>Чтобы тело полетело вверх, необходима начальная скорость. Сколько времени тело летит вверх - столько вниз, с какой скоростью улетает - с такой и возвращается и в верхней точке скорость равно нулю.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОНЫ ТЕЛА, БРОШЕННОГО ПОД УГЛОМ К ГОРИЗОНТУ</dt>
+<dd>Это сложное криволинейное движение: равномерное вдоль оси Ох и равнопеременное вдоль оси Оy с ускорение g. Сколько времени тело летит вверх (по вертикали) столько и по горизонтали. с какой скоростью и под каким
+углом тело улетело, с такой скоростью и взовратилось. В верхней точке скорость рвна нулю.</dd>
+</dl>
+
+
+<dl>
+<dt>ЗАКОНЫ ВРАЩАТЕЛЬНОГО КИНЕМАТИЧЕСКОГО ДВИЖЕНИЯ</dt>
+<dd>Тело движется по замкнутой линии, по окружности. Движение периодическок, время одного оборота измеряется периодом и частотой. Для характерситики испольцются угловые параметры.</dd>
+</dl>
+
+
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zakons.htm" target="_top" title="Наверх страницы"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+</div>
+
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2014. Все права защищены. Копирование материалов сайта разрешено только при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться в <a href="help.htm" target="_top">Центр пользовательской и технической поддержки</a></P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+

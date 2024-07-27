@@ -1,0 +1,828 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Физические приборы</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Описание физических приборов.">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="pribor.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТРАНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ОПИСАНИЯ ФИЗИЧЕСКИХ ПРИБОРОВ</h1>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Добро пожаловать в приборный отсек PHYSICSZONE! Здесь у Вас есть шанс познакомиться с приборами, которые используются в физике для проведения исследований,
+лабораторных работ и измерений. Может быть здесь Вы откроете для себя что-нибудь новое, так что приятного Вам ознакомления!</P>
+<br/>
+
+<div id="news">
+<h2>КАРТА ПРИБОРНОГО ОТСЕКА</h2>
+</div>
+
+<div id="pripoisk">
+<li><form action="pribor.htm#barometr" target="_top"><button><P>БАРОМЕТР-АНЕРОИД</P></button></form></li>
+<li><form action="pribor.htm#termometr" target="_top"><button><P>ТЕРМОМЕТР</P></button></a></form></li>
+<li><form action="pribor.htm#press" target="_top"><button><P>ГИДРАВЛИЧЕСКИЙ ПРЕСС</P></button></a></form></li>
+<li><form action="pribor.htm#nasos" target="_top"><button><P>ПОРШНЕВЫЙ НАСОС</P></button></a></form></li>
+<li><form action="pribor.htm#ampermetr" target="_top"><button><P>АМПЕРМЕТР</P></button></a></form></li>
+<li><form action="pribor.htm#voltmetr" target="_top"><button><P>ВОЛЬТМЕТР</P></button></a></form></li>
+<li><form action="pribor.htm#reostat" target="_top"><button><P>РЕОСТАТ</P></button></a></form></li>
+<li><form action="pribor.htm#sosud" target="_top"><button><P>СООБЩАЮЩИЕСЯ СОСУДЫ</P></button></form></li>
+<li><form action="pribor.htm#kondensator" target="_top"><button><P>ЭЛЕКТРОКОНДЕНСАТОР</P></button></form></li>
+<li><form action="pribor.htm#manometr" target="_top"><button><P>МАНОМЕТР</P></button></a></form></li>
+<li><form action="pribor.htm#dinamometr" target="_top"><button><P>ДИНАМОМЕТР</P></button></a></form></li>
+<li><form action="pribor.htm#solenoid" target="_top"><button><P>СОЛЕНОЙД</P></button></a></form></li>
+<li><form action="pribor.htm#buravchik" target="_top"><button><P>БУРАВЧИК</P></button></a></form></li>
+</div>
+
+<div id="news">
+<h2 id="barometr">БАРОМЕТР-АНЕРОИД</h2>
+</div>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; До середины XIX в. для измерения атмосферного давления 
+применяли лишь жидкостные (главным образом, ртутные) барометры, 
+изобретенные Э. Торричелли. В 1844 г. Л. Види сконструировал новый,
+безжидкостный барометр, получивший название барометр-анероид (от греческого слова "анерос" - безжидкостный).
+арометры-анероиды менее надежны, чем ртутные, так как содержащиеся в них пружины и мембраны со временем изменяют 
+свою упругость. Однако вследствие своей портативности и отсутствия жидкости они более удобны в обращении и потому широко используются на практике.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Барометры являются необходимыми приборами в метеорологических исследованиях, так 
+как знание атмосферного давления важно для предсказания погоды на ближайшие дни.<br/>
+
+<IMG SRC="pribori/barometr.jpg" align="right" height="250" width="300" hspace="20" vspace="20">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Чувствительность анероидов настолько высока, что даже при поднятии барометра на 2-3м 
+стрелка-указатель прибора заметно перемещается. Это позволяет обнаружить постепенное изменение атмосферного 
+давления даже при перемещении по лестнице дома или на эскалаторе в метро.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+С увеличением высоты над землей давление воздуха уменьшается. Поднимаясь с барометром в аэростате,
+можно измерить давление атмосферы на разных высотах. При небольших подъемах в среднем на каждые 12 м подъема давление 
+уменьшается на 1 мм рт. ст. На высоте 6 км давление воздуха примерно вдвое меньше, чем на поверхности Земли.<br/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Знание зависимости атмосферного давления от высоты позволяет использовать барометры-анероиды в качестве высотомеров. 
+Поскольку каждому значению атмосферного давления соответствует своя высота над уровнем моря, то шкалу этих приборов
+ можно сразу проградуировать в метрах (или километрах).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Барометрические высотомеры, используемые в авиации, иначе называют альтиметрами. 
+С их помощью летчики определяют высоту полета самолетов.</P>
+
+
+
+
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="termometr">ТЕРМОМЕТР</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Термометры, приборы для измерения температуры посредством контакта 
+с исследуемой средой. Первые термометры появились в конце 16 - начале
+17 вв. (например, термоскоп Галилея, 1597), сам термин «термометры»
+-в 1636. Действие термометров основано на изменениях однозначно 
+зависящих от температуры и легко поддающихся определению разных
+физических свойств тел (геоместрические размеры, давление в 
+замкнутом объеме, электрическое сопротивление, термоэдс, магнитная 
+восприимчивость и др.). Соответственно различают следующие наиболее,
+распространенные типы термометров: расширения, манометрические, 
+сопротивления, термоэлектрические, магнитные.<br/>
+
+<IMG SRC="pribori/termometr.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Менее распространены акустические, магнитные и некоторые иные 
+термометры Существуют термометры специального назначения, 
+например гипсотермометры (для измерения атмосферного давления 
+по температуре кипящей жидкости), метеорологические 
+(для измерений главным образом на метеостанциях), 
+глубоководные (для измерений температуры воды в водоемах 
+на различных глубинах).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Сами по себе большинство современных термометров представляют собой стеклянуую трубку
+с делениями и с содержанием в ней ртути. Деления чаще всего делают в градусах Цельсия
+или .... Также есть есть сейчас и электронные цифровые термометры. Чаще всего мы встречаем термометры
+дома и на окнах, когда смотрим температуру воздуха и в аптечке, когда измеряем температуру тела.
+</P>
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.chemport.ru/data/chemipedia/article_3688.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+
+<div id="news">
+<h2 id="press">ГИДРАВЛИЧЕСКИЙ ПРЕСС</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+После того как Паскаль провел ряд опытов по измерению атмосферного давления, 
+он решил сконструировать "новую машину для увеличения сил". Его изобретение позволило 
+создать гидравлический пресс (от греческого слова "гидравликос" - водяной).<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Гидравлический пресс - это машина для обработки материалов давлением, 
+приводимая в действие сдавливаемой жидкостью.<br/>
+
+<IMG SRC="pribori/press.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Паскаль написал, что с помощью изобретенной им машины "один человек, надавливающий на малый поршень, 
+уравновесит силу ста человек, надавливающих на поршень, в сто раз больший, и тем самым преодолеет силу
+ девяносто девяти человек". Это открытие и легло в основу принципа действия гидравлического пресса.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Впервые гидравлические прессы были применены в конце 18 — начале 19 вв. для пакетирования сена, выдавливания виноградного сока, отжима
+масла и т.п. С середины 19 в. Г. п. широко используется в металлообработке для ковки слитков, листовой штамповки, гибки
+и правки, объёмной штамповки, выдавливания труб и профилей, пакетирования и брикетирования отходов, прессования порошковых материалов, 
+покрытия кабелей металлической оболочкой и др. Г. п. нашли распространение также в производстве пластмассовых и резиновых изделий, 
+древесностружечных плит, фанеры, текстолита и др. Они применяются при синтезе новых материалов (например, искусственных алмазов).
+
+
+
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://dic.academic.ru/dic.nsf/bse/79077/Гидравлический" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="nasos">ПОРШНЕВЫЙ НАСОС</h2>
+</div>
+
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Благодаря простоте и надежности работы поршневые насосы нашли широкое применение в нефтяной, газовой и
+нефтехимической отраслях промышленности, все основные технологические процессы которых связаны с перекачкой по трубопроводам различных 
+жидкостей, нефтепродуктов, сжиженных газов, воды, глинистых растворов, химических реагентов и др. В бурении нефтяных и газовых скважин 
+поршневые насосы нашли исключительное применение. Они используются для создания циркуляции глинистого раствора или воды в скважине.
+ В добыче нефти поршневые (плунжерные) насосы используются главным образом для извлечения нефти 
+скважины, перекачки воды и высоковязкой нефти по
+трубопроводам, гидравлического разрыва пластов, нагнетания 
+воды в пласт. Поскольку в нефтяной промышленности нет ни 
+одного участка, где не использовались бы насосы, дальнейшее улучшение их технико-экономических показателей
+остается основной проблемой нефтяной промышленности. Сохранение при работе высокого коэффициента полезного 
+действия или полное использование установленной 
+мощности рассматриваемых гидравлических машин является одной из важнейших задач обслуживающего персонала.   
+
+<br/>
+
+<br/>
+<IMG SRC="pribori/nasos.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Действие поршневого насоса за один обороткоренного вала можно расчленить на его составляющие: процесс всасывания, при 
+котором происходит подъем жидкости из нижнего резервуара в цилиндр насоса, и процесс нагнетания, при котором
+жидкость вытесняется из цилиндра с энергией, достаточной для 
+преодоления всех видов сопротивлений на напорной стороне
+насоса. В насосах двойного действия обе стороны поршня являются рабочими. 
+Цилиндры таких насосов имеют четыре клапана При ходе поршня влево всасывающий и 
+нагнетательный клапаны открыты. Через клапан происходит всасывание, а через клапан 
+вытеснение жидкости в нагнетательный трубопровод. В это время клапаны закрыты. При 
+обратном ходе поршня через клапан жидкость поступает в цилиндр, а через клапан 
+производится подача жидкости в нагнетательный трубопровод. В рассматриваемых насоса
+всасывание и нагнетание жидкости происходит при каждом ходе поршня.
+
+</P>
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://student.zoomru.ru/transport/porshnevye-nasosy/160701.1309858.s1.html" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="ampermetr">АМПЕРМЕТР</h2>
+</div>
+
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Это прибор для измерения силы электрического тока. В соответствии с верх. пределом измерений различают кило-, 
+милли-, микро- и наноамперметры. Ампреметр включается в цепь тока последовательно. Для уменьшения искажающего влияния амперметр
+должен обладать малым входным сопротивлением. Основной частью простейших амперметров. является электроизмерительный механизм (магнитоэлектрический, 
+электромагнитный, электродинамический, ферродинамический). Амперметр для измерения малых токов представляет 
+
+<IMG SRC="pribori/ampermetr.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+собой сочетание измерительного усилителя тока с электроизмерительным механизмом, воспринимающим выходной сигнал усилителя. Для
+измерения больших токов в амперметр встраивают шунты или измерительные трансформаторы тока либо используют амперметры совместно с указанными добавочными
+устройствами. Широкое распространение получили цифровые амперметры. Для измерений в цепях переменного
+тока на ВЧ и СВЧ применяют амперметры, в которых перед электроизмерительным механизмом включен преобразователь переменного 
+тока в постоянный.</P>
+
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://dic.academic.ru/dic.nsf/enc_physics/74/АМПЕРМЕТР" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="voltmetr">ВОЛЬТМЕТР</h2>
+</div>
+
+<P>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Вольтметр – это электрический прибор, относящийся к классу гальванометров и предназначенный для
+определения электродвижущей силы и напряжений. Основная единица измерения устройства – вольт, помимо
+этого существуют видовые измерители в микровольтах, милливольтах, киловольтах и так далее. Вольтметры
+подключаются параллельно к источнику электроэнергии или нагрузке электроцепи.<br/>
+
+<IMG SRC="pribori/voltmetr.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Различные принципы действия, положенные в основу прибора, обусловили две большие категории приборов.
+Одна из групп вольтметров включает в себя электромеханические измерители,вторую группу составляют электронные средства измерения.
+К первой группе относятся магнитоэлектрические; электромагнитные; электродинамические; электростатические;
+выпрямительные; термоэлектрические. Вторую группу составляют электронные средства измерения. Сюда относятся 
+аналоговые и цифровые вольтметры. Они обладают большим входным сопротивлением и функционируют в широком диапазоне частот – от 50 гц до 100 Мгц. 
+Цифровой вольтметр демонстрирует очень высокий класс точности измерений. Погрешность измерений может быть от 0,5 до 0,001%.</P>
+
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://www.etalonpribor.ru/voltmeter/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="reostat">РЕОСТАТ</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Реостат-электрический аппарат (устройство) для регулирования и ограничения тока или напряжения в электрической цепи, 
+основная часть которого — проводящий элемент (ПЭ) с переменным электрическим сопротивлением. Величина сопротивления ПЭ может 
+изменяться плавно или ступенчато. При необходимости изменения тока или напряжения в небольших пределах реостат включают в электрическую цепь 
+последовательно (например, при ограничении пускового тока в электрических машинах). Для регулирования тока или напряжения в
+ широком диапазоне (от нуля до максимального значения) применяется потенциометрическое включение реостата, являющегося в этом случае 
+регулируемым делителем напряжения.<br/>
+ 
+<IMG SRC="pribori/reostat.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+В соответствии с назначением реостаты разделяют на пусковые, пускорегулировочные, нагрузочные и реостаты возбуждения. 
+По способу теплоотвода различают реостаты с воздушным, масляным и водяным охлаждением. В зависимости от материала, из которого 
+изготовлен ПЭ, реостаты делятся на металлические (наиболее распространены), жидкостные и угольные. Простейшие металлические реостаты — ползунковые,
+ у которых сопротивление изменяется перемещением контактного ползунка непосредственно по виткам проволоки из материала с высоким удельным 
+сопротивлением (манганин, константан, нихром, фехраль, сталь), намотанной на цилиндр из электроизоляционного материала (См. Электроизоляционные материалы) 
+(фарфор, стеатит). Жидкостный Р. состоит из сосуда, наполненного электролитом (10—15%-ный раствор Na2CO3 или K2CO3 в воде),
+ с опущенными в него электродами. Регулирование его сопротивления осуществляется изменением расстояния между электродами или глубины их погружения
+ в жидкость. Угольный реостаты выполняют в виде столбиков, набранных из тонких угольных шайб. Его сопротивление регулируется изменением давления, приложенного 
+к столбикам.
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://dic.academic.ru/dic.nsf/bse/127187/Реостат#sel=4:76,4:75" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="sosud">СООБЩАЮЩИЕСЯ СОСУДЫ</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Сообщающиеся сосуды, сосуды, соединённые между собой в нижней части (рис.). В наполненных одинаковой жидкостью сообщающиеся сосуды, 
+диаметр которых настолько велик, что позволяет пренебречь капиллярным эффектом, уровни жидкости располагаются на одинаковой высоте 
+
+<IMG SRC="pribori/sosudi.jpeg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+
+независимо от формы сосудов. На этом основано устройство жидкостных манометров, водомерных стекол паровых котлов и т.п. Если сообщающиеся сосуды
+наполнены различными жидкостями, то высоты столбов этих жидкостей (считая от поверхности соприкосновения жидкостей друг с другом) 
+обратно пропорциональны их плотностям, т. е. r1h1 = r2h2, где r1 и r2, h1 и h2 — соответственно плотности и высоты столбов жидкости. 
+Этим соотношением пользуются для определения плотности жидкости. Если же одно из колен С. с. закрыто, то разность уровней жидкости будет 
+зависеть от давления в закрытом колене; на этом основано устройство закрытых манометров.
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://slovari.yandex.ru/сообщающиеся%20сосуды/БСЭ/Сообщающиеся%20сосуды/" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="kondensator">КОНДЕНСАТОР</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+КОНДЕНСАТОР электрический (от лат. сondensator, — тот, кто уплотняет, сгущает), устройство, предназначенное для получения нужных величин 
+электрической емкости (см. ЕМКОСТНОЕ СОПРОТИВЛЕНИЕ) и способное накапливать (перераспределять) электрические заряды. 
+Электрический конденсатор состоит из двух (иногда более) подвижных или неподвижных проводящих электродов (обкладок), разделенных диэлектриком. 
+Обкладки должны иметь такую геометрическую форму и быть так расположены друг относительно друга, чтобы созданное ими электрическое поле было 
+сосредоточено в пространстве между ними. Как правило, расстояние между обкладками, равное толщине диэлектрика, мало по сравнению с линейными 
+размерами обкладок. Поэтому электрическое поле, возникающее при подключении обкладок к источнику с напряжением U, практически полностью
+ сосредоточено между обкладками. При этом частичные собственные емкости электрических обкладок пренебрежимо малы. 
+Таким образом, конденсатором называют систему, состоящую, как правило, из двух разноименно заряженных проводников, 
+при этом заряд, который надо перенести с одного проводника на другой, чтобы зарядить один из них отрицательно, а 
+другой положительно, называется зарядом конденсатора. Разность потенциалов U между обкладками конденсатора прямо пропорциональна 
+величине заряда Q, находящегося на каждой из них:  Q=С.U 
+С — коэффициент, характеризующий конденсатор, называется электрической емкостью конденсатора или емкостью. 
+Численно емкость электрического конденсатора С равна величине заряда Q одной из обкладок при напряжении, равном 1 вольт: С = Q/U.<br/>
+
+<IMG SRC="pribori/kondensator.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В СИ единицей емкости является фарад — 1 Ф. Емкостью, равной одному фараду, обладает такой конденсатор, между пластинами которого возникает разность потенциалов, равная одному вольту, при заряде на каждой из пластин, равном одному кулону. 
+Параметры, конструкция и область применения конденсаторов определяются диэлектриком (см. ДИЭЛЕКТРИКИ), разделяющим его обкладки, 
+поэтому основная классификация электрических конденсаторов проводится по типу диэлектрика. В зависимости от типа используемого 
+диэлектрика конденсаторы могут быть воздушные, бумажные, слюдяные, керамические, электролитические и др. 
+По емкости различают конденсаторы постоянной емкости и конденсаторы переменной емкости. Конденсаторы переменной емкости и полупеременные изготовляются с 
+механически и электрически управляемой емкостью. Изменение емкости в электрическом конденсаторе с механическим 
+управлением достигается чаще всего изменением площади его обкладок или (реже) изменением зазора между обкладками. 
+Простейший воздушный конденсатор переменной емкости состоит из двух изолированных систем металлических пластин, 
+которые входят друг в друга при вращении рукоятки: одна группа (ротор) может перемещаться так, что ее пластины 
+заходят в зазоры между пластинами другой группы (статора). Вдвигая и выдвигая одну систему пластин в другую можно
+ изменить емкость конденсатора. Электрические конденсаторы переменной емкости с твердым диэлектриком 
+(керамические, слюдяные, стеклянные, пленочные) в основном используются как полупеременные (подстрочные)
+ с относительно небольшим изменением емкости. В настоящее время широко используются управляемые конденсаторы переменной емкости — варикапы и вариконды 
+Емкость электрического конденсатора зависит от диэлектрический проницаемости диэлектрика, заполняющего конденсатор, 
+и от формы и размеров его обкладок. По форме обкладок различают плоские, цилиндрические, сферические конденсаторы.
+
+
+<div id="up">
+<center>
+<form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<form action="http://dic.academic.ru/dic.nsf/es/79255/КОНДЕНСАТОР" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form>
+</center>
+</div>
+
+
+
+<div id="news">
+<h2 id="manometr">МАНОМЕТР</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Манометры это механические устройства, служащие для измерения избыточного давления воды, пара, масла, эмульсий и различных газов величиной до 
+нескольких десятков и даже сотен атмосфер.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Манометр работает следующим образом: давление среды через присоединительный штуцер поступает внутрь изогнутой медной трубки овального сечения.  
+Под действием этого давления трубка стремиться распрямиться. Перемещение трубки через тягу и коромысло передается на подпружиненную ось со стрелкой.
+Стрелка поворачивается вслед за перемещением трубки, показывая действующее давление. <br/>
+
+<IMG SRC="pribori/manometr.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Манометры для измерения высоких давлений, например, для газовых редукторах, имеют несколько другую конструкцию чувствительного элемента. 
+Он также представляет собой медную трубку, но она имеет существенно меньшее поперечное сечение и, кроме того, имеет несколько витков,
+ относительно оси которых трубка и перемещается при подаче давления на манометр. Кроме преобразовательной функции 
+(давление среды - перемещение трубки и связаной с ней стрелки) медная трубка выполняет функцию демпфера.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Довольно часто корпуса манометров, служащих для измерения давления газов, окрашивают в различные цвета. Так манометры с голубым цветом 
+корпуса предназначены для измерения давления кислорода. Желтый цвет корпуса имеют манометры на аммиак, белый – на ацителен, темно-зеленый – 
+на водород, серовато-зеленый – на хлор. Манометры на пропан и другие горючие газы имеют красный цвет корпуса. Корпус черного цвета имеют манометры 
+предназначенные для работы с негорючими газами. Кислородные манометры в обязательном порядке должны быть обезжирены, так как иногда даже незначительное 
+загрязнение присоединительного штуцева и механизма при контакте с чистым кислородом может привести к воспламенению и даже взрыву. Манометры на ацетилен 
+не допускают наличия в измерительном механизме сплавов меди, так как при контакте с ацетиленом существует опасность образования взрывоопасной ацетиленистой меди.<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Один и тот же манометр можно использовать для измерения давления различных сред (жидкость, пар, газ) 
+если элементы его конструкции устойчивы к данным средам. В случае, если манометр имеет ограниченное применение, 
+то на его шкалу наносятся специальные символы информирующие об особенностях применения данного манометра. Более 
+подробную информацию о том, давление каких сред может измерять манометр можно найти в его заводском паспорте.
+
+
+<div id="up">
+<center>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Вернуться к началу страницы"><button type="submit"><P>НАВЕРХ СТРАНИЦЫ</P></button></form></li>
+<li><form action="http://knowkip.ucoz.ru/publ/teplotekhnicheskie_izmerenija/i/manometry/2-1-0-12" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="dinamometr">ДИНАМОМЕТР</h2>
+</div>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Динамометры - приборы, измеряющие силу упругости.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Динамометры бывают трёх типов: ДП - пружинные, ДГ- гидравлические, ДЭ - электрические.
+По способу регистрации измеряемых усилий динамометры подразделяют на указывающие - применяют главным образом для измерений статических усилий, возникающих в 
+конструкциях, установленных на стендах, при приложении к ним внешних сил и для измерения силы тяги при плавном передвижении изделия; считающие и пишущие динамометры, 
+
+<IMG SRC="pribori/dinamometr.jpg" align="right" height="250" width="300" hspace="20" vspace="20"/>
+
+регистрирующие переменные усилия, применяют чаще всего при определении силы тяги паровозов и тракторов, так как вследствие сильной тряски и неизбежных рывков при ускорении
+их движения, а также неравномерности загрузок изделия создаются переменные усилия.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Наибольшее распространение имеют динамометры общего назначения пружинные, указывающие. Пределы измерений и погрешность динамометра должны определяться одним из двух способов:
+расчётным, по таблицам приложения 2 ОСТ 1 00380.
+Основные параметры и размеры динамометров общего назначения, пружинных со шкальным отсчётным устройством, предназначенных для измерений
+статических растягивающих усилий, устанавливает ГОСТ 13837.
+
+<div id="up">
+<center>
+<form action="pribor.htm" target="_top" title="Вернуться к началу страницы"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+
+<div id="news">
+<h2 id="solenoid">СОЛЕНОЙД</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Соленоид — разновидность катушки индуктивности. Название происходит от гр. solen — канал, труба и eidos — подобный.
+Обычно под термином «соленоид» подразумевается цилиндрическая обмотка из провода, причём длина такой обмотки многократно превышает её диаметр.
+Конструктивно длинные соленоиды выполняются как в виде однослойной намотки, так и многослойной.
+Если длина намотки значительно превышает диаметр намотки, то в полости соленоида при подаче в него 
+электрического тока порождается магнитное поле, близкое к однородному.
+Также часто соленоидами называют электромеханические исполнительные механизмы, обычно со втягиваемым 
+
+<IMG SRC="pribori/solenoid.jpg" align="right" height="250" width="280" hspace="20" vspace="20"/>
+
+ферромагнитным сердечником. В таком применении соленоид почти всегда снабжается внешним ферромагнитным магнитопроводом, обычно называемым ярмом.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+При переменном токе соленоид создаёт переменное магнитное поле. Если соленоид используется как электромагнит, то на переменном
+токе величина силы притяжения изменяется. В случае якоря из магнитомягкого материала направление силы притяжения не изменяется. 
+В случае магнитного якоря направление силы меняется. На переменном токе соленоид имеет комплексное сопротивление, активная составляющая 
+которого определяется активным сопротивлением обмотки, а реактивная составляющая определяется индуктивностью обмотки.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Соленоиды постоянного тока чаще всего применяются как поступательный силовой электропривод. В отличие от обычных электромагнитов обеспечивает большой ход.
+Силовая характеристика зависит от
+строения магнитной системы (сердечника и корпуса) и может быть близка к линейной.
+Соленоиды приводят в движение ножницы для отрезания билетов и чеков в кассовых аппаратах, 
+язычки замков, клапаны в двигателях, гидравлических системах и проч. Один из самых известных примеров — «тяговое реле» автомобильного стартёра.
+Соленоиды на переменном токе применяются в качестве индуктора для индукционного нагрева в 
+индукционных тигельных печах.</P>
+
+<div id="up">
+<center>
+<form action="pribor.htm" target="_top" title=""><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%B5%D0%BD%D0%BE%D0%B8%D0%B4" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+
+<div id="news">
+<h2 id="buravchik">БУРАВЧИК</h2>
+</div>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Буравчик — режущий инструмент для высверливания неглубоких отверстий диаметром от 2 до 10 мм в мягкой древесине.
+Режущая кромка буравчика проходит по спирали вдоль его стержня. На конце — мелкая винтовая нарезка, благодаря которой буравчик 
+
+<IMG SRC="pribori/buravchik.jpg" align="right" height="250" width="280" hspace="20" vspace="20"/>
+
+ввинчивается в древесину при вращении. Буравчик плохо удаляет стружку, поэтому его приходится часто вынимать из просверливаемого отверстия во избежание
+раскалывания древесины.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Правило буравчика: Если поступательное движение буравчика совпадает с направлением тока в проводнике, то в направление вращения ручки буравчика совпадает с направлением вектора B.<br/><br/><br/><br/></P>
+<div id="up">
+<center>
+<form action="pribor.htm" target="_top" title="Вернуться наверх страницы"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="https://ru.wikipedia.org/wiki/%D0%91%D1%83%D1%80%D0%B0%D0%B2%D1%87%D0%B8%D0%BA" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+</div>
+</div>
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+
+</div>
+<CENTER>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,1035 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Шпаргалки по физике</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Шпаргалки по физике">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="shpora.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТАРНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ШПАРГАЛКИ ПО ФИЗИКЕ</h1>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Внимание! Сейчас вы получили доступ к странице с нелегальными для школы ресурсами-шпаргалками. Они всегда могут Вас выручить, если вы не выучили уроки, но могут и подставить Вас. Если
+Вас заметят, что Вы их используете, то Вы рискуете получить двойку. Но PHYSICSZONE поможет Вам. Под этим введением есть кнопки, одна из них называется "Как спрятать шпаргалку". Да и вообще эти кнопки помогут Вам быстро ориентироваться на этой странице! А шпаргалок с каждой неделей
+будет больше и больше! Этот учебный год в плане физики Вы не провалите!</P>
+<div id="poisk">
+<li><form action="shpora.htm#vibor" aria-haspopup="true" target="_top" title=""><button type="submit"><P>ВЫБОР<br/>ШПАРГАЛКИ</P></button></form></li>
+<li><form action="press.htm" aria-haspopup="true" target="_top" title=""><button type="submit"><P>КАК СПРЯТАТЬ<br/>ШАПАРГАЛКУ</P></button></form></li>
+<li><form action="shpora.htm#kollektion" aria-haspopup="true" target="_top" title=""><button type="submit"><P>КОЛЛЕКЦИЯ <br/>ШПАРГАЛОК</P></button></form></li>
+<li><form action="shpora.htm#zakaz" aria-haspopup="true" target="_top" title=""><button type="submit"><P>ЗАКАЗАТЬ<br/>ШПАРГАЛКУ</P></button></form></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title=""><button type="submit"><P>ГЛАВНАЯ<br/>СТРАНИЦА</P></button></form></li>
+</div>
+<div id="news">
+<h2 id="vibor">ВЫБЕРИТЕ ТЕМУ ШПАРГАЛКИ</h2>
+</div>
+<a href="shpora.htm#a1" target="_top">Молекула вещества.</a><br/>
+<a href="shpora.htm#a2" target="_top">Диффузия.</a><br/>
+<a href="shpora.htm#a3" target="_top">Цена деления прибора.</a><br/>
+<a href="shpora.htm#a4" target="_top">Агрегатное состояние вещества.</a> <br/>
+<a href="shpora.htm#a5" target="_top">Механическое движение. Часть 1.</a> <br/>
+<a href="shpora.htm#a6" target="_top">Механическое движение. Часть 2.</a><br/>
+<a href="shpora.htm#a7" target="_top">Инерция, инертность, масса.</a><br/> 
+<a href="shpora.htm#a8" target="_top">Плотность вещества.</a> <br/>
+<a href="shpora.htm#a9" target="_top">Таблица плотностей веществ. Часть 1.</a><br/>
+<a href="shpora.htm#a10" target="_top">Таблица плотностей веществ. Часть 2.</a> <br/>
+<a href="shpora.htm#a11" target="_top">Основные силы в физике. Часть 1.</a><br/>
+<a href="shpora.htm#a12" target="_top">Основные силы в физике. Часть 2.</a> <br/>
+<a href="shpora.htm#a13" target="_top">Давление тела.</a><br/>
+<a href="shpora.htm#a14" target="_top">Поршневый насос. Часть 1.</a><br/>
+<a href="shpora.htm#a15" target="_top">Поршневый насос. Часть 2.</a><br/>
+<a href="shpora.htm#a16" target="_top">Гидравлический пресс. Часть 1.</a> <br/>
+<a href="shpora.htm#a18" target="_top">Сообщающиеся сосуды</a> <br/> 
+<a href="shpora.htm#a19" target="_top">Манометр. Часть 1.</a> <br/>
+<a href="shpora.htm#a20" target="_top">Манометр. Часть 2.</a> <br/>
+<a href="shpora.htm#a21" target="_top">Атмосферное давление.</a><br/>
+<a href="shpora.htm#a22" target="_top">Механическая работа.</a> <br/>
+<a href="shpora.htm#a23" target="_top">Мощность.</a> <br/>
+<a href="shpora.htm#a24" target="_top">Рычаг.</a>  <br/>  
+<a href="shpora.htm#a25" target="_top">Неподвижный блок.</a>  
+
+<br/><br/>
+<div id="news">
+<h2 id="kollektion">КОЛЛЕКЦИЯ ШПАРГАЛОК</h2>
+</div><br/><br/>
+<blockquote id="a1" style="background-image: url('img/zametki.jpg'); width: 700px; height: 250px; border: 2px solid blue;">
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Молекула вещества. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>Молекулярно-кинетическая теория:</strong>
+Все вещества состоят из мельчайших частиц-атомов и молекул.
+Эти частицы находятся в непрерывном хаотическом движении.
+Эти частицы взаимодействуют друг с другом, притягиваются и отталкиваются.
+Между частицами существуют промежутки.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>Доказательства МКТ:</strong>
+Деление твёрдых тел на части, электронный, диффузия, смешивание воды и спирта, слипание свинцовых цилиндров.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>Определения:</strong>
+<strong>АТОМ</strong>-Мельчайшая частица вещества, сохраняющая все его физическая свойства.
+<strong>МОЛЕКУЛА ВЕЩЕСТВА</strong>-мельчайшая частица данного вещества, сохраняющая все химические свойства.
+<strong>РАЗМЕР АТОМА:</strong> Приблизительно равен 10<sup>-10</sup> или 0,0000000001 м.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи из ЕГЭ:</strong><br/>
+Что такое самая маленькая частица воды?<br/>
+1. Молекула.&nbsp; 2. Маленькая капля. &nbsp; 3. Электрон.&nbsp;  4. Атом. &nbsp; 5. Маленький шарик.<br/>
+<strong>Ответ:</strong> 4. Вопрос взят с файла сайта http://www.zavuch.info/methodlib/122/35506/.
+</center>
+</span>
+</blockquote>
+
+
+
+<blockquote id="a2" style="background-image: url('img/zametki.jpg'); width: 700px; height: 220px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Диффузия. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ДИФФУЗИЯ-</strong>
+Это явление, при котором происходит взаимное проникновение молекул одного вещества. между молекулами другого вещества.
+Диффузия зависит от температуры, от скорости молекул, от агрегатного состояния вещества и от самого вещества. Она зависит 
+от температуры, от скорости молекул и  от агрегатного состояния вещества, а также от самого вещества.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи из ЕГЭ:</strong><br/>
+В стакан с водой упала капля краски. Через некоторое время вся вода оказалась окрашенной. Какое явление было причиной
+ распространения молекул краски по всему объему воды? Температура воды в стакане была всюду одинаковой.<br/>
+1. Конвекция.&nbsp; 2. Испарение.&nbsp; 3. Диффузия.&nbsp; 4. Конденсация.&nbsp; 5. Все явления, перечисленные в ответах.
+<br/>
+<strong>Ответ:</strong> 3. Вопрос взят с файла сайта http://www.zavuch.info/methodlib/122/35506/.
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a3" style="background-image: url('img/zametki.jpg'); width: 700px; height: 160px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Цена деления прибора. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ЦЕНА ДЕЛЕНИЯ ПРИБОРА-</strong>
+Наименьшее деление шкалы прибора. Для того, чтобы найти цену деления прибора, нужно взять два ближайших числа, из большего вычесть меньшее и разделить на число деления между ними.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи :</strong><br/>
+Найти цену деления линейки 25 см.<br/>
+Находим два ближайших числа. Пусть это будет 10 и 11. Из 11 вычитаем 10, получаем 1. Считаем количество делений между ними: 10. 1/10 равно 0.1. 
+<br/>
+<strong>Ответ:</strong>  Цена деления линейки равна 0.1.
+</center>
+</span>
+</blockquote>
+
+
+
+<blockquote id="a4" style="background-image: url('img/zametki.jpg'); width: 700px; height: 240px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Агрегатное состояние вещества. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>АГРЕГАТНОЕ СОСТОЯНИЕ ВЕЩЕСТВА-</strong>
+Оно бывает жидким, твёрдым, газообразным. Молекулы этих веществ не отличаются друг от друга.<br/>
+<strong>ТВЁРДОЕ СОСТОЯНИЕ ВЕЩЕСТВА-</strong>
+Это постоянная форма и объём тела, молекулы находятся в строго определённых положениях (узлах кристаллической решётки), около которых они колеблются.<br/>
+<strong>ЖИДКОЕ СОСТОЯНИЕ ВЕЩЕСТВА-</strong>
+Это постоянный объём тела, легко меняет свою форму, молекулы находятся близко друг к другу, но взаимодействуют только с ближайшими.<br/>
+<strong>ГАЗООБРАЗНОЕ СОСТОЯНИЕ ВЕЩЕСТВА-</strong>
+Это состояние тела, при ктором оно не имеет постоянной формы и объёма и расстояние между молекулами большое.<br/>
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong>
+<br/>
+<strong>Ответ: В 7 классе задачи на эту тему не решаются.</strong>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a5" style="background-image: url('img/zametki.jpg'); width: 700px; height: 280px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Механическое движение. Часть 1. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>МЕХАНИЧЕСКОЕ ДВИЖЕНИЕ-</strong>
+Это изменение положения тела в пронстранстве относительно других тел с течением времени.<br/>
+<strong>ТЕЛО ОТСЧЁТА-</strong>
+Это тело, относительно которого рассматривается движение.<br/>
+<strong>СИСТЕМА ОТСЧЁТА-</strong>
+Это тело отсчёта, связанная с ним система координат и часы.<br/>
+<strong>МАТЕРИАЛЬНАЯ ТОЧКА-</strong>
+Это тело, формами и размерами которого можно пренебречь в условиях данной задачи.<br/>
+<strong>ТРАЕКТОРИЯ-</strong>
+Это линия вдоль которой движется тело.<br/>
+<strong>ПРОЙДЁННЫЙ ПУТЬ-</strong>
+Длина траектории.<br/>
+<strong>ПРЯМОЛИНЕЙНОЕ ДВИЖЕНИЕ-</strong>
+Это движение, когда траектория прямая линия.<br/>
+<strong>КРИВОЛИНЕЙНОЕ ДВИЖЕНИЕ-</strong>
+Это движение, когда траектория кривая линия.<br/>
+<strong>РАВНОМЕРНОЕ ДВИЖЕНИЕ-</strong>
+Это движение, когда тело за любые равные промежутки времени проходит одинаковые расстояния.<br/>
+<strong>СКОРОСТЬ ТЕЛА ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ-</strong>
+Это величина равная отношению пути ко времени, за которое этот путь пройден.<br/>
+</CENTER>
+</span>
+</blockquote>
+
+
+
+<blockquote id="a6" style="background-image: url('img/zametki.jpg'); width: 700px; height: 380px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Механическое движение. Часть 2. &copy; PHYSICSZONE.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>СКОРОСТЬ ТЕЛА ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ: &#965;=s/t</strong><br/>
+&#965;-скорость тела, s-расстояние, пройденное телом, t-время движения тела.<br/>
+<strong>РАССТОЯНИЕ, ПРОЙДЕННОЕ ТЕЛОМ ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ: s=&#965;*t</strong><br/>
+&#965;-скорость тела, s-расстояние, пройденное телом, t-время движения тела.<br/>
+<strong>ВРЕМЯ, ПРОЙДЕННОЕ ТЕЛОМ ПРИ РАВНОМЕРНОМ ДВИЖЕНИЕМ: t=S/&#965;</strong><br/>
+&#965;-скорость тела, s-расстояние, пройденное телом, t-время движения тела.<br/>
+<strong>РАЗНИЦА МЕЖДУ НАЧАЛЬНОЙ И КОНЕЧНОЙ СКОРОСТЬЮ: &#916;V=V<sub>2</sub>-V<sub>1</sub>=V<sub>К</sub>-V<sub>П</sub></strong><br/>
+&#916;V-разница в начальной и конечной скорости, V<sub>2</sub>-конечная скорость, V<sub>1</sub>-начальная скорость,
+V<sub>К</sub>-кинетическая скорость, V<sub>П</sub>-потенциальная скорость.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи :</strong><br/>
+Как называют линию, которую описывает тело при своём движении?<br/>
+1. Траектория. &nbsp; 2. Прямая линия. &nbsp; 3. Пройденный путь.
+<br/>
+<strong>Ответ: 1.</strong> Вопрос взят с файла сайта http://physik.ucoz.ru/board/7_klass/vzaimodejstvie_tel/mekhanicheskoe_dvizhenie/29-1-0-94
+</center>
+<br/>
+Велосипедист проехал 6 км за 20 минут. С какой скоростью он двигался? <br/>
+1. 30 м/с. &nbsp; 2. 5 м/c. &nbsp; 3. 0.5 м/c. 
+<br/>
+<strong>Ответ: 2.</strong> Вопрос взят с файла сайта http://physik.ucoz.ru/board/7_klass/vzaimodejstvie_tel/mekhanicheskoe_dvizhenie/29-1-0-94
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a7" style="background-image: url('img/zametki.jpg'); width: 700px; height: 350px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Инерция, инертность, масса. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ИНЕРЦИЯ-</strong>
+Это явление сохранения телом состояния своего движения, при отсутствии действия на него других тел или их действие скомпенсировано.<br/>
+<strong>ИНЕРТНОСТЬ-</strong>
+Это свойство тел сохранять состояние своего движения и препятствовать любым попыткам изменить это движение.<br/>
+<strong>МАССА-</strong>
+Мера инертности тел.<br/>
+<br/>
+</span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Созревшие стручки бобовых растений, быстро раскрываясь, описывают дуги. Какое явление положено в основу такого метода распространения семян?<br/>
+<br/><strong>Ответ: Созревшие стручки бобовых растений, быстро раскрываясь, описывают дуги – в это время семена, отрываясь от мест прикрепления, 
+по инерции движутся по касательной в стороны и падают значительно дальше материнского растения..</strong> Вопрос взят с сайта http://www.iralebedeva.ru/physic24.html.
+</center>
+<br/>
+Объясните причину того, что при резком торможении автомобиля его передняя часть опускается вниз.
+<br/>
+<strong>Ответ: Передняя часть автомобиля при резком торможении продолжает двигаться по инерции, поворачиваясь вокруг своих передних колёс на небольшой угол, что и приводит к её опусканию.</strong> Вопрос взят с сайта http://www.iralebedeva.ru/physic24.html.
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a8" style="background-image: url('img/zametki.jpg'); width: 700px; height: 170px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Плотность вещества. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ПЛОТНОСТЬ ВЕЩЕСТВА-</strong>
+Это физическая величина, равная отношению массы тела к его объёму.<br/>
+<strong>Формула плотности вещества: &#961;=m/V</strong>, где
+&#961-плотность вещества, m-масса вещества, V-объём вещества.</span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Какой вместимости надо взять сосуд чтобы в него можно было налить мёд массой 2.7 кг?<br/>
+V-? &nbsp;&nbsp; &#961;=m/V &nbsp;&nbsp; V=m/&#961; &nbsp;&nbsp; <br/>
+&#961;<sub>мёда</sub>=1350кг/м<sup>3</sup> &nbsp;&nbsp; V=m/&#961;<sub>мёда</sub>&nbsp;&nbsp;<br/>
+V=2700/1350=2л;<br/>
+<strong>Ответ: 2 литра.</strong>
+</center>
+</blockquote>
+
+
+
+<blockquote id="a9" style="background-image: url('img/zametki.jpg'); width: 700px; height: 460px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Таблица плотностей веществ. Часть 1. &copy; PHYSICSZONE.
+</span>
+<img src="img/plot.gif" width="650" height="420" title="Плотность веществ" style="border: 3px solid white;"/><br/>
+</CENTER>
+</blockquote>
+
+
+
+<blockquote id="a10" style="background-image: url('img/zametki.jpg'); width: 700px; height: 480px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Таблица плотностей веществ. Часть 2. &copy; PHYSICSZONE.
+</span>
+<img src="img/plot.jpg" width="650" height="450" title="Плотность веществ" style="border: 3px solid white;"/><br/>
+</CENTER>
+</blockquote>
+
+
+<blockquote id="a11" style="background-image: url('img/zametki.jpg'); width: 700px; height: 200px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Закон всемирного тяготения. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ЗАКОН ВСЕМИРНОГО ТЯГОТЕНИЯ-</strong>
+Все тела притягиваются друг к другу силами, равными по модулю произведению массы этих тел и обратно пропорциональными квадрату расстояния между ними.<br/>
+
+<strong>ФОРМУЛА ЗАКОНА ВСЕМИРНОГО ТЯГОТЕНИЯ:
+F=G*((m<sub>1</sub>*m<sub>2</sub>)/R<sup>2</sup>)</strong>, где
+F-сила всемирного тяготения, m<sub>1</sub> и m<sub>2</sub> массы притягивающихся тел, R-расстояние между этими телами, G-гравитационная постоянная.</span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+<strong>Ответ: Задачи на данную тему в 7 классе не рашаются.</strong> Вопрос взят с файла сайта 
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a11" style="background-image: url('img/zametki.jpg'); width: 700px; height: 220px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Основные силы в физике. Часть 1. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>СИЛА ТЯЖЕСТИ-</strong>
+Это сила притяжения всех тел к Земле.<br/>
+<strong>СИЛА УПРУГОСТИ-</strong>
+Это сила, возникающая при деформации тела.<br/>
+<strong>СИЛА ТРЕНИЯ-</strong>
+Это сила, возникающая при соприкосновении двух тел. Бывают силы трения скольжения, качения и в покое.<br/>
+<strong>УПРУГАЯ ДЕФОРМАЦИЯ-</strong>
+Это деформация, исчезающая после прекращения действия внешней силы.<br/>
+<strong>ПЛАСТИЧЕСКАЯ ДЕФОРМАЦИЯ-</strong>
+Это деформация, которая остается после прекращения действия внешней силы.<br/>
+<strong>ЗАКОН ГУКА-</strong>
+Изменение длины тела при сжатий и растяжении прямо пропорционально модулю силы упругости. При упругой деформации, растяжении или сжатии, модуль силы упругости прямопропорционален абсолютному удлинению тела.<br/>
+<strong>ВЕС ТЕЛА-</strong>
+это сила, с которой тело вследствие притяжения к Земле действует на опору или подвес.<br/>
+</span>
+</blockquote>
+
+
+
+<blockquote id="a12" style="background-image: url('img/zametki.jpg'); width: 700px; height: 250px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Основные силы в физике. Часть 2. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+
+<strong>
+Формула силы упругости:
+F<sub>упр</sub>=k*&#916;l=k*x
+</strong>, где
+F<sub>упр</sub>-сила упругости, k-жёсткость тела, &#916;l-удлинение, x-величина удлинения, равная &#916;l.
+<br/>
+
+<strong>
+Формула силы тяжести:
+F<sub>тяж</sub>=P=m*g=N
+</strong>, где
+F<sub>тяж</sub>-сила тяжести, P-вес тела, m-масса тела, g-ускорение свободного падения (постоянная для Земли 9.8), N-сила реакции опоры.
+<br/>
+
+<strong>
+Формула силы трения:
+F<sub>трен</sub>=&#956;*N</strong>,  где
+F<sub>трен</sub>-сила трения, &#956;-коэффициент трения, N-сила реакции опоры или сила упругости.
+</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Тело массой 5 кг лежит на наклонной поверхности 30 градусов. С какой силой тело давит на поверхность?<br/>
+F=mg*сosa; &nbsp; F=5 кг*9.8*30=43.3 Ньютона.<br/>
+<strong>Ответ: 43.3 Ньютона</strong> Вопрос взят с файла сайта http://znanija.com/task/1445388 
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a13" style="background-image: url('img/zametki.jpg'); width: 700px; height: 300px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Давление тела. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ДАВЛЕНИЕ ТЕЛА-</strong>
+Это величина, равная отношению силы, действующей перпендикулярно поверхности к площади этой поверхности.<br/>
+<strong>
+ДАВЛЕНИЕ, ПРОИЗВОДИМОЕ ТЕЛОМ: P=F/S=(m*g)/S=&#961;*g*h
+</strong>, где
+F-сила c которой тело действует на поверхность, S-площадь поверхности, на которую действует тело, m-масса тела, g-ускорение свободного падения, &#961;-плотность жидкости, 
+h-высота уровня жидкости. Последняя формула применяется для жидкости.<br/>
+<strong>ЗАКОН ПАСКАЛЯ-</strong>
+Давление, производимое на жидкость или газ, передаётся в любую точку без изменений во всех направлениях.<br/>
+</span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Батискаф «Триест» опустился на рекордную глубину 10 917 м. Каково давление воды и какова сила давления на иллюминатор площадью 500 см<sup>2</sup><br/>
+P=&#961;*g*h. &nbsp; P=1000кг/м<sup>3</sup>*9.8*10917м. &nbsp; P=106986600 Па-давление воды.<br/>
+P=F/S. &nbsp; F=P*S. &nbsp; F=106986600 Па.*5 м<sup>2</sup>. &nbsp; P=534933000 Па-давление на иллюминатор.<br/>
+ 
+<strong>Ответ: P=106986600 Па-давление воды; P=534933000 Па-давление на иллюминатор.</strong> Вопрос взят с файла сайта http://iumka.ru/fizika/zadachi-po-fizike/item/13255/.
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a14" style="background-image: url('img/zametki.jpg'); width: 700px; height: 430px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Поршневый насос. Часть 1. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 13px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ОПИСАНИЕ ПОРШНЕВОГО НАСОСА.</strong><br/>
+Благодаря простоте и надежности работы поршневые насосы нашли широкое применение в нефтяной, газовой и нефтехимической отраслях промышленности, 
+все основные технологические процессы которых связаны с перекачкой по трубопроводам различных жидкостей, нефтепродуктов, сжиженных газов, воды, 
+глинистых растворов, химических реагентов и др. В бурении нефтяных и газовых скважин поршневые насосы нашли исключительное применение. Они используются для создания 
+циркуляции глинистого раствора или воды в скважине. В добыче нефти поршневые (плунжерные) насосы используются главным образом для извлечения нефти скважины, перекачки воды
+и высоковязкой нефти по трубопроводам, гидравлического разрыва пластов, нагнетания воды в пласт. Поскольку в нефтяной промышленности нет ни одного участка, где не использовались
+бы насосы, дальнейшее улучшение их технико-экономических показателей остается основной проблемой нефтяной промышленности. Сохранение при работе высокого коэффициента полезного 
+действия или полное использование установленной мощности рассматриваемых гидравлических машин является одной из важнейших задач обслуживающего персонала. 
+Действие поршневого насоса за один обороткоренного вала можно расчленить на его составляющие: процесс всасывания, при котором происходит подъем жидкости 
+из нижнего резервуара в цилиндр насоса, и процесс нагнетания, при котором жидкость вытесняется из цилиндра с энергией, достаточной для преодоления всех видов 
+сопротивлений на напорной стороне насоса. В насосах двойного действия обе стороны поршня являются рабочими. Цилиндры таких насосов имеют четыре клапана При ходе
+поршня влево всасывающий и нагнетательный клапаны открыты. Через клапан происходит всасывание, а через клапан вытеснение жидкости в нагнетательный трубопровод.
+В это время клапаны закрыты. При обратном ходе поршня через клапан жидкость поступает в цилиндр, а через клапан производится подача жидкости в нагнетательный трубопровод. 
+В рассматриваемых насоса всасывание и нагнетание жидкости происходит при каждом ходе поршня.<br/>
+По материалам сайта: http://student.zoomru.ru/transport/porshnevye-nasosy/160701.1309858.s1.html?</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a15" style="background-image: url('img/zametki.jpg'); width: 700px; height: 130px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Поршневый насос. Часть 2. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Будут ли действовать в безвоздушном пространстве поршневые жидкостные насосы?<br/>
+<strong>Ответ: Насосы действовать не будут, потому что, когда мы качаем жидкость, ее внутрь толкает атмосферное давление. Без атмосферы не будет и давления.</strong><br/>
+По материалам сайта: http://уроки.мирфизики.рф/index.php?option=com_content&view=article&id=196:45---&catid=34:2011-11-29-17-15-09&Itemid=67. http://znanija.com/task/5607888</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a16" style="background-image: url('img/zametki.jpg'); width: 700px; height: 300px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Гидравлический пресс. Часть 1. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 13px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ОПИСАНИЕ ГИДРАВЛИЧЕСКОГО ПРЕССА.</strong><br/>
+После того как Паскаль провел ряд опытов по измерению атмосферного давления, он решил сконструировать "новую машину для увеличения сил". 
+Его изобретение позволило создать гидравлический пресс (от греческого слова "гидравликос" - водяной).
+Гидравлический пресс - это машина для обработки материалов давлением, приводимая в действие сдавливаемой жидкостью.
+Паскаль написал, что с помощью изобретенной им машины "один человек, надавливающий на малый поршень, уравновесит силу ста человек, 
+надавливающих на поршень, в сто раз больший, и тем самым преодолеет силу девяносто девяти человек". Это открытие и легло в основу принципа действия 
+гидравлического пресса.Впервые гидравлические прессы были применены в конце 18 — начале 19 вв. для пакетирования сена, выдавливания виноградного сока, отжима масла и т.п.
+С середины 19 в. Г. п. широко используется в металлообработке для ковки слитков, листовой штамповки, гибки и правки, объёмной штамповки, выдавливания т
+руб и профилей, пакетирования и брикетирования отходов, прессования порошковых материалов, покрытия кабелей металлической оболочкой и др. Г. п. нашли 
+распространение также в производстве пластмассовых и резиновых изделий, древесностружечных плит, фанеры, текстолита и др. Они применяются при синтезе
+ новых материалов (например, искусственных алмазов).
+<br/>
+По материалам сайта: http://dic.academic.ru/dic.nsf/bse/79077/Гидравлический?</span>
+</center>
+</span>
+</blockquote>
+
+
+
+
+<blockquote id="a18" style="background-image: url('img/zametki.jpg'); width: 700px; height: 370px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Сообщающиеся сосуды. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 13px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ОПИСАНИЕ СООБЩАЮЩИХСЯ СОСУДОВ.</strong><br/>
+Сообщающиеся сосуды, сосуды, соединённые между собой в нижней части. В наполненных одинаковой жидкостью сообщающиеся сосуды, 
+диаметр которых настолько велик, что позволяет пренебречь капиллярным эффектом, уровни жидкости располагаются на одинаковой высоте  
+независимо от формы сосудов. На этом основано устройство жидкостных манометров, водомерных стекол паровых котлов и т.п. Если сообщающиеся 
+сосуды наполнены различными жидкостями, то высоты столбов этих жидкостей (считая от поверхности соприкосновения жидкостей друг с другом) 
+обратно пропорциональны их плотностям, т. е. r1h1 = r2h2, где r1 и r2, h1 и h2 — соответственно плотности и высоты столбов жидкости. Этим
+соотношением пользуются для определения плотности жидкости. Если же одно из колен С. с. закрыто, то разность уровней жидкости будет зависеть
+от давления в закрытом колене; на этом основано устройство закрытых манометров.<br/></span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+В двух сообщающихся трубках разного сечения налита сначала ртуть, а потом в широкую трубку сечением 8 см<sup>2</sup> налито 272 г воды. Найдите разность уровней жидкостей.<br/>
+Высота столбика воды: 272 см<sup>3</sup>/8 см<sup>2</sup> = 34 см. <br/>
+Плотность ртути 13600 кг/м<sup>3</sup>, воды 1000 кг/м<sup>3</sup>. Ртуть в 13,6 тяжелее воды. <br/>
+Высота столбика ртути: 34 см / 13,6 = 2,5 см. <br/>
+Разность уровней: 34 - 2,5 = 31,5 см.<br/>
+<strong>Ответ: 31,5 см</strong> Вопрос взят с файла сайта http://otvet.mail.ru/question/73108070</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a19" style="background-image: url('img/zametki.jpg'); width: 700px; height: 480px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Манометр. Часть 1. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 13px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<strong>ОПИСАНИЕ МАНОМЕТРА.</strong><br/>
+Манометры это механические устройства, служащие для измерения избыточного давления воды, пара, масла, эмульсий и различных газов величиной до нескольких десятков и даже сотен атмосфер.
+Манометр работает следующим образом: давление среды через присоединительный штуцер поступает внутрь изогнутой медной трубки овального сечения. Под действием этого давления трубка стремиться 
+распрямиться. Перемещение трубки через тягу и коромысло передается на подпружиненную ось со стрелкой. Стрелка поворачивается вслед за перемещением трубки, показывая действующее давление.
+Манометры для измерения высоких давлений, например, для газовых редукторах, имеют несколько другую конструкцию чувствительного элемента. Он также представляет собой медную трубку, но она 
+имеет существенно меньшее поперечное сечение и, кроме того, имеет несколько витков, относительно оси которых трубка и перемещается при подаче давления на манометр. Кроме преобразовательной
+ функции (давление среды - перемещение трубки и связаной с ней стрелки) медная трубка выполняет функцию демпфера.
+Довольно часто корпуса манометров, служащих для измерения давления газов, окрашивают в различные цвета. Так манометры с голубым цветом корпуса предназначены для измерения давления кислорода. 
+Желтый цвет корпуса имеют манометры на аммиак, белый – на ацителен, темно-зеленый – на водород, серовато-зеленый – на хлор. Манометры на пропан и другие горючие газы имеют красный цвет корпуса.
+ Корпус черного цвета имеют манометры предназначенные для работы с негорючими газами. Кислородные манометры в обязательном порядке должны быть обезжирены, так как иногда даже незначительное 
+загрязнение присоединительного штуцева и механизма при контакте с чистым кислородом может привести к воспламенению и даже взрыву. Манометры на ацетилен не допускают наличия в измерительном 
+механизме сплавов меди, так как при контакте с ацетиленом существует опасность образования взрывоопасной ацетиленистой меди.
+Один и тот же манометр можно использовать для измерения давления различных сред (жидкость, пар, газ) если элементы его конструкции устойчивы к данным средам. 
+В случае, если манометр имеет ограниченное применение, то на его шкалу наносятся специальные символы информирующие об особенностях применения данного манометра. 
+Более подробную информацию о том, давление каких сред может измерять манометр можно найти в его заводском паспорте.<br/>
+По материалам сайта: http://knowkip.ucoz.ru/publ/teplotekhnicheskie_izmerenija/i/manometry/2-1-0-12?</span>
+
+</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a20" style="background-image: url('img/zametki.jpg'); width: 700px; height: 225px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Манометр. Часть 2. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+В баллоне вместительностью 10 л находится кислород, масса которого 12,8г. Давление в баллоне изменяется U-образным водяным манометром. Чему равна разность уровней воды в коленах манометра при температуре 27C? Атмосферное давление нормальное.<br/>
+
+P*V=n*R*T, выразим давление из данной формулы
+P=m*R*T/M*V<br/>
+
+P=(0,0128кг*8,31дж/моль*К*300К)/(0.01м<sup>3</sup>*0,032кг/моль)<br/>
+P=99720 Па<br/>
+
+так как надо найти разность уровней воды в коленах манометра, в формулу P=p*g*h, вместо P (давления) дставим разницу внешнего и внутреннего давлений (105Па - 99720Па)
+в итоге получилось 280Па=1000кг/м<sup>3</sup>*9,8м/c<sup>2</sup>*h, из чего h равно приблизительно 2.9 см<br/>
+
+<strong>Ответ: 2.9 см</strong><br/>
+По материалам сайта: http://sfiz.ru/forums.php?m=posts&p=5094</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a21" style="background-image: url('img/zametki.jpg'); width: 700px; height: 235px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Атмосферное давление. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>АТМОСФЕРНОЕ ДАВЛЕНИЕ</strong>-давление атмосферы на все находящиеся в ней предметы и земную поверхность. Атмосферное давление создаётся гравитационным притяжением воздуха к Земле. Атмосферное давление измеряется барометром. Атмосферное давление, равное давлению столба ртути высотой 760 мм при температуре 0 °C, называется нормальным атмосферным давлением.
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Если налить в стакан воду и закрыть его листом бумаги, поддерживая лист рукой перевернуть стакан вверх дном,и отнять руку от бумаги, то вода из стакана не выльется. Бумага останется "приклеенной к краям стакана". Почему?<br/>
+<strong>Ответ: Очевидно из-за разности давлений. Сила атмосферного давления превышает силу давления массы (вес) воды в стакане на лист бумаги. Герметичность конструкции обеспечивает явление смачивания. 
+Приложив внешнюю силу (дернув за лист бумаги) вы нарушите герметичность, внутрь попадет воздух, к весу добавится также атмосферное давление и вода с легкостью окажется на полу.</strong><br/>
+По материалам сайта: http://help.kalser.ru/viewtopic.php?p=4315</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a22" style="background-image: url('img/zametki.jpg'); width: 700px; height: 200px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Механическая работа. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>МЕХАНИЧЕСКАЯ РАБОТА-</strong>
+Это величина равная произведению силы на перемещение под действием этой силы.<br/>
+<strong>ФОРМУЛА МЕХАНИЧЕСКОЙ РАБОТЫ A=F*S=F*&#965;*t</strong>
+A-механическая работа, F-сила, прилагаемая для совершения работы, S-перемещение (путь), t-время, &#965;-скорость.<br/></span>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Пример задачи:</strong><br/>
+Лошадь тянет плуг с силой в 350Н.Какую работу совершит лошадь,пройдя борозду длиною в 25 м?<br/>
+A=F*S; &nbsp; A=350 Н*25 м=42000<br/>
+42000=350*S; &nbsp; S=120м<br/>
+Находим &#965;:
+&#965;=s/t &nbsp;
+&#965;=120м/60сук = 2 м в секунду<br/>
+<strong>Ответ: 2 м/с</strong><br/>
+По материалам сайта: http://znanija.com/task/1829216</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a23" style="background-image: url('img/zametki.jpg'); width: 700px; height: 270px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Мощность. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>МОЩНОСТЬ-</strong>
+Это быстрота совершения работы за единицу времени.<br/>
+<strong>ФОРМУЛА МОЩНОСТИ (БЫСТРОТЫ СОВЕРШЕНИЯ РАБОТЫ): N=A/t=(F*S)/t=F*V</strong>
+N-мощность тела, A-механическая работа, t-время, F-сила, прилагаемая для совершения работы, S-перемещение (путь), V-скорость.<br/></span>
+<strong>Пример задачи:</strong><br/>
+Юный турист, масса которого 41 кг, заметил, что за 25 с он поднимается на четвёртый этаж своего дома, неся за плечами рюкзак,  масса  которого равна 10 кг. Какую мощность развивает турист, если высота одного этажа равна 3 м?<br/>
+Запишем формулу мощности:
+N=A/t=(F*S)/t=F*V
+A - мех. работа. Формула которой:<br/>
+A=F*S=F*&#965;*t
+Где F - сила тяжести, формула которой:<br/>
+F=m*g<br/>
+Получаем:
+N=(m*g*h<sup>3</sup>)/t<br/>
+Считаем. Чтобы ответ получился =180 Н, ускорение свободного падения должно быть равно g=9,8 м/с^2.<br/>
+N=(51*9,8*9)/(25)=180 Н.<br/>
+<strong>Ответ: 180 H</strong><br/>
+По материалам сайта: http://znanija.com/task/1947009</span>
+</center>
+</span>
+</blockquote>
+
+
+
+<blockquote id="a24" style="background-image: url('img/zametki.jpg'); width: 700px; height: 270px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Рычаг. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>РЫЧАГ-</strong>
+Твёрдое тело, имеющее точку опоры или ось вращения.<br/>
+<strong>ПЛЕЧО СИЛЫ-</strong>
+Кротчайшее расстояние от точки опоры и линии действия сил. Это длина перпендикуляра, опущенного из точки опоры на линию действия силы.<br/>
+<strong>МОМЕНТ СИЛЫ-</strong>
+Это величина равная произведению силы на её плечо.<br/>
+<strong>УСЛОВИЕ РАВНОВЕСИЯ РЫЧАГА:
+F<sub>1</sub>/F<sub>2</sub>=l<sub>2</sub>/l<sub>1</sub>,</strong> где
+l<sub>1,2</sub>-длины рычага, F<sub>1,2</sub>-силы приложенные к рычагу.<br/>
+<strong>ЗАКОН РАВНОВЕСИЯ РЫЧАГА</strong>-
+рычаг находится  равновесии под действием двух сил, если момент силы, вращающей его по часвой стрелке, равен моменту силы, вращающей его против часовой стрелки.<br/></span>
+<strong>Пример задачи:</strong><br/>
+В школьной мастерской мальчик, чтобы сильно зажать в тиски обрабатываемую деталь, берется не за середину, а за край ручки тисков. Почему?<br/>
+<strong>Ответ: Если взяться за край ручки тисков, то увеличится момент силы затяжки, так как увеличится плечо силы.</strong><br/>
+По материалам сайта: http://5terka.com/7klass/Решебник%20к%20сборнику%20задач%20по%20физике%20для%207-9%20классов%20Лукашик%20В.И.%20Иванова%20Е.В?page=28</span>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="a25" style="background-image: url('img/zametki.jpg'); width: 700px; height: 170px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 7 класс. Блоки. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>НЕПОДВИЖНЫЙ БЛОК-</strong>
+Это рычаг с соотношением плеч 1:1, который не даёт выйгрыша в силе, а используется только для изменения направления силы.<br/>
+<strong>ПОДВИЖНЫЙ БЛОК-</strong>
+Это рычаг с соотношением плеч 1:2, который даёт выйгрыш в силе в 2 раза.<br/>
+<strong>ЗОЛОТОЕ ПРАВИЛО МЕХАНИКИ-</strong>
+Ни один простой механизм не даёт выйгрыша в работе. Во сколько раз мы выигрываем в силе, во столько раз мы проигрываем в пути.<br/>
+<strong>
+A<sub>1</sub>=A<sub>2</sub><br/>
+F<sub>1</sub>/F<sub>2</sub>=S<sub>2</sub>/S<sub>1</sub>
+</strong>
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="b1" style="background-image: url('img/zametki.jpg'); width: 700px; height: 180px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 8 класс. Тепловые явления. Температура. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>Молекулярно-кинетическая теория:</strong>
+Все вещества состоят из мельчайших частиц-атомов и молекул.
+Эти частицы находятся в непрерывном хаотическом движении.
+Эти частицы взаимодействуют друг с другом, притягиваются и отталкиваются.
+Между частицами существуют промежутки.<br/>
+<strong>ТЕПЛОВОЕ ДВИЖЕНИЕ-</strong>
+Беспорядочное движение частиц, из которых состоят тела.<BR/>
+<strong>ТЕМПЕРАТУРА-</strong>
+Мера нагретости тел. Мера средней кинетической энергии молекул.<br/>
+<strong>ТЕРМОМЕТР-</strong>
+Прибор для измерения температур. Бывает жидкостный (ртутный и спиртовой), твёрдотельный (термопары) и газовые (газ).<br/>
+<strong>Пример задачи:</strong><br/>
+Эта тема 8 класса идёт без практической части.
+</center>
+</span>
+</blockquote>
+
+
+<blockquote id="b2" style="background-image: url('img/zametki.jpg'); width: 700px; height: 230px; border: 2px solid blue;"><CENTER>
+<span style="color: blue; font-size: 14px; font-weight: bold; font-face:'Comic Sans MS';" align="center">
+Шпаргалка. 8 класс. Внутренняя энергия. &copy; PHYSICSZONE.</span>
+<br/>
+<span style="color: blue; font-size: 14px; font-weight: normal; font-face:'Comic Sans MS';" align="left">
+<center>
+<strong>ВНУТРЕННЯЯ ЭНЕРГИЯ-</strong>
+Это кинетическая и потенциальная энергия молекул данного тела.<Br/>
+<strong>СПОСОБЫ ИЗМЕНЕНИЯ ВНУТРЕННЕЙ ЭНЕРГИИ:</strong><BR/>
+1) Совершение работы<br/>
+2) <strong>ТЕПЛОПЕРЕДАЧА или ТЕПЛООБМЕН</strong>-Процесс измерения внутренней энергии без совершения работы над телом или самим телом. Это процесс обмена внутренней энергии соприкасающихся тел, имеющих разные температуры, происходящих без совершения работы.<br/>
+<strong>ТЕПЛОПРОВОДНОСТЬ-</strong>
+Это явление передачи внутренней энергии от одной части тела к другой или от одного тела к другому.<br/>
+<strong>ТЕПЛОПЕРЕДАЧА-</strong>
+Это конвекция, излучение, теплопроводность.<br/>
+<strong>Пример задачи:</strong><br/>
+Эта тема 8 класса идёт без практической части.
+</center>
+</span>
+</blockquote>
+
+
+<div id="up">
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="shpora.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<br/><br/>
+</div>
+
+</div>
+
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+

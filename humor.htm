@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Физика и юмор</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Физика и юмор">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+<a href="press.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТАРНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ТЕМАТИЧЕСКИЕ АНЕКДОТЫ</h1>
+
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Физика-нелёгкая наука. Иногда мозги кипят от неё. Поэтому полезно расслабляться. PHYSICSZONE публикует тематические анекдоты, связанные с физикой, так что можно совмещать приятное с полезным, ведь смех помогает расслабиться. Главное, не увлекаться!</P>
+
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Один профессор, председатель комиссии по атомной энергии, был очень рассеянным человеком. Поехал он как-то раз в троллейбусе, а там медсестра из психиатрической больницы везла куда-то больных. Подошла их остановка, вышли они друг за другом, и профессор, задумавшись, вместе с ними. Медсестра, пересчитывая больных:<br/>
+— Первый, второй, третий, четвертый... А вы кто такой?<br/>
+— Я председатель комиссии по атомной энергии.<br/>
+— Пятый, шестой, седьмой...<br/></P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Идет экзамен. Преподаватель поясняет:<br/>
+- Вопрос на пять. Чем измеряется напряжение.<br/>
+- Вопрос на четыре. Чем измеряется напряжение? А - вольтметром, Б - амперметром, В - омметром.<br/>
+- Вопрос на три. А не вольтметром ли измеряется напряжение?<br/></P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Учительница:
+- Вовочка, кто такой был Архимед?<br/>
+- Ну... это был ученый... как-то раз он мылся в ванне и закричал: "Эврика!"<br/>
+- И что означает "эврика"?<br/>
+- Ну... это означает "нашел".<br/>
+- И что же он нашел?<br/>
+- Не знаю... Мыло, наверное.<br/>
+</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Ученик: Раствор поваренной соли проводит электрический ток, значит, соль - электролит. Раствор сахара...<br/>
+- Учитель: Подумай, что представляет собой раствор сахара?<br/>
+- Ученик: Чай?<br/>
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>В раю Архимед, Паскаль и Ньютон играют в прятки. Архимед водит и начинает считать.
+ Паскаль убегает за горизонт, а Ньютон оглядывается, берёт палку, рисует вокруг себя квадрат со стороной 1 метр и 
+становится внутрь квадрата. Архимед заканчивает считать, открывает глаза и видит Ньютона:<br/>
+- Я вижу Ньютона!<br/>
+- Э, нет! Ньютон на метр квадратный - это Паскаль!<br/>
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>На станции стоит и ждет электричку  физик. К нему подходит цыганка: - Позолоти ручку, дорогой, всё что хочешь расскажу!<br/>
+Физик достаёт полтинник: - Cкажи мне период полураспада радия!<br/>
+У цыганки глаза О_О!<br/>
+А физик ей: - Ну, видишь, не заработала!, - и прячет деньги обратно в карман.<br/>
+</P>
+
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>Загруженный работой физик страдает над письменным столом. К нему подходит его ребенок и спрашивает:<br/>
+- Папа, как пишется цифра восемь?<br/>
+- Очень просто. Возьми бесконечность и поверни на пи пополам.<br/>
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>
+Закон сохранения бабушек:<br/>
+Сколько бабушек выйдет на остановке, столько же и войдет.<br/>
+</P>
+
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+<P>
+На уроке физики учительница объясняет, что такое возгонка, затем спрашивает:<br/>
+- Кто-нибудь может привести пример вещества, которое переходит из твердого состояния в газообразное, минуя жидкое? Вовочка, пожалуйста.<br/>
+Вовочка:<br/>
+- Горох.
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>
+- Что общего у кометы Галлея и у блондинки с справочником по квантовой физике в руках?<br/>
+- Обе встречаются раз в 75 лет.<br/>
+</P>
+
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>
+Вопрос корреспондента депутату:<br/>
+ - Как вы относитесь к законам физики? <br/>
+ - К законам физики я отношусь плохо, поскольку они никем не<br/>
+ ратифицированы...<br/>
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>- В чём сила, брат?<br/>
+-В ньютонах, брат, в ньютонах!</P>
+
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>
+Сидят в кафе два физика. Мимо проходит девушка. Один физик говорит другому:<br/>
+— Ты смотри, какое интересное сочетание атомов!
+</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+
+<P>
+А где корова моя любимая? <br/>
+- Ты что, Михайло! 20 лет уж прошло. <br/>
+- Так я и спрашиваю, где корова моя? <br/>
+- Да ты что, Михайло! Коровы 8 лет живут. <br/>
+- И где корова? <br/>
+- Ты в какой науке силен? В зоологии иль в механике? <br/>
+- В механике. <br/>
+- Сломалась твоя корова.<br/>
+</P>
+
+
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="humor.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+</div>
+
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+
+

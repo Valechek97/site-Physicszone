@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Интересные статьи по физике</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<link href="http://megascripts.ru/demo/News_Ticker/css/ticker-style.css" rel="stylesheet" type="text/css" /> 
+ <script type="text/javascript" src="http://megascripts.ru/demo/News_Ticker/js/site.js"></script> 
+ <script type="text/javascript" src="http://megascripts.ru/demo/News_Ticker/js/jquery.ticker.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Интересные статьи по физике">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="press.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТАРНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ИНТЕРЕСНЫЕ СТАТЬИ</h1>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Добро пожаловать в Пресс-центр Территории физики! Полезные статьи и интересные новости, связанные с физикой ждут Вас тут! Наслаждаемся достоверной информацией и познаем физику!</P>
+
+<div id="postoy1">
+<table> 
+<tr>
+<td>
+<a href="press.htm#nobel" target="_top">
+<span><Center>НОБЕЛЕВСКАЯ ПРЕМИЯ ПО ФИЗИКЕ</Center></span>
+<Center>О состоявшемся вручении Нобелевской премии 2014 года по физике рассказывает в статье достоверный источник</Center>
+</a></td></TR>
+
+<td>
+<a href="press.htm#futball" target="_top">
+<span><Center>ФУТБОЛ ГЛАЗАМИ ФИЗИКА</Center></span>
+<P><Center>Специально подготовленная PHYSICSZONE статья, с материалами из различных источников в предверии Чемпионата мира по футболу-2014</Center></p>
+</a></td></tr>
+
+<td>
+<a href="press.htm#fonar" target="_top">
+<span><Center>КАК СДЕЛАТЬ ВОДНЫЙ ФОНАРИК</Center></span>
+<P><Center>О создании фонарика, работающего на воде, своими руками повествует сторонний источник</Center></P>
+</a></td>
+</tr>
+</table>
+</div>
+
+<br/>
+
+
+<div id="news">
+<h2 id="nobel">НОБЕЛЕВСКАЯ ПРЕМИЯ ПО ФИЗИКЕ!</h2>
+</div>
+
+<img src="img/nobel.jpg" width="500" height="350" title="Лауреат Нобелевской премии Сюдзи Накамура" style="border: 3px solid white;" align="center" hspace="5" vspace="5" alt="Лауреат Нобелевской премии Сюдзи Накамура"/>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Лауреатами Нобелевской премии в области физики в 2014 году стали японские ученые Исаму Акасаки и Хироси Амано, а также Сюдзи Накамура из США.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Как объявил Нобелевский комитет при Королевской академии наук, награда будет вручена "за изобретение эффективных синих светодиодов, обеспечивающих яркие и энергосберегающие источники белого света".
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Нобелевские лауреаты изобрели новый энергосберегающий и экологичный источник энергии - синий светодиод (LED). Он дает новые возможности для получения белого света, являющегося более устойчивой и 
+эффективной альтернативой старым источникам света", - отмечает комитет.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Их изобретение в начале 1990-х годов открыло путь к основополагающим изменениям в осветительной технике. Обычные лампы освещали весь ХХ век, а XXI век будут освещать светодиоды", - говорится в письме.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Председатель комитета Пер Делсинг отметил, что основатель премии Альфред Нобель был бы доволен выбором Нобелевского комитета. "Это изобретение делает освещение
+значительно более эффективным. При этом нет необходимости использовать в лампах ртуть", - сказал он, приведя в качестве примера применения мобильный телефон с сильным фонариком-светодиодом.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Синий светодиод - это то, чего не хватало. В сочетании с зеленым и красным он дает белый свет с высокой энергетической эффективностью", - отметил он.
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Первые полупроводниковые излучатели красного цвета были получены в 1962 году, светодиоды желтого и зеленого цвета - в начале 1970-х. Затем группа 
+ученых изобрела первые синие светодиоды, и благодаря этому появились первые светодиодные RGB устройства, поскольку синий, красный и зеленый цвета позволяют получить любой цвет, в том числе белый.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Белые светодиоды, которые обеспечивают сильный белый свет, появились в 1996 году. Их отличают долгий срок эксплуатации и низкое энергопотребление. 
+Поскольку около четверти производимой в мире электроэнергии уходит на освещение, светодиодные лампы способствуют сохранению ресурсов планеты.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Лауреат премии Исаму Акасаки родился в 1929 году. Он - гражданин Японии, является профессором университета Нагоя и Мэйдзё. Его коллега Хироси Амано 
+родился в 1960 году, он также гражданин Японии и с 1989 года работает в университете Нагоя. Сюдзи Накамура родился в 1954 также в Японии, но работает в Калифорнийском университете в США и является гражданином этой страны.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Акасаки работал вместе с Амано в университете Нагоя, а Накамура являлся исследователем компании Nichia Chemicals, когда в начале 1990-х 
+они вместе получили синие яркие лучи из полупроводников.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Они запустили основопологающую трансформацию технологии освещения, - считают члены Нобелевского комитета. - Они добились успеха там, где остальные потерпели неудачу".</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Акасаки на пресс- конференции в городе Нагоя, которая была созвана после сообщения Нобелевского комитета при Королевской академии наук Швеции, 
+заявил, что ученые всего мира должны продолжать работать над своими исследованиями и не мыслить категориями "успех" или "провал". </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"Я не мыслил в категориях "успеха" или "провала". Я просто делал то, что считал нужным, - заявил Акасаки. - Я бы хотел призвать ученых всего мира, отдающих все силы своим исследованиям, поступать точно так же". </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Акасаки также выразил благодарность за поддержку своим коллегам. "Я не сделал этого открытия в одиночку", - подчеркнул ученый. </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+В свою очередь, Накамура признался, что не может поверить в присуждение ему награды. "Спасибо. Я не могу в это поверить",- сказал ученый, отвечая на вопрос пресс-службы Нобелевского комитета. </P>
+
+<div id="up1" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="press.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="http://itar-tass.com/nauka/1491220" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+<br/><br/>
+</div>
+
+<div id="news">
+<h2 id="futball">ФУТБОЛ ГЛАЗАМИ ФИЗИКА</h2></div>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Футбол-одна из самых распространённых спортивных игр в мире. В него играли и играют очень много разных людей. И физики не стали исключением.
+Такие знаменитые учёные физики как Ф. Астон и Э. Резерфорд,  француз Ф. Жолио-Кюри очень любили футбол, а  датский физикк Н. Бор в свое время 
+стал запасным вратарём в составе сборной Дании по футболу! И все эти учёные были Нобелевскими лауреатами!
+</P>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Теперь можно задаться таким вопросом, почему учёных-физиков так привлекает футбол? 
+Во-первых, футбол-эта тот вид спорта, в котором нужно уметь бегать на высокой скорости, иметь хорошую реакцию и мышление. Играя в мяч, можно
+мы видим такие явления, как земное притяжение, удар, движение по траектории т.д. 
+</P>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Футбол-это игра, которая строится на возможностях человеческого организма. Чем развитее, сильнее,
+быстрее огранизм, тем более яркой, захватывающе, напряжённой и интересной будет игра. В резерве развития футбола большую роль играет использование в игровых моментах
+достижения такой отрасли физики, как биофизика. Это наука, которая изучает действие физических факторов на живые организмы.
+</P>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; В силе, ловкости, быстроте человеческого организма важную роль играют мышцы или мускулы. В них производится
+прямое преобразвание химической энергии, которую человек получает с питанием, в механическую. Коэффициент полезного действия мускулов достаточно высокий 80-90%, а это значительно
+больше и выше чем у тепловых машин. Можно заметить тот факт, что при высокой быстроте и чёткости движений, человек может развивать в течение нескольких секунд мощность, превышающую  
+среднюю мощность лошади, что он делает за счёт мускулов. Но при длительной работе мускулы сильно устают и уменьшают отдачу. Это связано с тем, что в мускулах накапливается молочная кислота, из-за которой мышцы и начинают болеть.
+Приблизительно, за полный рабочий день, человек совершает мощость, равную 1/12 лошадиной силы. Но всё зависит от  того, насколько натренирован человек. Можно заметить, как футболисты устают
+в конце второго тайма футбольного матча, а они натренированные люди. Поэтому, футболисты стараются правильно распределить свои силы на протяжении всего матча, чтобы не устать в течение первых 15 минут игры.  
+</p>
+
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Как же определить максимальную мощность спортсмена? Для этого существует несколько тестов, два из которых наиболее популярны-Лестничный
+тест Маргария и 30-секундный Вингейт тест на велотренажёре. В Лестничном тесте Маргария спортсмены должны взобраться по лестнице на определённую высоту,разбежавшись перед этим около 6 метров. Фиксируется
+время забегания и мощность определяется по формуле <strong>N=(h*m*g)/t</strong>, где h-высотп подъёма, m-масса спортсмена, t-время подъёма спортсмена на определённую высоту, g-ускорение свободного падения.
+
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Не менее важную роль в футболе имеет быстрота реакции. Прежде всего она касается вратаря, однако и другим игрокам она не менее нужна, чтобы, к примеру, быстро принять пас или
+обвести соперника. Примерый верхний предел времени быстроты реагирования является 0.01 с, а когда объект зафиксирован глазом, то мозг его распознаёт за 0, 05 с. Отметим один интересный факт, что частота мигания глаза составляет 0,2-0,5 Гц.
+Это весьма медленный процесс в сравнении с бвстротой  реакции нервных клеток, поэтому можно сделать вывод, что вратарю не желательно моргать глазами во время пробивания ему пенальти. Однако здесь имеет значение сила удара по мячу и его скорость в направлении створа ворот.
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В этой статье приведи всего лишь несколько фактов взаимосвязи физики и футбола. На самом деле их огромное множество. Любите физику, ведите здоровый образ жизни и играйте в футбол!
+
+<div id="up1" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="press.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="http://nsportal.ru/ap/library/drugoe/2014/05/20/fizika-i-matematika-v-sporte" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+<center>
+<br/><br/>
+</div>
+
+
+<div id="news">
+<h2 id="fonar">ФОНАРИК, РАБОТАЮЩИЙ НА ВОДЕ</h2>
+</div>
+
+<img src="img/fonar.jpg" width="500" height="350" title="Схема водного фонарика" style="border: 3px solid white;" align="center" hspace="5" vspace="5" alt="Схема водного фонарика"/>
+
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Предлагаем вам сделать самодельный фонарик, работающий на воде! 
+Это отличная вещь для туристов, охотников и просто любителей смастерить что-то своими руками. Более того — изготовленный фонарик абсолютно 
+экологичен и не вредит окружающей среде, в отличие от обычных фонариков, аккумуляторы которых содержат в себе такие вредные металлы как свинец и ртуть.
+Представьте себе обычные настенные часы, которые работают от 6 месяцев до года, и Вам не нужно выходить из дома, для того, чтобы купить батарейки, 
+когда они сядут. Что может быть удобнее, чем подзарядка аккумулятора водой из под крана?
+Самодельный фонарик непрерывно светит около получаса, используя обычную водопроводную воду, с соленой морской водой время работы увеличивается 
+до 2-х часов.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Итак, как же это работает? Водяная батарейка состоит из 2-х пластин (медной и цинковой), а роль электролита играет вода. Выходное напряжение при этом довольно
+мало, и для того чтобы заставить светодиоды светиться, нужно будет собрать простой повышающий преобразователь напряжения.
+Необходимые материалы для сборки:</P>
+<P>
+ПВХ труба длиной 10 см (3/4 дюйма);<br/>
+ПВХ переходник с 3/4 дюйма на дюйм;<br/>
+Небольшая ферритовая бусинка (похожую можно взять из нерабочей экономки);<br/>
+Транзистор 2N3904 (NPN);<br/>
+1К резистор;<br/>
+Отражатель со светодиодами (из старого фонаря);<br/>
+Медный и цинковый электроды;<br/>
+Медный одножильный провод в лаковой изоляции;<br/>
+4 листа туалетной бумаги;<br/>
+Кусочек прозрачного пластика;<br/><br/>
+</P>
+<P><B>Инструменты и оборудование:<B></P>
+<P>
+Паяльник;<br/>
+Клеевой пистолет;<br/>
+Суперклей;<br/>
+</P>
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Водяная батарейка является основным источником питания для фонарика. Она состоит из двух полос металла, медной и цинковой. Медная пластинка — это анод (плюс), а цинковая — катод (минус питания).</P>
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В первую очередь, обмотайте 3 листа туалетной бумаги вокруг медного электрода, затем вложите в образовавшийся рулон цинковый электрод и домотайте остаток вокруг их двоих.
+Затем обмотайте получившийся рулон медной проволокой, это предотвратит бумагу от разрыва, когда она намокнет.
+После этого, я подобрал подходящих размеров пластиковую крышку (чтобы долго не искать подходящую по размерам, можно сделать самому из любого подходящего по размерам кусочка пластика), сделал в ней две прорези под электроды и загерметизировал соединение с помощью суперклея.
+Повышающий преобразователь это схема, которая позволяет загораться светодиодам при малом напряжении питания. Вот его схема:
+Припаяв все детали, нужно приклеить светоотражатель со светодиодами и радиодеталями к ПВХ переходнику.
+На обратной стороне десятисантиметрового куска ПВХ трубы, приклейте небольшой кружочек из прозрачного пластика, он будет служить индикатором уровня воды.
+Заполните фонарик водой, и он готов к работе.</P>
+<P><b><span style="color: yellow; font-size: 22px; font-face: Arial;">ПРИМЕЧАНИЕ:</span>  Фонарик будет работать на водопроводной воде около получаса, с морской соленой водой фонарик будет светить 2 часа. Лучше всего фонарик работает на уксусе, так как он содержит много электролитов, и в зависимости от концентрации уксусной кислоты, фонарик может светить 5-10 часов.
+Если добавить в фонарик вторую такую же батарейку, то его время работы и яркость увеличится втрое!</P>
+<P>
+Водопроводная вода 0,5 В — 0,9 В 400 мАч<br/>
+Морская вода 0,7 В — 1 В 600 мАч<br/>
+Уксус 0,9 В — 1,3 В 850 мАч<br/>
+</P>
+
+
+<div id="up1" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="press.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+<li><form action="https://vk.com/ipear?w=wall-37190761_32412" aria-haspopup="true" target="_blank" title="Территория источника информации"><button type="submit"><P>ИСТОЧНИК ИНФОРМАЦИИ</P></button></form></li>
+</center>
+<br/><br/>
+</div>
+</div>
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+
+

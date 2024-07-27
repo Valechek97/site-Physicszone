@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Интересные факты по физике</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Заметки физика">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="zametki.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТАРНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+
+<!--Основной контент-->
+
+<div id="novosti">
+<CENTER>
+<h1>ИНТЕРЕСНЫЕ ФАКТЫ И ЗАМЕТКИ</h1>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На этой странице представлены интересные факты и заметки, связанные с физикой. Возможно какие-то из них окажут на Вас впечатление, так что  приятого Вам с ними ознакомления!</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Давление воздуха на уровне моря при температуре 0°С соответствует давлению ртутного столба высотой 760 мм – эту величину и принято считать за нормальное барометрическое атмосферное давление. Колебания атмосферного давления
+обусловливают значительные изменения погоды.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Влажность воздуха. Перемена погоды в значительной степени обусловлена изменением влажности воздуха. Известно, что дым из печных труб или от костра при ясной сухой погоде поднимается вверх, а перед сырой погодой с 
+повышением влажности приземного слоя атмосферы стелется по земле, опускается вниз. Зимой при сухом воздухе и перед морозами дрова в печи горят ярко и быстро сгорают. Тусклое бледное пламя, неполное сгорание топлива,
+образование сажи, падающей назад из трубы в огонь, слабая тяга – признаки высокой влажности воздуха, наступления ненастья – летом, оттепели – зимой.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Приход грозы можно определить даже за несколько дней по небу, где начинают высоко появляться тонкие прозрачные полоски перистых облаков – верный признак и громких гроз.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Солнце перед грозой всегда мутное, спрятанное за пелену, ощущается удушливый зной, а на горизонте появляется полоса облаков, слившихся в темную сплошную массу.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Если туман с вечера опускается вниз и ложится на землю, то завтра не будет дождя. Если туман поднимается вверх от земли или воды – будет очень жарко.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Температура головки спичке, в долю секунда достигает практически 200 градусов по Цельсию. Вы уже догадались в какую долю секунды? Да, именно когда вы чиркаете ей об коробку.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>По законам физике, если сесть на стул отвесно и не подгибать ног, то встать со стула абсолютно не возможно. Можете попробовать, закон работает на все сто процентов.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Знаете ли вы, что температура самой настоящей лавы вулкана в полтора-два раза меньше, чем температура… обыкновенного домашнего примуса. Для заметки, температура в его пламени поднимается до двух тысяч градусов.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Вода может замёрзнуть в трубопроводе при температуре +20 °C, если в этой воде присутствует метан (если быть точнее, из воды и метана образуется газовый гидрат).
+ Молекулы метана «расталкивают» молекулы воды, так как занимают больший объём. Это приводит к понижению внутреннего давления воды и повышению температуры замерзания.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Температура в молнии может достигать 30 000 К, что в пять раз выше, чем температура поверхности Солнца — 6 000 К.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Чтобы посмотреть сквозь матовое стекло, достаточно наклеить на него кусочек прозрачного скотча. Из-за неровностей матового 
+стекла свет рассеивается, но клеевая сторона скотча сглаживает эти неровности, и в результате свет проходит как будто сквозь обычное стекло. 
+Нужно добавить, что если стекло матовое с двух сторон, этот трюк уже не сработает.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Cуществует оптическое явление, которое можно назвать перевёрнутой радугой, хотя случается оно очень редко. Такая радуга появляется только при 
+выполнении нескольких условий. В небе на высоте 7—8 км должна быть тонкая завеса перистых облаков, состоящих из кристалликов льда, а солнечный свет 
+должен упасть на них под определённым углом, чтобы разложиться на спектр и отразиться в атмосферу. Цвета в радуге «вверх ногами» располагаются тоже наоборот: 
+фиолетовый вверху, а красный — внизу.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>В нормальном состоянии вода начинает превращаться в лёд при температуре 0 °C. Процесс замерзания воды происходит вблизи центров кристаллизации, которые образуются
+вблизи мест микроскопических возмущений. Однако если убрать эти возмущения, вода может оставаться жидкой вплоть до ?43 °C — такое состояние называют переохлаждённой 
+водой. Одно из коммерческих применений этого эффекта внедрено производителями напитков. Специальные партии газировки поставляются именно с переохлаждённой водой, 
+и когда бутылку открывают, внутри сразу же образуется смесь из напитка и льда.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Масса капли дождя во много раз больше массы комара при сопоставимых размерах. Именно это, а также волоски на всей поверхности тела, приводит к очень малой передаче 
+импульса от капли к комару, что даёт насекомым способность выживать под дождём. При попадании капли на комара возможны два сценария: если удар приходится не по центру, 
+насекомое немного вращается и летит дальше; иначе капля ненадолго увлекает комара за собой, но тот довольно быстро освобождается.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Не зависимо от толщины и размера, ни один лист бумаги не может быть свернут более, чем 8 раз.</P>
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Eсли связать толстой металлической проволокой два фортепиано в разных комнатах и играть на одном из них, то второе (с нажатой педалью!) 
+будет играть ту же мелодию само собой, без пианиста.</P>
+
+<br/><span style="font-size: 24px; font-face: Arial; text-align: center; color: lime;">* * *</span><br/>
+
+<P>Факты взяты с сайтов: http://shtilnet.narod.ru/phakty.html &nbsp; http://obrazovanie.moy.su/publ/fakty/interesnye_fizicheskie_fakty/13-1-0-11</P>
+
+
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="zametki.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+</div>
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+
+</div>
+<CENTER>
+</body>
+</html>
+
+

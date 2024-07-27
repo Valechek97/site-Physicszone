@@ -1,0 +1,1190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<TITLE>Формулы для физических вычислений</TITLE>
+
+<!--Привязка страницы к CSS-->
+<link href="test.css" rel="stylesheet" type="text/css"/>
+
+<!--Привязка страницы к jQuery-->
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<!--Логотип во вкладке браузера-->
+<link rel="SHORTCUT ICON" href="pz.ico" type="image/x-icon"> 
+
+<!--Метатеги-->
+<meta http-equiv="Content-Type" content="text/html" charset="Windows-1251">
+<meta http-equiv="keywords" content="Формулы для вычислений по физике">
+<meta http-equiv="description" content="Сайт образовательно-познавательного содержания. Законы физики. Биографии знаменитых учёных. Описание физических приборов. Примеры решения задач по физике. Пресс-центр. Формулы для физических вычислений.">
+
+</HEAD>
+
+
+<BODY onload="getTime()">
+
+
+<a href="formula.htm" target="_top"><div id="fixblock1">
+<span>НАВЕРХ СТРАНИЦЫ</span>
+</div></a>
+
+
+<!--Начало контента-->
+
+<div id="content">
+
+<!--Название сайта-->
+<center>
+<div id="nazvanie">
+   <div id="name">
+   <a href="index.htm" target="_top" title="PHYSICSZONE приветствует Вас на своей Территории!"><span>PHYSICSZONE</span></a>
+   </div>
+   <div id="under">
+   <span>ТЕРРИТОРИЯ ФИЗИКИ</span>
+   </div>
+</div>
+</center>
+
+
+
+<!--Девиз сайта-->
+<center>
+   <div id="deviz">
+   <P>Задача PHYSICSZONE - доказать, что без репетитора реально сдать!</P>
+   </div>
+</center>
+
+
+<!--ДАта время-->
+<div id="time">
+
+<font id="1">Идёт загрузка даты</font><br/><font id="2">Идёт загрузка счётчика</font>
+
+<script>
+let ss = 0;
+let mnth = new Array(13); //массив с названиями месяцев
+mnth[0] = 'Ошибка получения даты';
+mnth[1] = 'января 2024';
+mnth[2] = 'февраля 2024';
+mnth[3] = 'марта 2024 ';
+mnth[4] = 'апреля 2024 ';
+mnth[5] = 'мая 2024 ';
+mnth[6] = 'июня 2024';
+mnth[7] = 'июля 2024 ';
+mnth[8] = 'августа 2024';
+mnth[9] = 'сентября 2024';
+mnth[10] = 'октября 2024';
+mnth[11] = 'ноября 2024 ';
+mnth[12] = 'декабря 2024';
+function write(element, value) { //функция вывода инфы в указанный id
+document.getElementById(element).innerHTML = value;
+}
+function getTime() { //функция получения даты
+setInterval(function time() {
+temp_date = new Date();
+d = temp_date.getDate();
+mh = temp_date.getMonth() + 1;
+y = temp_date.getYear();
+h = temp_date.getHours();
+m = temp_date.getMinutes();
+s = temp_date.getSeconds();
+ss++;
+write('1', 'Дата: ' + d + ' ' + mnth[mh] + '<br>Время: ' + h + ' ч ' + m + ' мин ' + s + ' c');
+write('2', 'На этой странице Вы: ' + ss + 'с');
+}, 1000); // выполянть действие по заданному интервалу
+}
+
+</script> 
+
+</div>
+
+
+
+<!--МЕНЮ-->
+<div id="navigation">
+<li><span>КАРТА: &nbsp;</span></li>
+<li><form action="index.htm" aria-haspopup="true" target="_top" title="Контрольно-пропускной пункт Территории физики (Главная страница сайта)"><button type="submit"><P>ПРОПУСКНОЙ<br/>ПУНКТ</P></button></form></li>
+<li><form action="formula.htm" aria-haspopup="true" target="_top" Title="Формулы для физических рассчётов с 7 по 10 классы."><button type="submit"><P>ВЫЧИСЛИТЕЛЬНЫЙ<br/>ЦЕНТР</P></button></form></li>
+<li><form action="zakons.htm" aria-haspopup="true" target="_top" title="Основные законы физики, изучаемые в школе в 7-10 классах."><button type="submit"><P>ТЕРРИТОРИАЛЬНЫЕ<br/>ЗАКОНЫ</P></button></form></li>
+<li><form action="biograf.htm" aria-haspopup="true" target="_top" title="Биографии знаменитых физиков, имена которых встречаются в школьной программе 7-10 классов."><button type="submit"><P>ДОСКА<br/>ПОЧЁТА</P></button></form></li>
+<li><form action="pribor.htm" aria-haspopup="true" target="_top" title="Приборы, работу которых изучают в школьной программе 7-10 классов."><button type="submit"><P>ПРИБОРНЫЙ<br/>ОТСЕК ЗОНЫ</P></button></form></li>
+<li><form action="postoyan.htm" aria-haspopup="true" target="_top" title="Физические постоянные"><button type="submit"><P>ФИЗИЧЕСКИЕ<br/>ПОСТОЯННЫЕ</P></button></form></li>
+</div>
+
+
+<!--Линия разделения хеадера-->
+<hr size="3"/>
+
+
+<!--Левая панель-->
+<div id="leftpanel">
+
+<!--Калькулятор-->
+
+<div id="kalkulator">
+<!--Калькулятор-->
+ <script language="JavaScript">
+ <!--
+ // deklaracja zmiennych
+ var wynik=0, op=0, nowe=0, nowe2=0, done=1, oset=0, kropka, temp;
+ function reset(value)
+ {
+ document.form1.ekran.value = value;
+ wynik = 0,
+ op = 0,
+ nowe = 0,
+ nowe2 = 0;
+ done = 1;
+ oset = 0;
+ }
+ function wspolna(new_temp)
+ {
+ kropka = 1;
+ if(nowe || done) {
+ nowe = 0;
+ done = 0;
+ temp = new_temp;
+ }
+ for(var i=0; i<temp.length; i++) if (temp[i]=='.') kropka=0;
+ }
+ function button(ktory,ktory2)
+ {
+ temp = document.form1.ekran.value;
+ if(ktory2=='.') {
+ wspolna('0');
+ if(kropka) {
+ temp += ktory2;
+ document.form1.ekran.value = temp;
+ oset = 0;
+ }
+ }
+ if(ktory>=0 && ktory<=9) {
+ wspolna('');
+ if(temp==0 && kropka==1) temp='';
+ temp += ktory;
+ document.form1.ekran.value = temp;
+ oset = 1;
+ }
+ if(ktory2=='-' || ktory2=='+' || ktory2=='/' || ktory2=='*') {
+ if(nowe) op = ktory2
+ else {
+ if(!nowe2) {
+ op = ktory2;
+ wynik = temp;
+ nowe2=1;
+ }
+ else {
+ wynik = eval(wynik + op + temp);
+ op = ktory2;
+ document.form1.ekran.value = wynik;
+ }
+ oset=0;
+ nowe = 1;
+ }
+ }
+ if(ktory2=='1/x' ) { wynik = eval(1 / temp) ; reset(wynik); }
+ if(ktory2=='sqrt') { wynik = Math.sqrt(temp); reset(wynik); }
+ if(ktory2=='exp' ) { wynik = Math.exp(temp) ; reset(wynik); }
+ if(ktory2=='+/-') document.form1.ekran.value = eval(-temp);
+ if(ktory2=='=' && oset && op!='0') reset(eval(wynik + op + temp));
+ if (ktory2=='C') reset(0);
+ if(document.form1.ekran.value[0] == '.')
+ document.form1.ekran.value = '0' + document.form1.ekran.value;
+ }
+ //-->
+ </script>
+
+ <center>
+ <form name="form1">
+ <table background="img/fisicsfon.jpg">
+ <tbody>
+ <tr><td><table background="img/fisicsfon.jpg" border="1" cellPadding="0" cellSpacing="5">
+ <tbody>
+ <tr align="middle">
+ <td colSpan="5"><input name="ekran" value="0" size="23" style="width: 150px;"></td></tr>
+ <tr align="middle">
+ <td colSpan="4"><span>КАЛЬКУЛЯТОР</span></td>
+ <td><input name="C" onclick="button(11,'C')" type="button" value=" C "></td></tr>
+ <tr align="middle">
+ <td><input name="7" onclick="button(7 ,'')" type="button" value=" 7 "></td>
+ <td><input name="8" onclick="button(8 ,'')" type="button" value=" 8 "></td>
+ <td><input name="9" onclick="button(9 ,'')" type="button" value=" 9 "></td>
+ <td><input name="/" onclick="button(11,'/')" type="button" value=" / "></td>
+ <td><input name="sqrt" onclick="button(11,'sqrt')" type="button" value="sqrt"></td></tr>
+ <tr align="middle">
+ <td><input name="4" onclick="button(4,'')" type="button" value=" 4 "></td>
+ <td><input name="5" onclick="button(5,'')" type="button" value=" 5 "></td>
+ <td><input name="6" onclick="button(6,'')" type="button" value=" 6 "></td>
+ <td><input name="*" onclick="button(11,'*')" type="button" value=" * "></td>
+ <td><input name="exp" onclick="button(11,'exp')" type="button" value="exp"></td></tr>
+ <tr align="middle">
+ <td><input name="1" onclick="button(1,'')" type="button" value=" 1 "></td>
+ <td><input name="2" onclick="button(2,'')" type="button" value=" 2 "></td>
+ <td><input name="3" onclick="button(3,'')" type="button" value=" 3 "></td>
+ <td><input name="-" onclick="button(11,'-')" type="button" value=" - "></td>
+ <td><input name="1/x" onclick="button(11,'1/x')" type="button" value="1/x "></td></tr>
+ <tr align="middle">
+ <td><input name="0" onclick="button(0,'')" type="button" value=" 0 "></td>
+ <td><input name="+/-" onclick="button(11,'+/-')" type="button" value=" +/- "></td>
+ <td><input name="." onclick="button(11,'.')" type="button" value=" , "></td>
+ <td><input name="+" onclick="button(11,'+')" type="button" value=" + "></td>
+ <td><input name="=" onclick="button(11,'=')" type="button" value=" = "></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </center>
+ </form>
+
+</div>
+
+
+<!--Вертикальное меню-->
+
+<center>
+<div id="vertical">
+<form action="press.htm" target="_top"><button title="Интересные статьи про физику"><font color="black" size="2" face="Bookman Old Style"><B>ПРЕСС-ЦЕНТР</B></font></button></form>
+<form action="humor.htm" target="_top"><button title="Анекдоты и смешные истории, связанные с физикой"><font color="black" size="2" face="Bookman Old Style"><B>ФАН-ЗОНА</B></font></button></form>
+<form action="zametki.htm" target="_top"><button title="Интересные заметки по поводу физики"><font color="black" size="2" face="Bookman Old Style"><B>ЗАМЕТКИ ФИЗИКА</B></font></button></form>
+<form action="shpora.htm" target="_top"><button title="Шпаргалки"><font color="black" size="2" face="Bookman Old Style"><B>НЕЛЕГАЛЬНО</B></font></button></form>
+<form action="media.htm" target="_top"><button title="Мультимедийные ресурсы Территории Физики"><font color="black" size="2" face="Bookman Old Style"><B>МЕДИА-ЦЕНТР</B></font></button></form>
+</div>
+</center>
+
+<div id="slovar">
+<center><span id="zaglav">СЛОВАРЬ ТЕРМИНОВ:</span></center>
+<div id="alf">
+<form action="opredelenia.htm#a" target="_top"><button title="Определения на букву А"><font color="black" size="2" face="Comic Sans MS"><B>А</B></font></button></form>
+<form action="opredelenia.htm#b" target="_top"><button title="Определения на букву Б"><font color="black" size="2" face="Comic Sans MS"><B>Б</B></font></button></form>
+<form action="opredelenia.htm#v" target="_top"><button title="Определения на букву В"><font color="black" size="2" face="Comic Sans MS"><B>В</B></font></button></form>
+<form action="opredelenia.htm#g" target="_top"><button title="Определения на букву Г"><font color="black" size="2" face="Comic Sans MS"><B>Г</B></font></button></form>
+<form action="opredelenia.htm#d" target="_top"><button title="Определения на букву Д"><font color="black" size="2" face="Comic Sans MS"><B>Д</B></font></button></form>
+<form action="opredelenia.htm#e" target="_top"><button title="Определения на букву Е"><font color="black" size="2" face="Comic Sans MS"><B>Е</B></font></button></form>
+<form action="opredelenia.htm#j" target="_top"><button title="Определения на букву Ж"><font color="black" size="2" face="Comic Sans MS"><B>Ж</B></font></button></form>
+<form action="opredelenia.htm#z" target="_top"><button title="Определения на букву З"><font color="black" size="2" face="Comic Sans MS"><B>З</B></font></button></form>
+<form action="opredelenia.htm#i" target="_top"><button title="Определения на букву И"><font color="black" size="2" face="Comic Sans MS"><B>И</B></font></button></form>
+<form action="opredelenia.htm#k" target="_top"><button title="Определения на букву К"><font color="black" size="2" face="Comic Sans MS"><B>К</B></font></button></form>
+<form action="opredelenia.htm#l" target="_top"><button title="Определения на букву Л"><font color="black" size="2" face="Comic Sans MS"><B>Л</B></font></button></form>
+<form action="opredelenia.htm#m" target="_top"><button title="Определения на букву М"><font color="black" size="2" face="Comic Sans MS"><B>М</B></font></button></form>
+<form action="opredelenia.htm#n" target="_top"><button title="Определения на букву Н"><font color="black" size="2" face="Comic Sans MS"><B>Н</B></font></button></form>
+<form action="opredelenia.htm#o" target="_top"><button title="Определения на букву О"><font color="black" size="2" face="Comic Sans MS"><B>О</B></font></button></form>
+<form action="opredelenia.htm#p" target="_top"><button title="Определения на букву П"><font color="black" size="2" face="Comic Sans MS"><B>П</B></font></button></form>
+<form action="opredelenia.htm#r" target="_top"><button title="Определения на букву Р"><font color="black" size="2" face="Comic Sans MS"><B>Р</B></font></button></form>
+<form action="opredelenia.htm#s" target="_top"><button title="Определения на букву С"><font color="black" size="2" face="Comic Sans MS"><B>С</B></font></button></form>
+<form action="opredelenia.htm#t" target="_top"><button title="Определения на букву Т"><font color="black" size="2" face="Comic Sans MS"><B>Т</B></font></button></form>
+<form action="opredelenia.htm#u" target="_top"><button title="Определения на букву У"><font color="black" size="2" face="Comic Sans MS"><B>У</B></font></button></form>
+<form action="opredelenia.htm#f" target="_top"><button title="Определения на букву Ф"><font color="black" size="2" face="Comic Sans MS"><B>Ф</B></font></button></form>
+<form action="opredelenia.htm#h" target="_top"><button title="Определения на букву Х"><font color="black" size="2" face="Comic Sans MS"><B>Х</B></font></button></form>
+<form action="opredelenia.htm#c" target="_top"><button title="Определения на букву Ц"><font color="black" size="2" face="Comic Sans MS"><B>Ц</B></font></button></form>
+<form action="opredelenia.htm#ch" target="_top"><button title="Определения на букву Ч"><font color="black" size="2" face="Comic Sans MS"><B>Ч</B></font></button></form>
+<form action="opredelenia.htm#sh" target="_top"><button title="Определения на букву Ш"><font color="black" size="2" face="Comic Sans MS"><B>Ш</B></font></button></form>
+<form action="opredelenia.htm#she" target="_top"><button title="Определения на букву Щ"><font color="black" size="2" face="Comic Sans MS"><B>Щ</B></font></button></form>
+<form action="opredelenia.htm#ye" target="_top"><button title="Определения на букву Э"><font color="black" size="2" face="Comic Sans MS"><B>Э</B></font></button></form>
+<form action="opredelenia.htm#yu" target="_top"><button title="Определения на букву Ю"><font color="black" size="2" face="Comic Sans MS"><B>Ю</B></font></button></form>
+<form action="opredelenia.htm#ya" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>Я</B></font></button></form>
+<span><form action="opredelenia.htm" target="_top"><button title="Определения на букву Я"><font color="black" size="2" face="Comic Sans MS"><B>К НАЧАЛУ</B></font></button></form></span>
+</div>
+</div>
+
+
+<div id="reclama">
+<P>Здесь может быть Ваша реклама</P>
+</div>
+
+</div>
+
+<!--Основной контент-->
+
+<div id="novosti">
+
+<center>
+<h1>ФОРМУЛЫ ДЛЯ ФИЗИЧЕСКИХ ВЫЧИСЛЕНИЙ</h1>
+</center>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Вы попали в Вычислительный центр Территории физики. Здесь находятся все формулы, которые используют для рассчётов в решении задач,
+лабораторных работах, измерениях приборов и т.д. Здесь будут собраны все формулы, которые проходят в школе с 7 по 11 класс, но пока что в связи с недавним открытием проекта PHYSICSZONE здесь есть только
+формулы 7 и 8 класса, но совсем скоро будут введены все другие формулы!</p>
+
+<div id="poisk">
+<li><form action="formula.htm#7k" aria-haspopup="true" target="_top" title="Формулы физики, изучаемые в 7 классе"><button type="submit"><P>7 КЛАСС</P></button></form></li>
+<li><form action="formula.htm#8k" aria-haspopup="true" target="_top" Title="Формулы физики, изучаемые в 8 классе"><button type="submit"><P>8 КЛАСС</P></button></form></li>
+<li><form action="formula.htm#9k" aria-haspopup="true" target="_top" title="Формулы физики, изучаемые в 9 классе"><button type="submit"><P>9 КЛАСС</P></button></form></li>
+<li><form action="formula.htm#10k" aria-haspopup="true" target="_top" title="Формулы физики, изучаемые в 10 классе"><button type="submit"><P>10 КЛАСС</P></button></form></li>
+<li><form action="formula.htm#11k" aria-haspopup="true" target="_top" title="Формулы физики, изучаемые в 11 классе"><button type="submit"><P>11 КЛАСС</P></button></form></li>
+</div>
+
+
+<div id="news">
+<h2 id="7k">7 КЛАСС</h2>
+</div>
+
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#965;=s/t</span></dt>
+<dd>&#965;-скорость тела, s-расстояние, пройденное телом, t-время движения тела.</dd>
+</dl>
+
+
+<br/><br/>
+
+<dl>
+<dt>РАССТОЯНИЕ, ПРОЙДЕННОЕ ТЕЛОМ ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ:  
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">s=&#965;*t</span></dt>
+<dd>&#965;скорость тела, s-расстояние, пройденное телом, t-время движения тела.</dd>
+</dl>
+
+
+
+
+<br/><br/>
+
+<dl>
+<dt>ВРЕМЯ, ПРОЙДЕННОЕ ТЕЛОМ ПРИ РАВНОМЕРНОМ ДВИЖЕНИЕМ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">t=S/&#965;</span></dt>
+<dd>&#965;-скорость тела, s-расстояние, пройденное телом, t-время движения тела.</dd>
+</dl>
+
+
+
+
+<br/><br/>
+
+<dl>
+<dt>РАЗНИЦА МЕЖДУ НАЧАЛЬНОЙ И КОНЕЧНОЙ СКОРОСТЬЮ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#916;V=V<sub>2</sub>-V<sub>1</sub>=V<sub>К</sub>-V<sub>П</sub></span></dt>
+<dd>&#916;V-разница в начальной и конечной скорости, V<sub>2</sub>-конечная скорость, V<sub>1</sub>-начальная скорость,
+V<sub>К</sub>-кинетическая скорость, V<sub>П</sub>-потенциальная скорость.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПЛОТНОСТЬ ВЕЩЕСТВА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#961;=m/V</span></dt>
+<dd>&#961;-плотность вещества, m-масса вещества, V-объём вещества.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ФОРМУЛА ЗАКОНА ВСЕМИРНОГО ТЯГОТЕНИЯ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=G*((m<sub>1</sub>*m<sub>2</sub>)/R<sup>2</sup>)</span></dt>
+<dd>F-сила всемирного тяготения, m<sub>1</sub> и m<sub>2</sub> массы притягивающихся тел, R-расстояние между этими телами, G-гравитационная постоянная.
+</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СИЛА УПРУГОСТИ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>упр</sub>=k*&#916;l=k*x</span></dt>
+<dd>F<sub>упр</sub>-сила упругости, k-жёсткость тела, &#916;l-удлинение, x-величина удлинения, равная &#916;l.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СИЛА ТЯЖЕСТИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>тяж</sub>=P=m*g</span></dt>
+<dd>F<sub>тяж</sub>-сила тяжести, P-вес тела, m-масса тела, g-ускорение свободного падения (постоянная для Земли 9.8).</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СЛОЖЕНИЕ СИЛ. РАВНОДЕЙСТВУЮЩАЯ ДВУХ СИЛ:  
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=F<sub>1</sub>+F<sub>2</sub></span></dt>
+<dd>F-равнодействующая сила, F<sub>1</sub>-одна из приложенных сил, F<sub>2</sub>-другая из приложеннных сил.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt><dt>РАВНОДЕЙСТВУЮЩАЯ ДВУХ НАПРАВЛЕННЫХ В РАЗНЫЕ СТОРОНЫ СИЛ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=F<sub>1</sub>+(-F<sub>2</sub>)</span></dt></dt>
+<dd>F-равнодействующая сила, F<sub>1</sub>-одна из приложенных сил, F<sub>2</sub>-другая из приложеннных сил.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СИЛА ТРЕНИЯ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>трен</sub>=&#956;*N</span></dt>
+<dd>F<sub>трен</sub>-сила трения, &#956;-коэффициент трения, N-сила реакции опоры или сила упругости.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАВИСИМОСТЬ ПЛОТНОСТИ И ВЫСОТЫ СТОЛБЦА В СООБЩАЮЩИХСЯ СОСУДАХ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">h<sub></sub>/h<sub>2</sub>=&#961;<sub>1</sub>/&#961;<sub>1</sub></SPAN></dt>
+<dd>h<sub>1, 2</sub>-высота столбцов жидкости в сообщающихся сосудах, &#961;<sub>1, 2</sub>-плотность жидкостей в сообщающихся сосудах.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>ДАВЛЕНИЕ, ПРОИЗВОДИМОЕ ТЕЛОМ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">P=F/S=(m*g)/S=&#961;*g*h</span></dt>
+<dd>F-сила c которой тело действует на поверхность, S-площадь поверхности, на которую действует тело, m-масса тела, g-ускорение свободного падения, &#961;-плотность жидкости, h-высота уровня жидкости. Последняя формула применяется для жидкости.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ВЫСОТА СТОЛБЦА ЖИДКОСТИ, ВЫРАЖАЕМАЯ ЧЕРЕЗ ДАВЛЕНИЕ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">h=P/(&#961;*g)</span></dt>
+<dd>h-высота столбца жидкости, &#961;-плотность жидкости, P-давление, с которым действует жидкость,g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ВЫТАЛКИВАЮЩАЯ СИЛА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>A</sub>=P=mg=&#961;*V*g</span></dt>
+<dd>F<sub>A</sub>-выталкивающая сила (Сила Архимеда), P-Вес вытесненной жидкости, m-масса вытесненной жидкости, g-ускорение свободного падения, &#961;-плотность вытесненной жидкости, V-объём погружённой части тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МЕХАНИЧЕСКАЯ РАБОТА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">A=F*S=F*&#965;*t</span></dt>
+<dd>A-механическая работа, F-сила, прилагаемая для совершения работы, S-перемещение (путь), t-время, &#965;-скорость.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МОЩНОСТЬ (БЫСТРОТА СОВЕРШЕНИЯ РАБОТЫ): 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">N=A/t=(F*S)/t=F*V</span></dt>
+<dd>N-мощность тела, A-механическая работа, t-время, F-сила, прилагаемая для совершения работы, S-перемещение (путь), V-скорость.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УСЛОВИЕ РАВНОВЕСИЯ РЫЧАГА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>1</sub>/F<sub>2</sub>=l<sub>2</sub>/l<sub>1</sub></span></dt>
+<dd>l<sub>1,2</sub>-длины рычага, F<sub>1,2</sub>-силы приложенные к рычагу.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МОМЕНТ СИЛЫ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">M=F*l</span></dt>
+<dd>M-момент силы, F-сила, приложенная к рычагу, l-длина рычага.</dd>
+</dl>
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="formula.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+
+
+<div id="news">
+<h2 id="8k">8 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ВНУТРЕННЯЯ ЭНЕРГИЯ ТЕЛА:  
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#916;U=Q+A</span></dt>
+<dd>U-внутрення энергия тела, A-механическакая работа, Q-количество теплоты.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>КОЛИЧЕСТВО ТЕПЛОТЫ: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q=c*m*&#916;t=сm(t<sub>2</sub>-t<sub>1</sub>)</span></dt>
+<dd>Q-количесто теплоты, c-удельная теплоёмкость, m-масса тела, &#916;t-время.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УДЕЛЬНАЯ ТЕПЛОТА СГОРАНИЯ ТОПЛИВА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q=g*m</span></dt>
+<dd>Q-удельная теплота сгорания топлива, q-удельная теплота вещества m-масса тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УДЕЛЬНАЯ ТЕПЛОТА ПЛАВЛЕНИЯ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q=+ или - &#955;*m</span></dt>
+<dd>Q-удельная теплота плавления, &#955;-удельная теплота вещества, m-масса тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УДЕЛЬНАЯ ТЕПЛОТА ПАРООБРАЗОВАНИЯ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q=L*m</span></dt>
+<dd>Q-удельная теплота парообразованияя, L;-удельная теплота вещества, m-масса тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УРАВНЕНИЯ ТЕПЛОВОГО БАЛАНСА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q<sub>1</sub>+Q<sub>2</sub>+Q<sub>3</sub>+Q<sub>4</sub>+Q<sub>5</sub>...=0 и Q<sub>отд</sub>+Q<sub>пол</sub>=0</span></dt>
+<dd>Q-количество теплоты, Q<sub>отд</sub>-отданнная энергия, Q<sub>пол</sub>-полученная энергия.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>ВЛАЖНОСТЬ ВОЗДУХА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#934;=(&#961;/&#961;<sub>0</sub>)*100%</span></dt>
+<dd>&#934;-Влажность воздуха, &#961;, &#961;<sub>0</sub>-плотность и давление насыщенного пара при данной температуре.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>КПД теплового двигателя: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#951;=(Q<sub>1</sub>-Q<sub>2</sub>)/Q<sub>1</sub>*100%</span></dt>
+<dd>&#951;-КПД теплового двигателя, Q<sub>1</sub>-количество теплоты полученное от нагревателя. Q<sub>2</sub>-количество теплоты отданное холодильнику.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>СИЛА ТОКА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">I=q/t=(P*R)<sup>1/2</sup></span></dt>
+<dd>I-сила тока, q-заряд, прошедший через поперечное сечение проводника, t-время прохождения заряда, R-удельное сопротивление проводника, P-мощность тока.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>НАПРЯЖЕНИЕ ТОКА В ПРОВОДНИКЕ: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">U=R*I=P/I=(P*R)<sup>1/2</sup></span></dt>
+<dd>Напряжение тока, I-сила тока, R-удельное сопротивление проводника, P-мощность тока.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МОЩНОСТЬ ТОКА:  <span style="font-size: 28px; font-style: italic; color:  orange; text-align: center;">P=U*I=R*I<sup>2</sup>=U<sup>2</sup>/R</span></dt>
+<dd>P-мощность тока, U-напряжение тока, I-сила тока, R-удельное сопротивление проводника.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>УДЕЛЬНОЕ СОПРОТИВЛЕНИЕ ПРОВОДНИКА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">R=U/I=U<sup>2</sup>/P=P/I<sup>2</sup>=&#961;*l*S</span></dt>
+<dd>R-удельное сопротивление проводника, U-напряжение тока, I-сила тока, P-мощность тока, &#961;-плотность проводника, l-длина проводника, S-площадь поперечного сечения.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАКОН ОМА ДЛЯ УЧАСТКА ЦЕПИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">I=U/R</span></dt>
+<dd>I-сила тока, U-напряжение тока, R-удельное сопротивление проводника.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МАССА ПРОВОДНИКА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">m=&#961;*V=&#961;*S*l</span></dt>
+<dd>&#961;-плотность проводника, l-длина проводника, S-площадь поперечного сечения, V-объём проводника.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>РАБОТА ЭЛЕКТРИЧЕСКОГО ТОКА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">A=I*U*t=q*U=(U<sup>2</sup>/R)*t=I<sup>2</sup>*R*t</span></dt>
+<dd>A-работа электрического тока, U-напряжение тока в проводнике, t-время прохождения тока по проводнику, I-сила тока, q-заряд, прошедший через поперечное сечение проводника, R-удельное сопротивление проводника.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАРЯД, ПРОШЕДШИЙ ЧЕРЕЗ ПОПЕРЕЧНОЕ СЕЧЕНИЕ ПРОВОДНИКА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">q=I*t</span></dt>
+<dd>q-заряд, прошедший через поперечное сечение проводника, I-сила тока, t-время прохождения заряда.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАКОН ДЖОУЛЯ-ЛЕНЦА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Q=I<sup>2</sup>*R*t</span></dt>
+<dd>Q-количество теплоты, выделяемое проводником с током, I-сила тока, t-время.</dd>
+</dl>
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="formula.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+
+
+<div id="news">
+<h2 id="9k">9 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>РАВНОУСКОРЕННОЕ ДВИЖЕНИЕ 
+
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">a=(&#965;-&#965;<sub>0</sub>)/&#916;t</span></dt>
+<dd>a-ускорение,производимое телом, &#965;<sub>0</sub>-начальная скорость, &#965;-скорость после ускорения, &#916;t-время, за которое выполнено ускорение.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА, НАЙДЕННАЯ ЧЕРЕЗ УСКОРЕНИЕ: 
+ 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#965;=&#965;<sub>0</sub>+a*t</span></dt>
+<dd>&#965;-скорость тела, &#965;<sub>0</sub>-начальная скорость тела, a-ускорение, произведённое телом, t-время.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>РАССТОЯНИЕ, ПРОЙДЕННОЕ ТЕЛОМ:
+
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> S=&#965;<sub>0</sub>*t+(a*t<sup>2</sup>)/2=(&#965;-&#965;<sub>0</sub><sup>2</sup>)/2*a</span></dt>
+<dd>&#965;-скорость, достигутая телом, &#965;<sub>0</sub>-начальная скорость тела, t-время достижения скорости, a-ускорение, произведённое телом.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>РАВНОУСКОРЕННОЕ ДВИЖЕНИЕ ТЕЛА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">a<sub>x</sub>=(&#965;<sub>x</sub>-&#965;<sub>x0</sub>)/t</span></dt>
+<dd>a-равноускоренное движение, &#965;<sub>x</sub>-текущая скорость тела, &#965;<sub>x0</sub>-начальная скорость тела, t-время.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПЕРЕМЕЩЕНИЕ ТЕЛА ПРИ РАВНОУСКОРЕННОМ ДВИЖЕНИИ: 
+
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">s<sub>x</sub>=&#965;<sub>x0</sub>*t+((a<sub>x</sub>*t<sup>2</sup>)/2)</span></dt>
+<dd>s<sub>x</sub>-перемещение тела, &#965;<sub>x0</sub>-начальная скорость тела, a<sub>x</sub>-ускорение, произведённо телом, t-время.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПЕРЕМЕЩЕНИЕ ТЕЛА ДЛЯ МОДУЛЕЙ:
+
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> s=(a*t<sup>2</sup)/2</span></dt>
+<dd>s-перемещение тела для модулей, a-ускорение тела для модулей, t-время.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ВТОРОЙ ЗАКОН НЬЮТОНА: 
+
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">a=F/m, F=a*m</span></dt>
+<dd>a-ускорение тела, F-равнодействующая сил, приложенная к телу, m-масса тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПРИНЦИП СУПЕРПОЗИЦИИ: 
+
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=F<sub>1</sub>+F<sub>2</sub>+...&#8721;F<sub>2</sub>, при l=1.</span></dt>
+<dd>F-векторная сумма сил, действующих на тело, F<sub>1</sub>-первая сила, действующая на тело, F<sub>2</sub>-вторая сила, действующая на тело, &#8721;-N-нарная сумма. l-СПРОСИТЬ У ФИЗИЧКИ!!!!</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ТРЕТИЙ ЗАКОН НЬЮТОНА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> F<sub>1</sub>=-F<sub>2</sub></span></dt>
+<dd>F<sub>1,2</sub>-силы, с которыми тела действуют друг на друга.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ВЫСОТА, С КОТОРОЙ СВОБОДНО ПАДАЕТ ТЕЛО:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> h=(g*t<sup>2</sup>)/2</span></dt>
+<dd>h-высота падения тела, t-время падения тела, g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАКОН ВСЕМИРНОГО ТЯГОТЕНИЯ: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=G*((m<sub>1</sub>*m<sub>2</sub>)/R<sup>2</sup>)</span></dt>
+<dd>F-Сила, с которыми приятгиваются тела, G-гравитационная постоянная, m<sub>1,2</sub>-массы тел, R-молярная газовая постоянная.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>УСКОРЕНИЕ СВОБОДНОГО ПАДЕНИЯ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">g=G*(M<sub>планеты</sub>/(R<sub>планеты</sub>+h<sup>2</sup>))</sub></span></dt>
+<dd>g-ускорение свободного падения, G-гравитационная постоянная, M-масса планеты, h-высота с которой планета начала притягивать тело, R-молярная газовая постояннная.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ВРЕМЯ (ПЕРИОД) ОДНОГО КОЛЕБАНИЯ ТЕЛА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> T=t/n</span></dt>
+<dd>T-время одного колебания тела, t-время когда тело колебалось, n-количество колебаний.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЧАСТОТА КОЛЕБАНИЯ ТЕЛА:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> &#957;=N/t</span></dt>
+<dd>&#957;-частота колебания тела, N-количество колебаний, t-время, когда тело колебалось.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЦИКЛИЧЕСКАЯ ИЛИ КРУГОВАЯ СКОРОСТЬ КОЛЕБАНИЯ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> &#969;=&#916;&#957;/&#916;t=2&#960;/T</span></dt>
+<dd>&#969;-Цикличнская или круговая скорость колебания, T-период, t-время, &#960;-числи Пи.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЦЕНТР СТРЕМИТЕЛЬНОГО УСКОРЕНИЯ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">a<sub>цс</sub>=&#957;<sup>2</sup>/R</span></dt>
+<dd>a<sub>цс</sub>-Центр стремительного ускорения, &#957;-скорость тела, R-радиус кривизны траектории.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА ПРИ СТРЕМИТЕЛЬНОМ УСКОРЕНИИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> &#957;=&#8730;(a*R)=&#8730;(G*(M<sub>пл</sub>/R<sup>2</sup>*R))=&#8730;(g*R)</span></dt>
+<dd>&#957;-Скорость тела при стремительном ускорении,  R-радиус кривизны траектории, G-ускорение свободного падения, M<sub>пл</sub>-масса планеты, a-центр стремительного ускорения.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПЕРВАЯ КОСМИЧЕСКАЯ СКОРОСТЬ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> &#957;<sub>1</sub>=&#8730;(G*(M<sub>пл</sub>/(R<sub>пл</sub>+h))</span></dt>
+<dd> &#957;<sub>1</sub>-первая космическая скорость, G-ускорение свободного падения, R<sub>пл</sub>-радиус планеты, M<sub>пл</sub>-масса планеты, h-высота, на которой тело развивает Первую космическую скорость.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>CИЛА, НАЙДЕННАЯ ЧЕРЕЗ МАССУ И УСКОРЕНИЕ:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> F=m*a=m*((&#957;-&#957;<sub>0</sub>)/t)</span></dt>
+<dd>F-сила импульса тела (импульс), m-масса тела, a-ускорение тела. &#957;-скорость тела, &#957;<sub>0</sub>-начальная скорость тела, t-масса.</dd>
+</dl>
+
+
+<br/><br/>
+
+<dl>
+<dt>ИМПУЛЬС ТЕЛА:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> P=m*&#957;</span></dt>
+<dd>P-импульс тела, M-масс тела, &#957;-скорость тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПРОИЗВЕДЕНИЕ СИЛЫ ИМПУЛЬСА И ВРЕМЕНИ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">Ft=m*&#957;-m*&#957;<sub>0</sub>=P-P<sub>0</sub>=&#916;P</span></dt>
+<dd>F-сила импульса, t-время, P-импульс тела, P<sub>0</sub>-начальный импульс тела, m-масс тела, &#916;P-разница импульсов.</dd>
+</dl>
+
+
+<br/><br/>
+
+<dl>
+<dt>ВТОРОЙ ЗАКОН НЬЮТОНА ЧЕРЕЗ ИМПУЛЬС:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> F<sub>1</sub>=-F<sub>2</sub>=m<sub>1</sub>*((&#957;<sub>1</sub>*&#957;<sub>01</sub>)/t)=-m<sub>2</sub>*((&#957;<sub>2</sub>*&#957;<sub>02</sub>)/t)</span></dt>
+<dd>m<sub>1,2</sub>-массы тел, &#957;<sub>1,2</sub>-скорости тел, &#957;<sub>01,02</sub>-начальные скорости тел, t-время.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ ИМПУЛЬСА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">m<sub>1</sub>*&#957;<sub>01</sub>+m<sub>1</sub>*&#957;<sub>02</sub>=m<sub>1</sub>*&#957;<sub>1</sub>m<sub>2</sub>*&#957;<sub>2</sub></span></dt>
+<dd>m<sub>1,2</sub>-массы тел, &#957;<sub>1,2</sub>-скорости тел, &#957;<sub>01,02</sub>-начальные скорости тел.</dd>
+</dl>
+
+
+<br/><br/>
+
+<dl>
+<dt>МЕХАНИЧЕСКАЯ РАБОТА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> A=F*S*cos&#945;</span></dt>
+<dd>A-механичекая работа, F-сила, с которой совершается работа, S-перемещение.</dd>
+</dl>
+
+
+
+<br/><br/>
+
+<dl>
+<dt>КИНЕТИЧЕСКАЯ ЭНЕРГИЯ ТЕЛА:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> E<sub>к</sub>=(m*&#957;<sup>2</sup>)/2</span></dt>
+<dd> E<sub>к</sub>-кинетическая энергия тела, m-масса тела, &#957;-скорость тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПОТЕНЦИАЛЬНАЯ ЭНЕРГИЯ ТЕЛА: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">E<sub>п</sub>=m*g*h</span></dt>
+<dd> E<sub>п</sub>-потенциальная энергия тела, m-масса тела, g-ускорение свободного падения, h-высота падения тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПОТЕНИЦАЛЬНАЯ ЭНЕРГИЯ ДЛЯ УПРУГО-ДЕФОРМИРОВАННОГО ТЕЛА:
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"> E<sub>п</sub>=k*&#916;l<sup>2</sup>/2</span></dt>
+<dd>E<sub>п</sub>-потенциальная энергия упруго-деформированного тела, k-жёсткость тела, &#916;l-разница в деформации тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ЗАКОН СОХРАНЕНИЯ ЭНЕРГИИ: 
+ <span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">E<sub>k1</sub>+E<sub>п1</sub>=E<sub>k2</sub>+E<sub>п2</sub></span></dt>
+<dd> E<sub>k1</sub>-кинетическая энергия первого тела, E<sub>п1</sub>-потенциальная энергия первого тела, E<sub>k2</sub>-кинетическа энергия второго тела, E<sub>п2</sub>-потенциальная энергия второго тела.</dd>
+</dl>
+
+
+<div id="news">
+<h2 id="10k">10 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ТЕОРЕМА КОСИНУСОВ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">c<sup>2</sup>=a<sup>2</sup>+b<sup>2</sup>-2*a*b*cosA</span></dt>
+<dd>c-гипотенуза, a,b-катеты, A-угол между катетом и гепотенузой.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;=S/t=(r<sub>2</sub>-r<sub>1</sub>)/(t<sub>2</sub>-t<sub>1</sub>)</span></dt>
+<dd>&#957;-Скорость тела, S-перемещение, t-время. r<sub>1,2</sub>-Начальное и конечное положение тела.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СРЕДНЯЯ СКОРОСТЬ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>ср</sub>=l/&#916;t</span></dt>
+<dd>&#957;<sub>ср</sub>-средняя скорость, l-длина траектории, &#916;t-время прохождения траектории, промежуток времени.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>КЛАССИЧЕСКИЙ ЗАКОН СЛОЖЕНИЯ СКРОСТЕЙ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;=&#957;<sub>2</sub>+&#957;<sub>1</sub></span></dt>
+<dd>&#957;-скорость, &#957;<sub>1,2</sub>-скорости тел.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ДВИЖЕНИЕ ПОД ДЕЙСТВИЕМ СИЛЫ ТЯЖЕСТИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">h=&#957;<sub>0</sub>*t+(g*t<sup>2</sup>)/2</span></dt>
+<dd>h-высота падения тела, &#957;<sub>0</sub>-начальная скорость тела, t-время падения тела, g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА ВО ВРЕМЯ ПАДЕНИЯ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;=&#957;<sub>0</sub>+g*t<sup>2</sup></span></dt>
+<dd>&#957;-скорость тела во время падения, &#961;<sub>0</sub>-начальная скорость тела, t-время падения тела, g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>ДВИЖЕНИЕ ТЕЛА, БРОЩЕННОГО ГОРИЗОНТАЛЬНО:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">t=&#8730;(2*h)/g</span></dt>
+<dd>h-высота падения тела, t-время падения тела, g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>ДЛИНА ТРАЕКТОРИИ, ПО КОТОРОЙ ПАДАЕТ ТЕЛО:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">l=&#961;<sub>0</sub>*&#8730;(2*h)/g=&#957;<sub>0</sub>*t</span></dt>
+<dd>h-высота падения тела, &#957;<sub>0</sub>-начальная скорость тела, t-время падения тела, g-ускорение свободного падения.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СКОРОСТЬ ТЕЛА ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;=lim(&#916;r/&#916;t)</span></dt>
+<dd>Скоростью &#957; точки называется предел отношения перемещения &#916;r, к промежутку времени &#916;t, в течение которого это перемещение произошло, при стремлении &#916;t к нулю.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>СРЕДНЯЯ СКОРОСТЬ ТЕЛА ПРИ РАВНОМЕРНОМ ДВИЖЕНИИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>ср</sub>=(&#916;s/&#916;t)=(&#916;r/&#916;t)</span></dt>
+<dd>&#916;s-расстояние, &#916;t.-время, &#957;<sub>ср</sub>-средняя скорость.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ОТНОСИТЕЛЬНАЯ СКОРОСТЬ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>12</sub>=&#957;<sub>1</sub>-&#957;<sub>2</sub></span></dt>
+<dd>&#957;<sub>1,2</sub>-скорости тел, &#957;<sub>12</sub>-скорость тела относительно второго.</dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>ЗАКОН СЛОЖЕНИЯ СКОРОСТЕЙ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>2</sub>=&#957;<sub>1</sub>+&#957;=</span></dt>
+<dd>&#957;<sub>1,2</sub>-скорости тела. &#957;-скорость относительно инерциальной системы отсчёта.</dd>
+</dl>
+
+<br/><br/>
+<dl>
+<dt><span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+<br/><br/>
+
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+
+
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="formula.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+
+
+<div id="news">
+<h2 id="11k">11 КЛАСС</h2>
+</div>
+
+<dl>
+<dt>ЗАКОН АМПЕРА: 
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>А</sub>=B*|I|*&#916;l*sina</span></dt>
+<dd>F<sub>А</sub>-сила Ампера, B-магнитная индукция, I-сила тока, &#916;l-длина првоодника, sina-синус угла.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ФОРМУЛА ДЛЯ РАССЧЁТА СИЛЫ ВЗАИМОДЕЙСТВИЯ ДВУХ ПАРАЛЛЕЛЬНЫХ ПРВОДНИКОВ С ТОКОМ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>А</sub>F=(&#924;<sub>0</sub>*I<sub>1</sub>*I<sub>2</sub>*l)/(2*&#928;*r)</span></dt>
+<dd>&#924;<sub>0</sub>-магнитная постоянная, I<sub>1,2</sub>-силы тока в проводниках, l-длина проводников, r-расстояние между проводниками.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МАГНИТНОЕ ПОЛЕ КАТУШКИ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">B=&#924;<sub>0</sub>*I*n=&#924;<sub>0</sub>*I*l/N</span></dt>
+<dd>B-магнитная индукция, &#924;<sub>0</sub>-магнитная постоянная, I-сила тока в проводнике, n-количество витков за единицу длины, l-длина проводника.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МАГНИТНОЕ ПОЛЕ В ЦЕНТРЕ КРУГОВОГО ВИТКА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">B=&#924;<sub>0</sub>*I/(2*r)</span></dt>
+<dd>B-магнитная индукция, &#924;<sub>0</sub>-магнитная постоянная, I-сила тока в проводнике, r-расстояние.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МАКСИМАЛЬНО ВРАЩАЮЩИЙСЯ МОМЕНТ СИЛЫ, ДЕЙСТВУЮЩИЙ НА РАМКУ С ТОКОМ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">M<sub>max</sub>=B*I*S*N</span></dt>
+<dd>B-магнитная индукция, I-сила тока, S-площадь сечения, N-количество витков.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>СИЛА ЛОРЕНЦА:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F<sub>Л</sub>=F<sub>A</sub>/N=B*|q|*&#961;*sina</span></dt>
+<dd>F<sub>Л</sub>-сила Лоренца, F<sub>A</sub>-Сила Ампера, N-количество витков, &#916;-скорость заряженной частицы, sina-синус угла, q-заряд.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>ПОЛНАЯ СИЛА, ДЕЙСТВУЮЩАЯ НА ЭЛЕКТРИЧЕСКИЙ ЗАРЯД:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">F=F<sub>Э</sub>+F<sub>M</sub>=F<sub>КУЛ</sub>+F<sub>ЛОР</sub></span></dt>
+<dd>F-полная сила, действующая на заряд, F<sub>Э</sub>-электрическая сила, F<sub>М</sub>-кинетическая сила, F<sub>ЛОР</sub>-сила Лоренца, F<sub>КУЛ</sub>-сила Кулона.</dd>
+</dl>
+
+<br/><br/>
+
+<dl>
+<dt>МАГНИТАЯ ПРОНИЦАЕМОСТЬ СРЕДЫ:
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#924;=B/B<sub>0</sub></span></dt>
+<dd>&#924;-магнитная проницаемость среды. B-магнитная индукция, B<sub>0</sub>-магнитаня индукция в ваакуме.</dd>
+</dl>
+
+<dl>
+<dt>ЗАВИСИМОСТЬ ВЕЛИЧИНЫ &#957; (СКОРОСТИ)</dt>
+<dd>Данная величина зависит от выбора сиситемы отсчёта.  Если система отсчёта перемещается со скоростью &#957;<sub>0</sub>, то скорость относительно 
+неподвижной системы отсчёта &#957;=&#957;<sub>0</sub>+&#957;<sub>1</sub>, где &#957;<sub>1</sub>-скорость тела. Иногда необходимо оценивать относительную скорость и бывает, что
+речу тела движутся навстречу: &#957;<sub>отн.</sub>=&#957;<sub>1</sub>+&#957;<sub>2</sub>, если в одном направлении, то &#957;<sub>отн.</sub>=|&#957;<sub>1</sub>-&#957;<sub>2</sub>| или без модуля.</dd>
+</dl>
+
+
+<dl>
+<dt>УРАВНЕНИЕ ОКРУЖНОСТИ
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">x<sup>2</sup>+y<sup>2</sup>=r<sup>2</sup></span></dt>
+<dd>x-координата оси абсцисс, y-коорината оси ординат, r-радиус окружности</dd>
+</dl>
+
+
+<dl>
+<dt>ПЕРЕМЕЩЕНИЕ МАТЕРИАЛЬНОЙ ТОЧКИ
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#916;r=&#8730;(&#916;x<sup>2</sup>+&#916;y<sup>2</sup>)=&#8730;((x<sub>2</sub>-x<sub>1</sub><sup>2</sup>)+(y<sub>2</sub>-y<sub>1</sub><sup>2</sup>))</span></dt>
+<dd>x<sub>1</sub>-начальное положение точки по оси абсцисс, x<sub>2</sub>-конечное положение точки по оси абсцисс, y<sub>1</sub>-начальное положение точки по оси ординат, y<sub>2</sub>-конечное положение точки по оси ординат, &#916;x-разница в начальной
+и конечных координатах по оси абсцисс, &#916;y-разница в начальной и конечных координатах по оси ординат, &#916;r-перемещение материальной точки.</dd>
+</dl>
+
+
+<dl>
+<dt>СРЕДНЯЯ СКОРОСТЬ МАТЕРИАЛЬНОЙ ТОЧКИ
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>ср</sub>=&#916;r/&#916;t</span></dt>
+<dd>&#957;<sub>ср</sub>-средняя скорость тела, &#916;r-перемещение материальной точки, &#916;t-время, за которое выполнено перемещение материальной точки.</dd>
+</dl>
+
+
+<dl>
+<dt>МГНОВЕННАЯ СКОРОСТЬ МАТЕРИАЛЬНОЙ ТОЧКИ
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>мгн</sub>=lim&#916;r/&#916;t=(&#916;r)'=d(&#916;r)/dt</span></dt>
+<dd>d/dt-знак производной, дифференцирование, &#957;<sub>ср</sub>-средняя скорость тела, &#916;r-перемещение материальной точки, &#916; t-время, за которое выполнено перемещение материальной точки, '-производная, дифференцирование.</dd>
+</dl>
+
+
+<dl>
+<dt>CРЕДНЯЯ (ГУЖЕВАЯ СКОРОСТЬ)
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;">&#957;<sub>ср.</sub>=S<sub></sub></span></dt>
+<dd></dd>
+</dl>
+
+
+<br/><br/>
+
+<dl>
+<dt>
+<span style="font-size: 28px; font-style: italic; color: orange; text-align: center;"></span></dt>
+<dd></dd>
+</dl>
+
+
+
+
+<div id="up" style="box-align: center;">
+<center>
+<form action="index.htm" target="_top" title="Вернуться на Главную страницу"><button><P>ВЕРНУТЬСЯ НА КПП</P></button></form>
+<form action="formula.htm" target="_top" title="К началу территории"><button><P>НАВЕРХ СТРАНИЦЫ</P></button></form>
+</center>
+<br/><br/>
+</div>
+</div>
+
+
+
+<div id="footer">
+<P>&copy; PHYSICSZONE 2013-2024. Все права защищены. Копирование материалов сайта разрешено при указании прямой ссылки на PHYSICSZONE и на ресурсы, используемые PHYSICSZONE для получения контента.
+По вопросам и в случае возникновения проблем обращаться по адресу электронной почты: valentin.polovinkin@mail.ru</P>
+</div>
+
+</div>
+<CENTER>
+</body>
+</html>
+
